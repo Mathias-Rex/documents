@@ -1,6 +1,7 @@
 # Magyarországi Informatikai és Programozó Versenyek (2025–2026)
 
 Összefoglaló dokumentum általános és középiskolás diákok számára.
+[Google docs változat](https://docs.google.com/document/d/1hVRwHp8279BW64YBcdPLrAq3KJQY9iusTN2f7KaYlrQ/edit?usp=sharing)
 
 ---
 
@@ -47,8 +48,6 @@ Az Informatika-Számítástechnika Tanárok Egyesületének verseny oldala. Inne
 | **Október** | isze.hu → Kozma László nevezés figyelése |
 | **November** | njszt.hu / tehetseg.inf.elte.hu → Kódkupa, e-Hód, Nemes Tihamér Online 1. forduló |
 | **December–január** | tehetseg.inf.elte.hu → Nemes Tihamér Alkalmazói nevezés, ROCS kiírás figyelése |
-
-
 
 ---
 
