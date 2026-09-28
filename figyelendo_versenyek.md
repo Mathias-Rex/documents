@@ -1,7 +1,9 @@
-# Magyarországi Informatikai és Programozó Versenyek (2025–2026)
+# Magyarországi Informatikai és Programozó Versenyek (2026–2027)
 
 Összefoglaló dokumentum általános és középiskolás diákok számára.
 [Google docs változat](https://docs.google.com/document/d/1hVRwHp8279BW64YBcdPLrAq3KJQY9iusTN2f7KaYlrQ/edit?usp=sharing)
+
+> 🔄 **Utolsó ellenőrzés: 2026. szeptember 28.** A dokumentumot frissítettük a 2026/2027-es tanévre: ahol már megjelent a friss kiírás, ott az új dátumok/linkek szerepelnek; ahol még nem, ott a legutóbb ismert (2025/26-os) adatok láthatók egy megjegyzéssel. A részletes, versenyenkénti ellenőrzési jegyzőkönyv a [`versenyek_2026_2027_statusz.md`](./versenyek_2026_2027_statusz.md) fájlban található.
 
 ---
 
@@ -57,28 +59,32 @@ Az Informatika-Számítástechnika Tanárok Egyesületének verseny oldala. Inne
 
 > 💸 = nevezési díj vagy jelentős eszközköltség; 💸💸 = komoly hardverberuházás szükséges (több tíz–százezer Ft)
 
-| Verseny neve | Fókusz | Korosztály | Típus | Mikor jelenik meg a kiírás? | Nevezési határidő (tipikus) | Verseny időpontja (tipikus) | Link |
-|---|---|---|---|---|---|---|---|
-| 22. Neumann János Programtermék Verseny | Projektmunka (app, játék, grafika, CAD, animáció, hardver) | Ált. és közép (21 év alatt) | Egyéni / csapat | **szeptember–október** | **január–február** | Döntő: **március vége** (Szekszárd) | https://neumannverseny.hu |
-| Boronkay Informatika Verseny – 8. évfolyam | Alkalmazói informatika (elmélet + szöveg, táblázat) | 8. osztály (alacsonyabb is indulhat) | Egyéni | **október eleje** | 1. ford.: **november közepe** / 2. ford.: **január eleje** | Döntő: **január vége** (Vác) | https://boronkay.vac.hu/informatika-verseny |
-| Boronkay Informatika Verseny – 5–7. évfolyam | Alkalmazói informatika (elmélet + grafika, szöveg, prezentáció) | 5–7. osztály | Egyéni | **október közepe** | 1. ford.: **január vége** / 2. ford.: **április eleje** | Döntő: **április vége** (Vác) | https://boronkay.vac.hu/informatika-verseny |
-| ProSuli Robotika Verseny 💸 | LEGO robotprogramozás (vonalkövetés, pályafeladatok) | Ált. és közép (amatőr / profi liga) | Csapat | **október** | **február eleje** | Regionális: **február** / Döntő: **március** (Törökbálint) | https://prosuli.hu/prosuli-robotika-verseny |
-| FIRST LEGO League – Challenge 💸💸 | LEGO robotika + tudományos kutatási projekt | 9–16 év | Csapat (3–10 fő) | **augusztus** (szezon-indulás) | **november vége** | Regionális: **január–február** / Nemzeti döntő: **február vége** (Budapest) | https://www.firstlegoleague.hu |
-| FIRST LEGO League – Explore & Discover 💸 | LEGO robotika (játékos, modellépítés, bemutató) | 4–10 év | Csapat | **augusztus** | **január vége** | Kiállítás: **február–május** | https://www.firstlegoleague.hu |
-| World Robot Olympiad (WRO) 💸💸 | Robotika (RoboMission, Future Innovators, RoboSports, Future Engineers) | 8–19 év (kategóriánként) | Csapat (2–3 fő) | **december–január** | **február–március** (reg.wro.hu) | Magyarországi válogató: **április–május** | https://wro.hu |
-| FIRST Tech Challenge (FTC) 💸💸 | Haladó mérnöki robotépítés + programozás | 12–18 év (9–12. évf.) | Csapat (6–12 fő) | **augusztus–szeptember** | **október–november** | Ligaversenyek: **január–február** / Nemzeti döntő: **március** | https://firsttechchallenge.hu |
-| e-Hód / Bebras | Algoritmikus gondolkodás (programozás nélkül, online teszt) | 3–12. évfolyam (5 korcsoport) | Egyéni | **október eleje** | Regisztráció: **október közepe** | Verseny: **november 2–3. hete** / Díjátadó: **május vége** | http://e-hod.elte.hu |
-| Nemes Tihamér Online Programozási Verseny | Programozás (algoritmusok, C++/Python/Pascal/C#/Java) | 5–12. osztály | Egyéni | **október** | Folyamatos (fordulónként az előző szerdán éjfélig) | 5 forduló: **nov, dec, jan, febr, ápr** / Eredményhirdetés: **máj. 7.** | https://tehetseg.inf.elte.hu/nemes-online/nemes-aktualis.html |
-| Zsakó László Programozási Verseny | Programozás (algoritmusok, analízis, kódolás) | 5–13. osztály | Egyéni | **október** | 1. ford. (iskolai): **október** | Területi: **november** / Döntő: **február** (ELTE IK) | https://tehetseg.inf.elte.hu/nemes/ |
-| Kódkupa – IIOT Válogatóverseny | Csapat algoritmikus programozás (C, C++, Python) | 5–12. évf. (profi: 7–12.) | Csapat (max. 4 fő) | **október** | **november eleje** | 4 online selejtező: **nov–febr** / Döntő: **március** (Budapest, Fazekas) / Nemzetközi: **május–június** | https://kodkupa.hu |
-| PROGRACE Programozói Verseny | Programozás (egynapos csapatverseny) | Közép + egyetemisták (24 év alatt) | Csapat (3 fő) | **szeptember–október** | **november** | **december 1.** (Pécs, PTE MIK) | https://pte.hu/hu/esemeny/prograce-programozoi-verseny |
-| Code Week Hungary | Kódolás, algoritmikus gondolkodás (nem klasszikus verseny, iskolai esemény) | Minden korosztály | Egyéni / csapat | **szeptember** | Eseményregisztráció folyamatos | **október** (minden évben) | https://www.codeweekhungary.hu |
-| Kozma László Alkalmazói Tanulmányi Verseny | Alkalmazói informatika (grafika, szöveg, prezentáció, táblázat) | 5–10. évfolyam (2 korcsoport) | Páros / csapat | **szeptember–október** | **október** | 2 forduló: iskolai → Döntő: **május** (Százhalombatta) | https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/ |
-| Dusza Árpád Országos Programozói Emlékverseny | Programozás (hagyományos / web / mobilprogramozás) | 9–13. évfolyam (középiskola) | Egyéni | **szeptember–október** | **október–november** | Regionális: **január–február** / Döntő: **március–április** | https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/ |
-| Radnóti Hack&CODE Informatikai Verseny | Programozás + robotika + projekt (AI, webfejlesztés, szabadulószoba, csapatmunka) | 7–8. évfolyam | Csapat (2–4 fő) | **október** | **október vége** | I. forduló: **november** (online) / II. forduló: **december** (Pécs) / III. forduló: **január** (Pécs) | http://www.radnoti-pecs.hu |
-| Nemes Tihamér Alkalmazói Tanulmányi Verseny | Alkalmazói informatika (irodai szoftverek, weblapkészítés) | 7–10. évfolyam | Egyéni | **november–december** | **január eleje** | Iskolai forduló: **január** / Területi: **február** / Döntő: **március** (ELTE IK) / Díjátadó: **május** | https://tehetseg.inf.elte.hu/nemesa/ |
-| ROCS – Robotprogramozó Csapatverseny | LEGO robotprogramozás (vonalkövetés, akadálypálya) | 5–8. évfolyam (3 korcsoport) | Csapat (2–3 fő) | **november–december** | **január–február** | Regionális: **február–március** / Döntő: **április** (Kecskemét) | http://robotprog.hu/ |
-| Kovács Mihály Országos Grafikus Programozási Verseny | Grafikus programozás (teknőcgrafika, animáció, rekurzió – Scratch / Logo / Python) | 3–12. évfolyam (4 korcsoport: K1–K4) | Egyéni | **november–december** | **január vége** | Iskolai forduló: **február** / Döntő: **április** (ELTE IK) / Eredményhirdetés: **május 8.** | http://logo.inf.elte.hu/ |
+> ✅ = már megjelent a 2026/2027-es kiírás | ❌ = még a 2025/26-os (vagy korábbi) adatok érvényesek | ❓ = státusz bizonytalan
+
+| Verseny neve | 26/27? | Fókusz | Korosztály | Típus | Mikor jelenik meg a kiírás? | Nevezési határidő (tipikus / 26-27) | Verseny időpontja (tipikus / 26-27) | Link |
+|---|:---:|---|---|---|---|---|---|---|
+| 22. Neumann János Programtermék Verseny | ❌ | Projektmunka (app, játék, grafika, CAD, animáció, hardver) | Ált. és közép (21 év alatt) | Egyéni / csapat | **szeptember–október** | **január–február** | Döntő: **március vége** (Szekszárd) | https://neumannverseny.hu |
+| Boronkay Informatika Verseny – 8. évfolyam | ❓ | Alkalmazói informatika (elmélet + szöveg, táblázat) | 8. osztály (alacsonyabb is indulhat) | Egyéni | **október eleje** | 1. ford.: **november közepe** / 2. ford.: **január eleje** | Döntő: **január vége** (Vác) | https://boronkay.vac.hu/informatika-verseny |
+| Boronkay Informatika Verseny – 5–7. évfolyam | ❓ | Alkalmazói informatika (elmélet + grafika, szöveg, prezentáció) | 5–7. osztály | Egyéni | **október közepe** | 1. ford.: **január vége** / 2. ford.: **április eleje** | Döntő: **április vége** (Vác) | https://boronkay.vac.hu/informatika-verseny |
+| ProSuli Robotika Verseny 💸 | ✅ | LEGO robotprogramozás (vonalkövetés, pályafeladatok) | Ált. és közép (amatőr / profi liga) | Csapat | **október** | 2026/27: **hamarosan** (a kiírás elindult) | Regionális: **február** / Döntő: **március** (Törökbálint) | https://prosuli.hu/prosuli-robotika-verseny |
+| FIRST LEGO League – Challenge 💸💸 | ✅ | LEGO robotika + tudományos kutatási projekt (2026/27: **BIOGLOW**) | 9–16 év | Csapat (3–10 fő) | **augusztus** (szezon-indulás) | Csapatregisztráció: **2026. nov. 30.** | Regionális: **2026. dec.–2027. febr.** / Nemzeti döntő: **2027. márc. 7.** (Miskolc) | https://www.firstlegoleague.hu |
+| FIRST LEGO League – Explore & Discover 💸 | ✅ | LEGO robotika (játékos, modellépítés, bemutató) | 4–10 év | Csapat | **augusztus** | Iskolai/óvodai regisztráció: **2027. jan. 31.** | Kiállítás: **február–május** | https://www.firstlegoleague.hu |
+| World Robot Olympiad (WRO) 💸💸 | ❌ | Robotika (RoboMission, Future Innovators, RoboSports, Future Engineers) | 8–19 év (kategóriánként) | Csapat (2–3 fő) | **december–január** | **február–március** (reg.wro.hu) | Magyarországi válogató: **április–május** | https://wro.hu |
+| FIRST Tech Challenge (FTC) 💸💸 | ✅ | Haladó mérnöki robotépítés + programozás (2026/27: **BIOBUZZ**) | 12–18 év (9–12. évf.) | Csapat (6–12 fő) | **augusztus–szeptember** | 2026/27: dátumok még **nincsenek meghirdetve** | Ligaversenyek/döntő dátuma: **még nem ismert** | https://firsttechchallenge.hu |
+| e-Hód / Bebras | ❌ | Algoritmikus gondolkodás (programozás nélkül, online teszt) | 3–12. évfolyam (5 korcsoport) | Egyéni | **október eleje** | Regisztráció: **október közepe** | Verseny (előzetes): **2026. nov. 9–20.** | http://e-hod.elte.hu |
+| Nemes Tihamér Online Programozási Verseny | ❌ | Programozás (algoritmusok, C++/Python/Pascal/C#/Java) | 5–12. osztály | Egyéni | **október** | Folyamatos (fordulónként az előző szerdán éjfélig) | 5 forduló: **nov, dec, jan, febr, ápr** / Eredményhirdetés: **máj. 7.** | https://tehetseg.inf.elte.hu/nemes-online/nemes-aktualis.html |
+| Zsakó László Programozási Verseny | ❌ | Programozás (algoritmusok, analízis, kódolás) | 5–13. osztály | Egyéni | **október** | 1. ford. (iskolai): **október** | Területi: **november** / Döntő: **február** (ELTE IK) | https://tehetseg.inf.elte.hu/nemes/ |
+| Kódkupa – IIOT Válogatóverseny | ❌ | Csapat algoritmikus programozás (C, C++, Python) | 5–12. évf. (profi: 7–12.) | Csapat (max. 4 fő) | **október** | **november eleje** | 4 online selejtező: **nov–febr** / Döntő: **március** (Budapest, Fazekas) / Nemzetközi: **május–június** | https://kodkupa.hu |
+| PROGRACE Programozói Verseny | ❌ | Programozás (egynapos csapatverseny) | Közép + egyetemisták (24 év alatt) | Csapat (3 fő) | **szeptember–október** | **november** | **december 1.** (Pécs, PTE MIK) | https://prograce.hu |
+| Code Week Hungary | ✅ | Kódolás, algoritmikus gondolkodás (nem klasszikus verseny, iskolai esemény) | Minden korosztály | Egyéni / csapat | **szeptember** | Eseményregisztráció folyamatos | **2026. október 10–25.** (14. Code Week) | https://www.codeweekhungary.hu |
+| Kozma László Alkalmazói Tanulmányi Verseny | ✅ | Alkalmazói informatika (grafika, szöveg, prezentáció, táblázat) | 5–10. évfolyam (2 korcsoport) | Páros / csapat | **szeptember–október** | **2026. október 16.** (XXV. verseny) | 2 forduló: iskolai → Döntő: **május** (Százhalombatta) | https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/ |
+| Dusza Árpád Országos Programozói Emlékverseny | ✅ | Programozás (hagyományos / web / mobilprogramozás) | 9–13. évfolyam (középiskola) | Egyéni | **szeptember–október** | **október–november** (2026/27-es felhívás elérhető) | Regionális: **január–február** / Döntő: **március–április** | https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/ |
+| Radnóti Hack&CODE Informatikai Verseny | ❓ | Programozás + robotika + projekt (AI, webfejlesztés, szabadulószoba, csapatmunka) | 7–8. évfolyam | Csapat (2–4 fő) | **október** | ⚠️ nincs nyoma a versenynek az átalakult honlapon – lásd megjegyzés lent | — | http://www.radnoti-pecs.hu |
+| Nemes Tihamér Alkalmazói Tanulmányi Verseny | ✅ | Alkalmazói informatika (irodai szoftverek, weblapkészítés) | 7–10. évfolyam | Egyéni | **november–december** | **2026. december 20.** | Iskolai forduló: **2027. jan. 6.** / Országos: **2027. márc. 20.** / Díjátadó: **2027. máj. 6.** (ELTE IK) | https://versenyportal.hu/nemesa/nemesa_aktualis.html |
+| ROCS – Robotprogramozó Csapatverseny | ❌ | LEGO robotprogramozás (vonalkövetés, akadálypálya) | 5–8. évfolyam (3 korcsoport) | Csapat (2–3 fő) | **november–december** | **január–február** | Regionális: **február–március** / Döntő: **április** (Kecskemét) | http://robotprog.hu/ |
+| Kovács Mihály Országos Grafikus Programozási Verseny | ✅ | Grafikus programozás (teknőcgrafika, animáció, rekurzió – Scratch / Logo / Python) | 3–12. évfolyam (4 korcsoport: K1–K4) | Egyéni | **november–december** | **2027. február 16.** | Iskolai forduló: **2027. febr. 17.** / Országos: **2027. ápr. 10.** / Eredményhirdetés: **2027 május** (ELTE IK) | https://versenyportal.hu/logo/logo_aktualis.html |
+
+*(A teljes ellenőrzési jegyzőkönyv, forrásokkal és indoklással: [`versenyek_2026_2027_statusz.md`](./versenyek_2026_2027_statusz.md))*
 
 ---
 
@@ -106,11 +112,13 @@ Az Informatika-Számítástechnika Tanárok Egyesületének verseny oldala. Inne
 - **Előzsűri (1. forduló):** A beérkező pályamunkákat független informatika tanárokból álló, iskolákból felkért zsűri értékeli. Döntőbe jutásról értesítés: **2026. február 28-ig**.
 - **Döntő (2. forduló):** 2026. március 26–27., Szekszárdi I. Béla Gimnázium. A döntőbe maximum 80 fő juthat be.
 
+> ❌ **2026.09.28-i ellenőrzés:** a honlapon még a 22. (2025/2026-os, már lezajlott) kiírás látszik, a 23. verseny 2026/2027-es kiírása még nem jelent meg.
+
 ### Jelentkezés
 
 - Online regisztráció: [https://neumannverseny.hu](https://neumannverseny.hu)
 - A nevezéshez **kötelező** egy max. 10 perces, a pályamunkát bemutató videó csatolása.
-- **Nevezési határidő: 2026. február 23. (éjfél) – meghosszabbítva**
+- **Nevezési határidő: 2026. február 23. (éjfél) – meghosszabbítva** *(a 22. verseny határideje — a 23.-é még nincs meghirdetve)*
 
 ### Szabályok és feltételek
 
@@ -161,6 +169,8 @@ A Tigra Zrt. támogatja a BIV 8. évfolyamos versenyét; a dobogósok értékes 
 
 - Web: [https://boronkay.vac.hu/informatika-verseny](https://boronkay.vac.hu/informatika-verseny)
 
+> ❓ **2026.09.28-i ellenőrzés:** a honlap jelenleg HTTP 503 hibát ad, nem volt élőben ellenőrizhető. A gyorsítótárazott tartalom még a 2025/26-os (már lejárt) dátumokat mutatta — érdemes később kézzel újraellenőrizni.
+
 ---
 
 ## 3. Yettel ProSuli Robotikaverseny
@@ -181,11 +191,13 @@ A Tigra Zrt. támogatja a BIV 8. évfolyamos versenyét; a dobogósok értékes 
 
 ### Jelentkezés
 
-- Web: [https://yettel.hu](https://yettel.hu)
+- Web: [https://prosuli.hu/prosuli-robotika-verseny/](https://prosuli.hu/prosuli-robotika-verseny/)
+
+> ✅ **2026.09.28-i ellenőrzés:** a honlap már kifejezetten a **2026/2027 tanévi** versenyt hirdeti (AI-segített és hagyományos kategória), de a konkrét dátumok (nevezés, regionális fordulók, döntő) helyén még "hamarosan…" szerepel.
 
 ---
 
-## 4. FIRST LEGO League (FLL) – UNEARTHED szezon (2025–2026)
+## 4. FIRST LEGO League (FLL) – BIOGLOW szezon (2026–2027)
 
 **Szervező:** FIRST Hungary
 
@@ -199,23 +211,22 @@ A Tigra Zrt. támogatja a BIV 8. évfolyamos versenyét; a dobogósok értékes 
 | Explore | 6–10 év | 2–6 fő |
 | Challenge | 9–16 év | 3–10 fő |
 
-### A 2025–2026-os szezon témája: **UNEARTHED (Régészet)**
+### A 2026–2027-es szezon témája: **BIOGLOW**
 
-A csapatok STEM-tudásukat és együttműködési készségeiket felhasználva régészeti témájú kihívásokat oldanak meg.
+A honlap kiemeli, hogy a 2026–2027-es tanév különleges lesz: új, "Future Edition" formátum indul.
 
-### Szezon menetrendje
+### Szezon menetrendje (2026/2027)
 
 | Esemény | Dátum |
 |---|---|
-| Szezon kezdete / készletek kiosztása | 2025. augusztus 5. |
-| Csapatregisztráció vége (főszezon) | 2025. november 30. |
-| Első regionális forduló (Debrecen) | 2026. január 16. |
-| Iskolai/óvodai regisztráció vége | 2026. január 31. |
-| Utolsó regionális forduló (Szeged) | 2026. február 14. |
-| Magyarországi Nemzeti döntő (Budapest) | 2026. február 28. |
-| Utószezon regisztráció vége | 2026. április 8. |
-| Utószezon Challenge döntő | 2026. április 22. |
-| Utószezon Explore kiállítás | 2026. május 27. |
+| Szezon kezdete | 2026. augusztus 4. |
+| Csapatregisztráció vége (főszezon) | 2026. november 30. |
+| Első regionális forduló | 2026. december 12. |
+| Iskolai/óvodai regisztráció vége | 2027. január 31. |
+| Utolsó regionális forduló | 2027. február 21. |
+| Magyarországi Nemzeti döntő (Miskolc) | 2027. március 7. |
+
+> ✅ **2026.09.28-i ellenőrzés:** a fenti dátumok a honlapon élőben, a 2026/2027-es BIOGLOW szezonra vonatkozóan szerepelnek.
 
 ### Fontos tudnivalók
 
@@ -247,9 +258,11 @@ A csapatok STEM-tudásukat és együttműködési készségeiket felhasználva r
 
 - Web: [https://wro.hu](https://wro.hu)
 
+> ❌ **2026.09.28-i ellenőrzés:** a honlap még csak a lezajlott "WRO 2026" szezont mutatja (nemzeti döntő: 2026. jún. 26–27.), a 2027-es szezonra vonatkozó kiírás még nem jelent meg.
+
 ---
 
-## 6. FIRST Tech Challenge (FTC)
+## 6. FIRST Tech Challenge (FTC) – BIOBUZZ szezon (2026–2027)
 
 **Szervező:** FIRST Hungary
 
@@ -269,6 +282,8 @@ A csapatok STEM-tudásukat és együttműködési készségeiket felhasználva r
 
 - Csapatregisztráció online: [https://www.firstinspires.org/robotics/ftc/start-a-team](https://www.firstinspires.org/robotics/ftc/start-a-team)
 - Fő oldal: [https://firsttechchallenge.hu](https://firsttechchallenge.hu)
+
+> ✅ **2026.09.28-i ellenőrzés:** az oldal már nevesíti a 2026/2027-es szezon játékát, a **"BIOBUZZ"**-t, és jelzi, hogy az előző (2025/26-os "DECODE") szezon a magyar nemzeti döntővel lezárult. A konkrét 2026/27-es forduló-dátumok egyelőre nincsenek megadva.
 
 ---
 
@@ -295,6 +310,8 @@ A csapatok STEM-tudásukat és együttműködési készségeiket felhasználva r
 ### Elérhetőség
 
 - Web: [https://njszt.hu](https://njszt.hu/hu/szakmai_kozosseg/tehetseggondozasi-szakosztaly/versenyek)
+
+> ❌ **2026.09.28-i ellenőrzés:** a hivatalos oldal (e-hod.elte.hu) egyelőre csak előzetesen említi a 2026. november 9–20. közötti fordulót; a formális kiírás és a regisztráció (várhatóan október közepétől) még nem nyílt meg.
 
 ---
 
@@ -352,6 +369,8 @@ C++, Pascal, C#, Python, Java (Linux környezetben értékelik)
 - E-mail: nemes_online@inf.elte.hu
 - Web: [http://tehetseg.inf.elte.hu/nemes-online/index.html](http://tehetseg.inf.elte.hu/nemes-online/index.html)
 
+> ❌ **2026.09.28-i ellenőrzés:** az oldalon még a fenti 2025/2026-os kiírás az aktuális; 2026/27-es fordulódátumokra utalás nincs.
+
 ---
 
 ## 9. Zsakó László Nemzetközi Programozási Verseny (korábban: Nemes Tihamér Verseny)
@@ -389,6 +408,8 @@ A versenyző maga választja a nyelvet; hangsúly a módszeres programozáson, n
 - E-mail: progverseny@inf.elte.hu
 - Web: [https://tehetseg.inf.elte.hu/nemes/](https://tehetseg.inf.elte.hu/nemes/)
 - NJSZT titkárság: titkarsag@njszt.hu
+
+> ❌ **2026.09.28-i ellenőrzés:** a kiírás dokumentumai (pl. `nemes/2026/felhiv26prog.pdf`) még a 2025/2026-os tanév fordulóira vonatkoznak (országos döntő: 2026. február 21.); 2026/27-es kiírás még nem jelent meg.
 
 ---
 
@@ -458,6 +479,8 @@ Az online selejtezőkön a csapat maga választja meg, mikor kezdi a **3 órás 
 - Web: [https://kodkupa.hu](https://kodkupa.hu)
 - E-mail: info@kodkupa.hu
 
+> ❌ **2026.09.28-i ellenőrzés:** a honlap és a versenykiírás PDF-je még a 2025/2026-os szezonra vonatkozik (döntő: 2026. március 14.); 2026/27-es kiírás még nem jelent meg.
+
 ---
 
 ## 11. PROGRACE Programozói Verseny
@@ -493,6 +516,8 @@ PTE MIK, Pécs (7624 Pécs, Boszorkány u. 2.)
 - Web: [https://prograce.hu](https://prograce.hu)
 - E-mail: info@prograce.hu
 
+> ❌ **2026.09.28-i ellenőrzés:** a prograce.hu legfrissebb híre még a 2025/26-os fordulóról szól, 2026/27-es kiírás nincs. (A dokumentum korábban egy elavult, 2018-as pte.hu linket tartalmazott — ezt a fenti, aktuális prograce.hu linkre javítottuk.)
+
 ---
 
 ## 12. Code Week Hungary (Európai Kódolási Hét)
@@ -503,7 +528,9 @@ PTE MIK, Pécs (7624 Pécs, Boszorkány u. 2.)
 
 ### Időpont
 
-Minden év **októberében**.
+Minden év **októberében**. A **14. Code Week** időpontja: **2026. október 10–25.**
+
+> ✅ **2026.09.28-i ellenőrzés:** a honlap már egyértelműen a 2026-os (14.) Code Week-et hirdeti a fenti dátumokkal.
 
 ### Célcsoport
 
@@ -568,6 +595,8 @@ Grafika (rajz, képszerkesztés), szövegszerkesztés, prezentációkészítés,
 - Szervező: isze@isze.hu
 - Postacím: ISZE, 1133 Budapest, Kárpát u. 11. 2/4
 
+> ✅ **2026.09.28-i ellenőrzés:** megjelent a **2026/2027-es kiírás (XXV. verseny)** — "VERSENYKIÍRÁS 2026-2027", "VERSENYSZABALYZAT 2026-2027" és "Szülői nyilatkozat 2026-2027" dokumentumok elérhetők a fenti oldalon. **Nevezési (postára adási) határidő: 2026. október 16.**
+
 ---
 
 ## 14. Nemes Tihamér Alkalmazói Tanulmányi Verseny
@@ -604,6 +633,15 @@ Kétfordulós verseny:
 
 Windows operációs rendszeren: **Word, Excel, PowerPoint** (szöveg, táblázat, prezentáció), **GIMP** (pixelgrafika), **Inkscape** (vektorgrafika), **Visual Studio Code + Live Server, Notepad++** (honlapszerkesztés).
 
+### Menetrend – 2026/2027-es tanév
+
+| Esemény | Dátum |
+|---|---|
+| Nevezési határidő | **2026. december 20.** |
+| Iskolai forduló | **2027. január 6.** |
+| Országos döntő | **2027. március 20.** |
+| Eredményhirdetés | **2027. május 6.** (ELTE IK) |
+
 ### Menetrend (tipikus)
 
 | Esemény | Tipikus időpont |
@@ -622,8 +660,11 @@ Részvétel **ingyenes**.
 
 ### Elérhetőség
 
-- Web: [https://tehetseg.inf.elte.hu/nemesa/](https://tehetseg.inf.elte.hu/nemesa/)
+- Web (2026/27-es aktuális kiírás): [https://versenyportal.hu/nemesa/nemesa_aktualis.html](https://versenyportal.hu/nemesa/nemesa_aktualis.html)
+- Korábbi oldal (még nem frissült): [https://tehetseg.inf.elte.hu/nemesa/](https://tehetseg.inf.elte.hu/nemesa/)
 - E-mail: nemes_alk@inf.elte.hu
+
+> ✅ **2026.09.28-i ellenőrzés:** a verseny hivatalos platformja átkerült a `versenyportal.hu`-ra, ahol már él a 2026/2027-es kiírás (lásd fenti dátumok). Az eredeti `tehetseg.inf.elte.hu/nemesa/` oldal még nem frissült.
 
 ---
 
@@ -667,6 +708,8 @@ Kétfordulós:
 
 - Web: [http://robotprog.hu/](http://robotprog.hu/)
 
+> ❌ **2026.09.28-i ellenőrzés:** a honlap még a korábbi (XV., 2024/25-ös "ÚJRATÖLTVE") kiírást mutatja; 2026/27-es kiírásra utaló infó nincs.
+
 ---
 
 ## 16. Kovács Mihály Országos Grafikus Programozási Verseny (KMOGPV)
@@ -703,16 +746,27 @@ Kétfordulós verseny:
 1. **Iskolai forduló:** Papíros + számítógépes feladatok, a saját iskolában. Az iskola javítja, a minimum pontszámot elért dolgozatokat feltölti a versenyportálra.
 2. **Országos döntő:** Egyéni projektfeladat megírása számítógépen, ELTE IK Budapest (szombat, 11:00–14:00).
 
-### Menetrend – 2025/2026-os tanév
+### Menetrend – 2026/2027-es tanév
 
 | Esemény | Dátum |
 |---|---|
-| Jelentkezési határidő | **2026. január 30.** |
-| Iskolai forduló | **2026. február 18.** (szerda, 14:00–16:00) |
-| Dolgozatok továbbküldése | **2026. március 6.** |
-| Döntőbe jutók közzététele | **2026. március 20.** |
-| Országos döntő | **2026. április 18.** (szombat, 11:00–14:00, ELTE IK) |
-| Ünnepélyes eredményhirdetés | **2026. május 8.** (Neumann-nap, ELTE IK) |
+| Jelentkezési határidő | **2027. február 16.** |
+| Iskolai forduló | **2027. február 17.** |
+| Javítás / felüljavítás | 2027. március 5. / 19. |
+| Döntőbe jutók közzététele | **2027. március 22.** |
+| Országos döntő | **2027. április 10.** |
+| Ünnepélyes eredményhirdetés | **2027 május** (ELTE IK) |
+
+### Menetrend – 2025/2026-os tanév (korábbi, referenciaként)
+
+| Esemény | Dátum |
+|---|---|
+| Jelentkezési határidő | 2026. január 30. |
+| Iskolai forduló | 2026. február 18. (szerda, 14:00–16:00) |
+| Dolgozatok továbbküldése | 2026. március 6. |
+| Döntőbe jutók közzététele | 2026. március 20. |
+| Országos döntő | 2026. április 18. (szombat, 11:00–14:00, ELTE IK) |
+| Ünnepélyes eredményhirdetés | 2026. május 8. (Neumann-nap, ELTE IK) |
 
 ### Menetrend (tipikus)
 
@@ -734,8 +788,11 @@ Kétfordulós verseny:
 
 ### Elérhetőség
 
-- Web: [http://logo.inf.elte.hu/](http://logo.inf.elte.hu/) (másodlagos: http://tehetseg.inf.elte.hu/logo/index.html)
+- Web (2026/27-es aktuális kiírás): [https://versenyportal.hu/logo/logo_aktualis.html](https://versenyportal.hu/logo/logo_aktualis.html)
+- Korábbi oldal (még csak a 2025/26-os PDF-fel): [http://logo.inf.elte.hu/](http://logo.inf.elte.hu/) (másodlagos: http://tehetseg.inf.elte.hu/logo/index.html)
 - E-mail: graf_prog@inf.elte.hu
+
+> ✅ **2026.09.28-i ellenőrzés:** a verseny hivatalos platformja átkerült a `versenyportal.hu`-ra, ahol már él a 2026/2027-es kiírás (lásd fenti dátumok). Az eredeti `logo.inf.elte.hu` oldal még a 2025/26-os PDF-et mutatja.
 
 ---
 
@@ -784,9 +841,13 @@ Kétfordulós verseny:
 - Web: [https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/](https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/)
 - Szervező: isze@isze.hu
 
+> ✅ **2026.09.28-i ellenőrzés:** az oldal tetején "2026/2027" fejléc alatt már elérhető a **"Versenyfelhívás_2026-2027"** és a **"Versenyszabalyzat2026-2027"** (PDF-ek), külön a hagyományos és a webprogramozói ágnak.
+
 ---
 
 ## 18. Radnóti Hack&CODE Informatikai Verseny
+
+> ⚠️ **2026.09.28-i ellenőrzés – FIGYELEM, a verseny jövője bizonytalan:** a `www.radnoti-pecs.hu` domain jelenleg átirányít egy szakképzési centrumba (SzC) integrálódott, teljesen átalakult honlapra (`technikum.radnoti-pecs.hu`). Sem a régi, sem az új domainen, sem webes kereséssel nem található nyoma a "Hack&CODE" versenynek (sem 2025/26-os, sem 2026/27-es kiírásnak). Lehet, hogy a verseny megszűnt vagy átnevezték — **mielőtt a dokumentumból törlik, érdemes közvetlenül az iskolánál megerősítést kérni** (titkar@radnoti-pecs.hu). Az alábbi adatok a legutóbb ismert (2025/26-os) kiírásból származnak, referenciaként.
 
 **Szervező:** Baranya Vármegyei SzC Radnóti Miklós Közgazdasági Technikum (Pécs)
 
@@ -854,4 +915,4 @@ Regisztrációs űrlap: [https://forms.gle/eR3HK92LVR8pH4cw5](https://forms.gle/
 
 ---
 
-*Dokumentum összeállítva: 2025–2026-os tanév | Forrás: verseny-kiírások és szervező intézmények weboldalai*
+*Dokumentum összeállítva: 2025–2026-os tanév | Frissítve a 2026–2027-es tanévre: 2026. szeptember 28. | Forrás: verseny-kiírások és szervező intézmények weboldalai*
