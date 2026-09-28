@@ -3,7 +3,7 @@
 Összefoglaló dokumentum általános és középiskolás diákok számára.
 [Google docs változat](https://docs.google.com/document/d/1hVRwHp8279BW64YBcdPLrAq3KJQY9iusTN2f7KaYlrQ/edit?usp=sharing)
 
-> 🔄 **Utolsó ellenőrzés: 2026. szeptember 28.** A dokumentumot frissítettük a 2026/2027-es tanévre: ahol már megjelent a friss kiírás, ott az új dátumok/linkek szerepelnek; ahol még nem, ott a legutóbb ismert (2025/26-os) adatok láthatók egy megjegyzéssel. A részletes, versenyenkénti ellenőrzési jegyzőkönyv a [`versenyek_2026_2027_statusz.md`](./versenyek_2026_2027_statusz.md) fájlban található.
+> 🔄 **Utolsó ellenőrzés: 2026. szeptember 28.** A dokumentumot frissítettük a 2026/2027-es tanévre: ahol már megjelent a friss kiírás, ott az új dátumok/linkek szerepelnek; ahol még nem, ott a legutóbb ismert (2025/26-os) adatok láthatók egy megjegyzéssel. A részletes, versenyenkénti ellenőrzési jegyzőkönyv a [`versenyek_2026_2027_statusz.md`](./versenyek_2026_2027_statusz.md) fájlban található. A tavalyi (2025/26-os) állapot változatlanul megtalálható itt: [`figyelendo_versenyek_2025_2026.md`](./figyelendo_versenyek_2025_2026.md).
 
 ---
 
