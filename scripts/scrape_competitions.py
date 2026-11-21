@@ -123,15 +123,21 @@ class Competition:
 def build_registry() -> List[Competition]:
     return [
         Competition(
-            id="neumann", name="22. Neumann János Programtermék Verseny", fee="",
+            id="neumann", name="23. Neumann János Programtermék Verseny", fee="",
             focus="Projektmunka (app, játék, grafika, CAD, animáció, hardver)",
-            age="Ált. és közép (21 év alatt)", type="Egyéni / csapat",
-            announce="szeptember–október", deadline="január–február",
-            event_date="Döntő: március vége (Szekszárd)",
+            age="Ált. és közép (a döntő kezdetéig, 2027.03.18-ig, 20 év alatt)", type="Egyéni / csapat",
+            announce="szeptember–október", deadline="2027. február 14.",
+            event_date="Előzsűri értesítés: 2027. febr. 22. / Döntő: 2027. márc. 18–19. (Szekszárd)",
             link="https://neumannverseny.hu",
-            check_urls=["https://neumannverseny.hu"],
-            extra_patterns=[r"23\.\s*Neumann"],
-            fallback_note="A honlapon még a 22. (2025/2026-os, már lezajlott) kiírás látszik.",
+            # A neumannverseny.hu maga csak egy "FIGYELEM!" jelzéssel az ibela.hu
+            # dokumentumtárára mutat — a tényleges kiírás ott jelenik meg először.
+            check_urls=["https://ibela.hu/neumann/dokumentumtar", "https://neumannverseny.hu"],
+            extra_patterns=[r"23\.\s*Neumann", r"Versenyfelhívás\s*2027", r"\b2027\b"],
+            fallback_note=(
+                "A 23. Neumann János verseny 2027. évi kiírása megjelent "
+                "(ibela.hu/neumann/dokumentumtar): nevezési határidő 2027. február 14., "
+                "döntő 2027. március 18–19. (Szekszárd)."
+            ),
         ),
         Competition(
             id="boronkay-8", name="Boronkay Informatika Verseny – 8. évfolyam", fee="",

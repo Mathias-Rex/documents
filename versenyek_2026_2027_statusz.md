@@ -2,11 +2,11 @@
 
 Automatikus ellenőrzés (scripts/scrape_competitions.py) — **2026. nov. 21.**.
 
-**9** versenynél már megjelent/elérhető az új tanévi kiírás, **6**-nál még a korábbi adatok érvényesek, **5** verseny státusza bizonytalan.
+**10** versenynél már megjelent/elérhető az új tanévi kiírás, **5**-nál még a korábbi adatok érvényesek, **5** verseny státusza bizonytalan.
 
 | Verseny | Státusz | Megjegyzés | Honlap |
 |---|---|---|---|
-| 22. Neumann János Programtermék Verseny | ❌ Még nincs | Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlapon még a 22. (2025/2026-os, már lezajlott) kiírás látszik. | https://neumannverseny.hu |
+| 23. Neumann János Programtermék Verseny | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://ibela.hu/neumann/dokumentumtar oldalon található „23. Neumann” jelzi a 2026/2027-es kiírást. | https://neumannverseny.hu |
 | Boronkay Informatika Verseny – 8. évfolyam | ❓ Bizonytalan | Automatikus ellenőrzés: egyik figyelt oldal sem volt elérhető (https://boronkay.vac.hu/informatika-verseny); a korábbi állapot megőrizve. Korábbi megjegyzés: A honlap korábban HTTP 503 hibát adott — nem volt élőben ellenőrizhető. | https://boronkay.vac.hu/informatika-verseny |
 | Boronkay Informatika Verseny – 5–7. évfolyam | ❓ Bizonytalan | Automatikus ellenőrzés: egyik figyelt oldal sem volt elérhető (https://boronkay.vac.hu/informatika-verseny); a korábbi állapot megőrizve. Korábbi megjegyzés: A honlap korábban HTTP 503 hibát adott — nem volt élőben ellenőrizhető. | https://boronkay.vac.hu/informatika-verseny |
 | ProSuli Robotika Verseny | ❌ Még nincs | Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap a 2026/2027 tanévi versenyt hirdette, de a konkrét dátumok még hiányoztak. | https://prosuli.hu/prosuli-robotika-verseny/ |

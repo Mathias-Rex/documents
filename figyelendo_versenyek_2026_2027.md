@@ -63,7 +63,7 @@ Az Informatika-Számítástechnika Tanárok Egyesületének verseny oldala. Inne
 
 | Verseny neve | 26/27? | Fókusz | Korosztály | Típus | Mikor jelenik meg a kiírás? | Nevezési határidő (tipikus / 26-27) | Verseny időpontja (tipikus / 26-27) | Link |
 |---|:---:|---|---|---|---|---|---|---|
-| 22. Neumann János Programtermék Verseny | ❌ | Projektmunka (app, játék, grafika, CAD, animáció, hardver) | Ált. és közép (21 év alatt) | Egyéni / csapat | **szeptember–október** | **január–február** | Döntő: **március vége** (Szekszárd) | https://neumannverseny.hu |
+| 23. Neumann János Programtermék Verseny | ✅ | Projektmunka (app, játék, grafika, CAD, animáció, hardver) | Ált. és közép (a döntő kezdetéig 20 év alatt) | Egyéni / csapat | **szeptember–október** | **2027. február 14.** | Előzsűri értesítés: **2027. febr. 22.** / Döntő: **2027. márc. 18–19.** (Szekszárd) | https://neumannverseny.hu |
 | Boronkay Informatika Verseny – 8. évfolyam | ❓ | Alkalmazói informatika (elmélet + szöveg, táblázat) | 8. osztály (alacsonyabb is indulhat) | Egyéni | **október eleje** | 1. ford.: **november közepe** / 2. ford.: **január eleje** | Döntő: **január vége** (Vác) | https://boronkay.vac.hu/informatika-verseny |
 | Boronkay Informatika Verseny – 5–7. évfolyam | ❓ | Alkalmazói informatika (elmélet + grafika, szöveg, prezentáció) | 5–7. osztály | Egyéni | **október közepe** | 1. ford.: **január vége** / 2. ford.: **április eleje** | Döntő: **április vége** (Vác) | https://boronkay.vac.hu/informatika-verseny |
 | ProSuli Robotika Verseny 💸 | ✅ | LEGO robotprogramozás (vonalkövetés, pályafeladatok) | Ált. és közép (amatőr / profi liga) | Csapat | **október** | 2026/27: **hamarosan** (a kiírás elindult) | Regionális: **február** / Döntő: **március** (Törökbálint) | https://prosuli.hu/prosuli-robotika-verseny |
@@ -88,7 +88,7 @@ Az Informatika-Számítástechnika Tanárok Egyesületének verseny oldala. Inne
 
 ---
 
-## 1. 22. Neumann János Kárpát-medencei Informatikai Programtermék Verseny
+## 1. 23. Neumann János Kárpát-medencei Informatikai Programtermék Verseny
 
 **Szervezők:** Szekszárdi I. Béla Gimnázium és Neumann János Számítógéptudományi Társaság
 
@@ -105,20 +105,21 @@ Az Informatika-Számítástechnika Tanárok Egyesületének verseny oldala. Inne
 
 ### Korosztály
 
-Általános és középiskolások, akik **2026. március 26-ig a 21. életévüket nem töltötték be**.
+Általános és középiskolások, akik **a döntő induló napjáig (2027. március 18-ig) a 20. életévüket nem töltötték be**.
 
 ### Fordulók
 
-- **Előzsűri (1. forduló):** A beérkező pályamunkákat független informatika tanárokból álló, iskolákból felkért zsűri értékeli. Döntőbe jutásról értesítés: **2026. február 28-ig**.
-- **Döntő (2. forduló):** 2026. március 26–27., Szekszárdi I. Béla Gimnázium. A döntőbe maximum 80 fő juthat be.
+- **Előzsűri (1. forduló):** A beérkező pályamunkákat független informatika tanárokból álló, iskolákból felkért zsűri értékeli. Döntőbe jutásról értesítés: **2027. február 22-ig**.
+- **Döntő (2. forduló):** 2027. március 18–19., Szekszárdi I. Béla Gimnázium. A döntőbe maximum 80 fő juthat be.
 
-> ❌ **2026.09.28-i ellenőrzés:** a honlapon még a 22. (2025/2026-os, már lezajlott) kiírás látszik, a 23. verseny 2026/2027-es kiírása még nem jelent meg.
+> ✅ **2026.11.21-i ellenőrzés:** megjelent a 23. verseny 2026/2027-es (azaz "2027. évi") kiírása — a versenyfelhívás és szabályzat az [ibela.hu/neumann/dokumentumtar](https://ibela.hu/neumann/dokumentumtar) oldalon érhető el (a neumannverseny.hu honlap csak egy "FIGYELEM!" jelzéssel mutat ide). A nevezés továbbra is a neumannverseny.hu oldalon történik.
 
 ### Jelentkezés
 
 - Online regisztráció: [https://neumannverseny.hu](https://neumannverseny.hu)
+- Versenyfelhívás és szabályzat: [ibela.hu/neumann/dokumentumtar](https://ibela.hu/neumann/dokumentumtar)
 - A nevezéshez **kötelező** egy max. 10 perces, a pályamunkát bemutató videó csatolása.
-- **Nevezési határidő: 2026. február 23. (éjfél) – meghosszabbítva** *(a 22. verseny határideje — a 23.-é még nincs meghirdetve)*
+- **Nevezési határidő: 2027. február 14. (24h)**
 
 ### Szabályok és feltételek
 

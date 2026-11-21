@@ -1,5 +1,5 @@
 // ⚠️ Ezt a fájlt a scripts/scrape_competitions.py generálja automatikusan — ne szerkeszd kézzel!
-// Generálva: 2026-11-21T20:03:56
+// Generálva: 2026-11-21T20:09:14
 //
 // Használat HTML-ből (klasszikus <script>, globál változóként):
 //   <script src="competitions-data.js"></script>
@@ -34,17 +34,17 @@ var COMPETITION_DATA = {
   "items": [
     {
       "id": "neumann",
-      "name": "22. Neumann János Programtermék Verseny",
-      "status": "no",
+      "name": "23. Neumann János Programtermék Verseny",
+      "status": "yes",
       "fee": "",
       "focus": "Projektmunka (app, játék, grafika, CAD, animáció, hardver)",
-      "age": "Ált. és közép (21 év alatt)",
+      "age": "Ált. és közép (a döntő kezdetéig, 2027.03.18-ig, 20 év alatt)",
       "type": "Egyéni / csapat",
       "announce": "szeptember–október",
-      "deadline": "január–február",
-      "eventDate": "Döntő: március vége (Szekszárd)",
+      "deadline": "2027. február 14.",
+      "eventDate": "Előzsűri értesítés: 2027. febr. 22. / Döntő: 2027. márc. 18–19. (Szekszárd)",
       "link": "https://neumannverseny.hu",
-      "note": "Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlapon még a 22. (2025/2026-os, már lezajlott) kiírás látszik."
+      "note": "Automatikus ellenőrzés: a(z) https://ibela.hu/neumann/dokumentumtar oldalon található „23. Neumann” jelzi a 2026/2027-es kiírást."
     },
     {
       "id": "boronkay-8",
