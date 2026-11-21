@@ -609,7 +609,7 @@ def render_data_js(competitions: List[Competition], checked_at: str) -> str:
         "// Haszn\u00e1lat Node/CommonJS-b\u0151l:\n"
         '//   const { COMPETITION_DATA } = require("./competitions-data.js");\n'
         "\n"
-        f"var COMPETITION_DATA = {body};\n"
+        f"const COMPETITION_DATA = {body};\n"
         "\n"
         'if (typeof module !== "undefined" && module.exports) {\n'
         "  module.exports = COMPETITION_DATA;\n"
