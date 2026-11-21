@@ -1,0 +1,193 @@
+/*
+  versenyek_2026_2027.html stíluslapja.
+  A createdomblocks@2.0.1 stíluslapjára épül (annak CSS-változóit és
+  osztályait egészíti ki / írja felül) — azt a HTML <head>-je tölti be
+  előbb, ebből a fájlból pedig csak az oldalra jellemző, saját szabályok
+  jönnek.
+*/
+:root {
+  --page-max-width: 1100px;
+}
+/* Sötét mód: rendszerbeállítás szerint, hacsak a felhasználó explicit nem állított be világosat */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #60a5fa;
+    --primary-hover: #3b82f6;
+    --secondary: #9ca3af;
+    --success: #4ade80;
+    --success-bg: #14532d;
+    --error: #f87171;
+    --error-bg: #450a0a;
+    --warning: #fbbf24;
+    --warning-bg: #451a03;
+    --info: #60a5fa;
+    --info-bg: #1e3a5f;
+    --neutral: #9ca3af;
+    --neutral-bg: #27272a;
+    --text: #f3f4f6;
+    --text-light: #9ca3af;
+    --border: #374151;
+    --bg: #1f2937;
+    --bg-alt: #111827;
+  }
+}
+/* Sötét mód: explicit felhasználói választás (a rendszerbeállítástól függetlenül) */
+:root[data-theme="dark"] {
+  --primary: #60a5fa;
+  --primary-hover: #3b82f6;
+  --secondary: #9ca3af;
+  --success: #4ade80;
+  --success-bg: #14532d;
+  --error: #f87171;
+  --error-bg: #450a0a;
+  --warning: #fbbf24;
+  --warning-bg: #451a03;
+  --info: #60a5fa;
+  --info-bg: #1e3a5f;
+  --neutral: #9ca3af;
+  --neutral-bg: #27272a;
+  --text: #f3f4f6;
+  --text-light: #9ca3af;
+  --border: #374151;
+  --bg: #1f2937;
+  --bg-alt: #111827;
+}
+/*
+  A createdomblocks könyvtár az alert/toast/badge success/error/warning/info
+  variánsainál NEM CSS-változóval, hanem fixen beégetett (csak világos
+  háttérhez tervezett, pl. #166534 sötétzöld) szövegszínt használ. Sötét
+  módban ez a sötét háttérszínen (--success-bg stb.) szinte olvashatatlan
+  (zöld-a-zöldön / kék-a-kéken) — ezért itt felülírjuk világosabb, megfelelő
+  kontrasztú szövegszínekre, ugyanazzal a kettős (media query + explicit
+  data-theme) mintával, mint a többi sötét mód szabály.
+*/
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .alert-success,
+  :root:not([data-theme="light"]) .toast-success,
+  :root:not([data-theme="light"]) .badge-success { color: #bbf7d0; }
+  :root:not([data-theme="light"]) .alert-error,
+  :root:not([data-theme="light"]) .toast-error,
+  :root:not([data-theme="light"]) .badge-error { color: #fecaca; }
+  :root:not([data-theme="light"]) .alert-warning,
+  :root:not([data-theme="light"]) .toast-warning,
+  :root:not([data-theme="light"]) .badge-warning { color: #fde68a; }
+  :root:not([data-theme="light"]) .alert-info,
+  :root:not([data-theme="light"]) .toast-info,
+  :root:not([data-theme="light"]) .badge-info,
+  :root:not([data-theme="light"]) .badge { color: #bfdbfe; }
+}
+:root[data-theme="dark"] .alert-success,
+:root[data-theme="dark"] .toast-success,
+:root[data-theme="dark"] .badge-success { color: #bbf7d0; }
+:root[data-theme="dark"] .alert-error,
+:root[data-theme="dark"] .toast-error,
+:root[data-theme="dark"] .badge-error { color: #fecaca; }
+:root[data-theme="dark"] .alert-warning,
+:root[data-theme="dark"] .toast-warning,
+:root[data-theme="dark"] .badge-warning { color: #fde68a; }
+:root[data-theme="dark"] .alert-info,
+:root[data-theme="dark"] .toast-info,
+:root[data-theme="dark"] .badge-info,
+:root[data-theme="dark"] .badge { color: #bfdbfe; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg-alt);
+  color: var(--text);
+}
+/*
+  A createDOMBlocks createContainer()-je a "container" ÉS a "page" osztályt is
+  ráteszi ugyanarra az elemre. A könyvtár .container szabálya adna 1rem oldalsó
+  paddingot, de mivel ez a .page szabály azonos specificitású és később töltődik
+  be, teljesen felülírta azt — emiatt mobil nézetben a tartalom a képernyő
+  szélét érintette. Explicit oldalsó paddingot adunk, mobilon kicsivel kisebbet.
+*/
+.page { padding: 2rem 1rem 4rem; }
+@media (max-width: 480px) {
+  .page { padding: 1.5rem 0.75rem 3rem; }
+}
+.header-bar { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.header-text { flex: 1 1 auto; min-width: 0; }
+#theme-toggle { flex: 0 0 auto; white-space: nowrap; }
+.subtitle { color: var(--text-light); margin-top: -0.5rem; }
+.meta-line { color: var(--text-light); font-size: 0.9rem; }
+/* Az alert alapból vízszintesen (cím | üzenet, 2 oszlopban) rendezi a tartalmát
+   (flex, gap) — itt egymás alá (2 sorba) tesszük a címet és az üzenetet. */
+#status-alert { flex-direction: column; align-items: stretch; gap: 0.25rem; }
+.legend-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.75rem 0 1.25rem; font-size: 0.9rem; color: var(--text-light); }
+.legend-row span.legend-item { display: inline-flex; align-items: center; gap: 0.35rem; }
+.filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
+/*
+  A createdomblocks könyvtár a .btn-hez alapból nem ad háttér- vagy
+  szövegszínt (csak :hover-re), így a böngésző natív gombstílusára hagyatkozik
+  — ez sötét módban rossz kontrasztot adhat. Explicit, téma-tudatos alapstílust
+  adunk minden gombnak.
+*/
+.btn { background-color: var(--bg); color: var(--text); border: 1px solid var(--border); }
+.filter-bar .btn.active {
+  background-color: var(--primary-hover);
+  color: #ffffff;
+  border-color: var(--primary-hover);
+  box-shadow: var(--shadow-md);
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+#competition-grid { align-items: start; }
+@media (max-width: 680px) {
+  #competition-grid { grid-template-columns: 1fr !important; }
+}
+.comp-card { border-left: 5px solid var(--border); transition: box-shadow 0.2s ease; }
+.comp-card[data-status="yes"] { border-left-color: var(--success); }
+.comp-card[data-status="no"] { border-left-color: var(--error); }
+.comp-card[data-status="unsure"] { border-left-color: var(--warning); }
+.comp-card.is-hidden { display: none; }
+/* Lejárt határidejű versenyek: halványított, szürkített megjelenés, de nem elrejtve (azt a kapcsoló dönti el). */
+.comp-card.is-expired { filter: grayscale(0.85) opacity(0.65); }
+.comp-card.is-expired:hover { filter: grayscale(0.5) opacity(0.85); }
+.expired-toggle-row { margin: -0.5rem 0 1.25rem; font-size: 0.9rem; }
+/* A könyvtár .checkbox-input-je alapból oszlopba (label fölé, input alá) rendez —
+   egy jelölőnégyzetnél ehelyett egy sorban, egymás mellett akarjuk a kettőt. */
+.expired-toggle-row .checkbox-input { flex-direction: row; align-items: center; gap: 0.5rem; margin-bottom: 0; }
+.expired-toggle-row label { color: var(--text-light); cursor: pointer; font-weight: 400 !important; }
+.expired-toggle-row input[type="checkbox"] { cursor: pointer; width: 1.1rem; height: 1.1rem; }
+.comp-meta .badge { margin-bottom: 0.75rem; margin-right: 0.4rem; }
+.comp-countdown { font-size: 0.85rem; font-weight: 600; margin: 0.4rem 0 0; color: var(--text-light); }
+
+/* --- Idővonal --- */
+.timeline-section { margin: 0.5rem 0 2rem; }
+.timeline-hint { font-size: 0.85rem; color: var(--text-light); margin: 0 0 0.75rem; }
+.timeline { position: relative; margin: 0; padding: 0 0 0 1.25rem; border-left: 2px solid var(--border); }
+.timeline-item {
+  position: relative; display: flex; align-items: baseline; gap: 0.75rem;
+  flex-wrap: wrap; padding: 0.4rem 0; font-size: 0.92rem;
+}
+.timeline-item::before {
+  content: ""; position: absolute; left: -1.5rem; top: 0.85rem;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--border); border: 2px solid var(--bg);
+}
+.timeline-item[data-status="yes"]::before { background: var(--success); }
+.timeline-item[data-status="no"]::before { background: var(--error); }
+.timeline-item[data-status="unsure"]::before { background: var(--warning); }
+.timeline-item.is-expired-entry { opacity: 0.55; }
+.timeline-date { flex: 0 0 auto; min-width: 6rem; font-weight: 600; color: var(--text-light); }
+.timeline-name { flex: 1 1 240px; }
+.timeline-today {
+  position: relative; display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 0; margin: 0.2rem 0; font-weight: 700; color: var(--primary);
+}
+.timeline-today::before {
+  content: ""; position: absolute; left: -1.5rem; top: 50%; transform: translateY(-50%);
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--primary); border: 3px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--primary);
+}
+.comp-fields { margin: 0 0 0.75rem; }
+.comp-row { display: flex; gap: 0.75rem; padding: 0.3rem 0; border-bottom: 1px dashed var(--border); font-size: 0.92rem; }
+.comp-row:last-child { border-bottom: none; }
+.comp-row dt { flex: 0 0 40%; margin: 0; color: var(--text-light); font-weight: 600; }
+.comp-row dd { margin: 0; flex: 1; }
+.comp-note { font-size: 0.85rem; color: var(--text-light); font-style: italic; margin: 0.5rem 0 0; }
+.comp-link { display: inline-block; margin-top: 0.6rem; font-weight: 600; }
+footer.page-footer { margin-top: 2rem; font-size: 0.85rem; color: var(--text-light); }
+footer.page-footer a { color: inherit; }
