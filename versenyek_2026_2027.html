@@ -118,12 +118,14 @@
   @media (max-width: 480px) {
     .page { padding: 1.5rem 0.75rem 3rem; }
   }
-  .header-bar { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .header-bar { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
   .header-text { flex: 1 1 auto; min-width: 0; }
   #theme-toggle { flex: 0 0 auto; white-space: nowrap; }
   .subtitle { color: var(--text-light); margin-top: -0.5rem; }
   .meta-line { color: var(--text-light); font-size: 0.9rem; }
-  .stats-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
+  /* Az alert alapból vízszintesen (cím | üzenet, 2 oszlopban) rendezi a tartalmát
+     (flex, gap) — itt egymás alá (2 sorba) tesszük a címet és az üzenetet. */
+  #status-alert { flex-direction: column; align-items: stretch; gap: 0.25rem; }
   .legend-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.75rem 0 1.25rem; font-size: 0.9rem; color: var(--text-light); }
   .legend-row span.legend-item { display: inline-flex; align-items: center; gap: 0.35rem; }
   .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
@@ -217,6 +219,23 @@
       return theme === "dark" ? "☀️ Világos mód" : "🌙 Sötét mód";
     }
 
+    // --- szűrő / kapcsoló állapot megjegyzése ---
+    var FILTER_STATE_KEY = "versenyek-filter-state";
+
+    function getStoredFilterState() {
+      try {
+        var raw = localStorage.getItem(FILTER_STATE_KEY);
+        if (!raw) { return null; }
+        var parsed = JSON.parse(raw);
+        return parsed && typeof parsed === "object" ? parsed : null;
+      } catch (e) { return null; }
+    }
+
+    function setStoredFilterState(state) {
+      try { localStorage.setItem(FILTER_STATE_KEY, JSON.stringify(state)); }
+      catch (e) { /* localStorage nem elérhető */ }
+    }
+
     // --- határidő-számítás és rendezés a mai dátumhoz képest ---
     function daysUntilDeadline(deadlineDate) {
       if (!deadlineDate) { return null; }
@@ -304,25 +323,21 @@
 
       CDB.createDivider({ parent: page, id: "divider-1" });
 
-      // --- statisztika a data.items alapján kiszámolva ---
+      // --- statisztika a data.items alapján kiszámolva (a szűrőgombok feliratain jelenik meg) ---
       var counts = { yes: 0, no: 0, unsure: 0 };
       data.items.forEach(function (item) { counts[item.status]++; });
 
-      var statsRow = createDOMElem({ tag: "div", attrs: { class: "stats-row" }, parent: page });
-      CDB.createBadge({ parent: statsRow, id: "stat-total", text: "Összesen: " + data.items.length + " verseny", type: "neutral" });
-      Object.keys(data.statusLegend).forEach(function (key) {
-        var l = data.statusLegend[key];
-        CDB.createBadge({
-          parent: statsRow, id: "stat-" + key,
-          text: l.icon + " " + l.shortLabel + ": " + counts[key],
-          type: l.badgeType
-        });
-      });
-
-      // --- szűrő gombsor ---
+      // --- szűrő gombsor (a kezdeti állapotot a localStorage-ból töltjük vissza) ---
+      var storedFilterState = getStoredFilterState();
       var filterBar = createDOMElem({ tag: "div", attrs: { class: "filter-bar" }, parent: page });
-      var currentFilterKey = "all";
-      var showExpired = true;
+      var currentFilterKey = (storedFilterState && storedFilterState.filterKey) || "all";
+      var showExpired = storedFilterState && typeof storedFilterState.showExpired === "boolean"
+        ? storedFilterState.showExpired
+        : true;
+
+      function persistFilterState() {
+        setStoredFilterState({ filterKey: currentFilterKey, showExpired: showExpired });
+      }
 
       function updateVisibility() {
         var cards = document.querySelectorAll("#competition-grid .comp-card");
@@ -342,9 +357,10 @@
           btn.classList.toggle("active", btn.id === "filter-" + key);
         });
         updateVisibility();
+        persistFilterState();
       }
 
-      var allBtn = CDB.createButton({
+      CDB.createButton({
         parent: filterBar, id: "filter-all", text: "Összes (" + data.items.length + ")",
         click: function () { applyFilter("all"); }
       });
@@ -362,7 +378,11 @@
         text: "📝 Neveztünk (" + registeredCount + ")",
         click: function () { applyFilter("registered"); }
       });
-      allBtn.classList.add("active");
+      // Ha a mentett szűrő időközben érvénytelenné vált (pl. régi adat), essünk vissza "all"-ra.
+      if (!document.getElementById("filter-" + currentFilterKey)) { currentFilterKey = "all"; }
+      filterBar.querySelectorAll(".btn").forEach(function (btn) {
+        btn.classList.toggle("active", btn.id === "filter-" + currentFilterKey);
+      });
 
       // --- "lejárt határidejűek mutatása" kapcsoló ---
       var expiredToggleRow = createDOMElem({ tag: "div", attrs: { class: "expired-toggle-row" }, parent: page });
@@ -370,10 +390,11 @@
         parent: expiredToggleRow, id: "show-expired-toggle",
         labelText: "Lejárt határidejű versenyek mutatása (szürkítve)",
         labelfirst: false,
-        checked: true,
+        checked: showExpired,
         onChange: function (e) {
           showExpired = e.target.checked;
           updateVisibility();
+          persistFilterState();
         }
       });
 
@@ -383,6 +404,9 @@
       sortItemsByDeadline(data.items).forEach(function (item) {
         renderCard(grid, item, data.statusLegend[item.status]);
       });
+      // A mentett szűrő/kapcsoló állapotot csak most tudjuk érvényesíteni, miután
+      // a kártyák ténylegesen létrejöttek a DOM-ban.
+      updateVisibility();
 
       CDB.createDivider({ parent: page, id: "divider-2" });
 
