@@ -123,6 +123,9 @@
   #theme-toggle { flex: 0 0 auto; white-space: nowrap; }
   .subtitle { color: var(--text-light); margin-top: -0.5rem; }
   .meta-line { color: var(--text-light); font-size: 0.9rem; }
+  /* Az alert alapból vízszintesen (cím | üzenet, 2 oszlopban) rendezi a tartalmát
+     (flex, gap) — itt egymás alá (2 sorba) tesszük a címet és az üzenetet. */
+  #status-alert { flex-direction: column; align-items: stretch; gap: 0.25rem; }
   .stats-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
   .legend-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.75rem 0 1.25rem; font-size: 0.9rem; color: var(--text-light); }
   .legend-row span.legend-item { display: inline-flex; align-items: center; gap: 0.35rem; }
