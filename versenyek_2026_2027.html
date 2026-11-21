@@ -431,6 +431,7 @@
       // A kártya belső tartalmát közvetlenül DOMElemJS.createDOMElem-mel építjük fel
       // (append: false — csak a createCard() kapja meg a végén, body-ként).
       var metaWrap = createDOMElem({ tag: "div", attrs: { class: "comp-meta" }, append: false });
+      var days = daysUntilDeadline(item.deadlineDate);
 
       CDB.createBadge({
         parent: metaWrap, id: "badge-" + item.id,
@@ -438,9 +439,15 @@
         type: legend.badgeType
       });
       if (item.registered) {
+        // A határidő lejárta választja el a két állapotot: ha már lejárt, a
+        // nevezés biztosan megtörtént ("Neveztünk"); ha még nem (vagy a
+        // határidő ismeretlen/folyamatos), még csak szándékunkban áll
+        // ("Jelentkezünk").
+        var hasEntered = days !== null && days < 0;
         CDB.createBadge({
           parent: metaWrap, id: "badge-registered-" + item.id,
-          text: "📝 Neveztünk", type: "info"
+          text: hasEntered ? "✔️ Neveztünk" : "📝 Jelentkezünk",
+          type: hasEntered ? "success" : "info"
         });
       }
 
@@ -466,7 +473,6 @@
         })
       });
 
-      var days = daysUntilDeadline(item.deadlineDate);
       var countdown = countdownText(days);
       if (countdown) {
         CDB.createParagraph({ parent: metaWrap, id: "countdown-" + item.id, text: countdown, class: "comp-countdown" });
