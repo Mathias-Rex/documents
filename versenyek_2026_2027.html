@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Magyarországi Informatikai és Programozó Versenyek 2026/2027</title>
+<script>
+  // Mentett téma visszaállítása minél korábban, hogy ne villanjon fel a rossz téma.
+  (function () {
+    try {
+      var saved = localStorage.getItem("versenyek-theme");
+      if (saved === "light" || saved === "dark") {
+        document.documentElement.setAttribute("data-theme", saved);
+      }
+    } catch (e) { /* localStorage nem elérhető (pl. privát böngészés) */ }
+  })();
+</script>
+<link rel="stylesheet" href="https://unpkg.com/createdomblocks@2.0.1/dist/style.css" />
+<style>
+  :root {
+    --page-max-width: 1100px;
+  }
+  /* Sötét mód: rendszerbeállítás szerint, hacsak a felhasználó explicit nem állított be világosat */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --primary: #60a5fa;
+      --primary-hover: #3b82f6;
+      --secondary: #9ca3af;
+      --success: #4ade80;
+      --success-bg: #14532d;
+      --error: #f87171;
+      --error-bg: #450a0a;
+      --warning: #fbbf24;
+      --warning-bg: #451a03;
+      --info: #60a5fa;
+      --info-bg: #1e3a5f;
+      --neutral: #9ca3af;
+      --neutral-bg: #27272a;
+      --text: #f3f4f6;
+      --text-light: #9ca3af;
+      --border: #374151;
+      --bg: #1f2937;
+      --bg-alt: #111827;
+    }
+  }
+  /* Sötét mód: explicit felhasználói választás (a rendszerbeállítástól függetlenül) */
+  :root[data-theme="dark"] {
+    --primary: #60a5fa;
+    --primary-hover: #3b82f6;
+    --secondary: #9ca3af;
+    --success: #4ade80;
+    --success-bg: #14532d;
+    --error: #f87171;
+    --error-bg: #450a0a;
+    --warning: #fbbf24;
+    --warning-bg: #451a03;
+    --info: #60a5fa;
+    --info-bg: #1e3a5f;
+    --neutral: #9ca3af;
+    --neutral-bg: #27272a;
+    --text: #f3f4f6;
+    --text-light: #9ca3af;
+    --border: #374151;
+    --bg: #1f2937;
+    --bg-alt: #111827;
+  }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-alt);
+    color: var(--text);
+  }
+  .page { padding: 2rem 0 4rem; }
+  .header-bar { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .header-text { flex: 1 1 auto; min-width: 0; }
+  #theme-toggle { flex: 0 0 auto; white-space: nowrap; }
+  .subtitle { color: var(--text-light); margin-top: -0.5rem; }
+  .meta-line { color: var(--text-light); font-size: 0.9rem; }
+  .stats-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
+  .legend-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.75rem 0 1.25rem; font-size: 0.9rem; color: var(--text-light); }
+  .legend-row span.legend-item { display: inline-flex; align-items: center; gap: 0.35rem; }
+  .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
+  .filter-bar .btn.active { background-color: var(--primary-hover); box-shadow: var(--shadow-md); outline: 2px solid var(--primary); outline-offset: 1px; }
+  #competition-grid { align-items: start; }
+  @media (max-width: 680px) {
+    #competition-grid { grid-template-columns: 1fr !important; }
+  }
+  .comp-card { border-left: 5px solid var(--border); transition: box-shadow 0.2s ease; }
+  .comp-card[data-status="yes"] { border-left-color: var(--success); }
+  .comp-card[data-status="no"] { border-left-color: var(--error); }
+  .comp-card[data-status="unsure"] { border-left-color: var(--warning); }
+  .comp-card.is-hidden { display: none; }
+  .comp-meta .badge { margin-bottom: 0.75rem; }
+  .comp-fields { margin: 0 0 0.75rem; }
+  .comp-row { display: flex; gap: 0.75rem; padding: 0.3rem 0; border-bottom: 1px dashed var(--border); font-size: 0.92rem; }
+  .comp-row:last-child { border-bottom: none; }
+  .comp-row dt { flex: 0 0 40%; margin: 0; color: var(--text-light); font-weight: 600; }
+  .comp-row dd { margin: 0; flex: 1; }
+  .comp-note { font-size: 0.85rem; color: var(--text-light); font-style: italic; margin: 0.5rem 0 0; }
+  .comp-link { display: inline-block; margin-top: 0.6rem; font-weight: 600; }
+  footer.page-footer { margin-top: 2rem; font-size: 0.85rem; color: var(--text-light); }
+  footer.page-footer a { color: inherit; }
+</style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="https://unpkg.com/domelemjs@2.0.1/dist/index.browser.js"></script>
+  <script src="https://unpkg.com/createdomblocks@2.0.1/dist/index.js"></script>
+  <!--
+    EGYETLEN ADATFORRÁS — a teljes oldal a COMPETITION_DATA objektumból épül fel,
+    amit a scripts/scrape_competitions.py generál. Ne szerkeszd kézzel a
+    competitions-data.js-t — futtasd újra a scrapert helyette.
+  -->
+  <script src="competitions-data.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    // ======================================================================
+    // RENDERELÉS — DOMelemJS (DOMElemJS.createDOMElem) + createDOMBlocks
+    // (CreateDOMBlocks.*) segítségével, kizárólag a fenti adatobjektumból.
+    // ======================================================================
+    var createDOMElem = DOMElemJS.createDOMElem;
+    var CDB = CreateDOMBlocks;
+    var THEME_KEY = "versenyek-theme";
+
+    // --- világos / sötét mód kezelése ---
+    function getStoredTheme() {
+      try { return localStorage.getItem(THEME_KEY); } catch (e) { return null; }
+    }
+    function setStoredTheme(theme) {
+      try {
+        if (theme) { localStorage.setItem(THEME_KEY, theme); }
+        else { localStorage.removeItem(THEME_KEY); }
+      } catch (e) { /* localStorage nem elérhető */ }
+    }
+    function getEffectiveTheme() {
+      var stored = getStoredTheme();
+      if (stored === "light" || stored === "dark") { return stored; }
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+    }
+    function themeButtonLabel(theme) {
+      return theme === "dark" ? "☀️ Világos mód" : "🌙 Sötét mód";
+    }
+
+    function renderPage(data) {
+      var page = CDB.createContainer({ parent: "#app", id: "page", class: "page" });
+
+      var headerBar = createDOMElem({ tag: "div", attrs: { class: "header-bar" }, parent: page });
+      var headerText = createDOMElem({ tag: "div", attrs: { class: "header-text" }, parent: headerBar });
+
+      CDB.createTitle({ parent: headerText, id: "page-title", text: "Magyarországi Informatikai és Programozó Versenyek" }, 1);
+      CDB.createTitle({ parent: headerText, id: "page-subtitle", text: data.schoolYear + "-es tanév", class: "subtitle" }, 2);
+      createDOMElem({
+        tag: "p", parent: headerText, attrs: { class: "meta-line" },
+        text: "Adatvezérelt áttekintő — egyetlen JavaScript objektumból renderelve, DOMelemJS + createDOMBlocks segítségével."
+      });
+
+      var themeBtn = CDB.createButton({
+        parent: headerBar, id: "theme-toggle",
+        text: themeButtonLabel(getEffectiveTheme()),
+        click: function () {
+          var next = getEffectiveTheme() === "dark" ? "light" : "dark";
+          applyTheme(next);
+          setStoredTheme(next);
+          themeBtn.textContent = themeButtonLabel(next);
+        }
+      });
+      // Amíg a felhasználó nem választott explicit témát, kövessük élőben a
+      // rendszer világos/sötét beállításának változását is (csak a gomb feliratán).
+      if (window.matchMedia) {
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
+          if (!getStoredTheme()) { themeBtn.textContent = themeButtonLabel(getEffectiveTheme()); }
+        });
+      }
+
+      CDB.createAlert({
+        parent: page, id: "status-alert", type: "info",
+        title: "Utolsó ellenőrzés: " + data.statusCheckedAt,
+        message: "A státuszok a versenyek hivatalos honlapjainak automatizált, webes ellenőrzésén alapulnak. Ahol még nincs 2026/27-es kiírás, ott a legutóbb ismert adatok láthatók."
+      });
+
+      // --- jelmagyarázat, a statusLegend objektumból felépítve ---
+      var legendRow = createDOMElem({ tag: "div", attrs: { class: "legend-row" }, parent: page });
+      Object.keys(data.statusLegend).forEach(function (key) {
+        var l = data.statusLegend[key];
+        createDOMElem({
+          tag: "span", parent: legendRow, attrs: { class: "legend-item" },
+          children: [
+            { tag: "span", text: l.icon },
+            { tag: "span", text: l.label }
+          ]
+        });
+      });
+
+      CDB.createDivider({ parent: page, id: "divider-1" });
+
+      // --- statisztika a data.items alapján kiszámolva ---
+      var counts = { yes: 0, no: 0, unsure: 0 };
+      data.items.forEach(function (item) { counts[item.status]++; });
+
+      var statsRow = createDOMElem({ tag: "div", attrs: { class: "stats-row" }, parent: page });
+      CDB.createBadge({ parent: statsRow, id: "stat-total", text: "Összesen: " + data.items.length + " verseny", type: "neutral" });
+      Object.keys(data.statusLegend).forEach(function (key) {
+        var l = data.statusLegend[key];
+        CDB.createBadge({
+          parent: statsRow, id: "stat-" + key,
+          text: l.icon + " " + l.shortLabel + ": " + counts[key],
+          type: l.badgeType
+        });
+      });
+
+      // --- szűrő gombsor ---
+      var filterBar = createDOMElem({ tag: "div", attrs: { class: "filter-bar" }, parent: page });
+
+      function applyFilter(key) {
+        var cards = document.querySelectorAll("#competition-grid .comp-card");
+        cards.forEach(function (card) {
+          var show = key === "all" || card.dataset.status === key;
+          card.classList.toggle("is-hidden", !show);
+        });
+        filterBar.querySelectorAll(".btn").forEach(function (btn) {
+          btn.classList.toggle("active", btn.id === "filter-" + key);
+        });
+      }
+
+      var allBtn = CDB.createButton({
+        parent: filterBar, id: "filter-all", text: "Összes (" + data.items.length + ")",
+        click: function () { applyFilter("all"); }
+      });
+      Object.keys(data.statusLegend).forEach(function (key) {
+        var l = data.statusLegend[key];
+        CDB.createButton({
+          parent: filterBar, id: "filter-" + key,
+          text: l.icon + " " + l.shortLabel + " (" + counts[key] + ")",
+          click: function () { applyFilter(key); }
+        });
+      });
+      allBtn.classList.add("active");
+
+      // --- verseny-kártyák rácsa ---
+      var grid = CDB.createGrid({ parent: page, id: "competition-grid", class: "competition-grid", columns: 2, gap: "1.25rem" });
+
+      data.items.forEach(function (item) {
+        renderCard(grid, item, data.statusLegend[item.status]);
+      });
+
+      CDB.createDivider({ parent: page, id: "divider-2" });
+
+      createDOMElem({
+        tag: "footer", parent: page, attrs: { class: "page-footer" },
+        children: [
+          {
+            tag: "p",
+            children: [
+              { tag: "span", text: "Forrás és teljes ellenőrzési jegyzőkönyv: " },
+              { tag: "a", text: "figyelendo_versenyek_2026_2027.md", attrs: { href: "./figyelendo_versenyek_2026_2027.md" } },
+              { tag: "span", text: " · " },
+              { tag: "a", text: "versenyek_2026_2027_statusz.md", attrs: { href: "./versenyek_2026_2027_statusz.md" } }
+            ]
+          },
+          { tag: "p", text: "Renderelve: DOMelemJS (createDOMElem) + createDOMBlocks (createdomblocks) — a competitions-data.js-ből importált egyetlen JS adatobjektumból. Az adatokat a scripts/scrape_competitions.py scraper generálja." }
+        ]
+      });
+    }
+
+    function renderCard(grid, item, legend) {
+      // A kártya belső tartalmát közvetlenül DOMElemJS.createDOMElem-mel építjük fel
+      // (append: false — csak a createCard() kapja meg a végén, body-ként).
+      var metaWrap = createDOMElem({ tag: "div", attrs: { class: "comp-meta" }, append: false });
+
+      CDB.createBadge({
+        parent: metaWrap, id: "badge-" + item.id,
+        text: legend.icon + " " + legend.shortLabel,
+        type: legend.badgeType
+      });
+
+      var fields = [
+        { label: "Fókusz", value: item.focus },
+        { label: "Korosztály", value: item.age },
+        { label: "Típus", value: item.type },
+        { label: "Kiírás megjelenése", value: item.announce },
+        { label: "Nevezési határidő", value: item.deadline },
+        { label: "Verseny időpontja", value: item.eventDate }
+      ];
+
+      createDOMElem({
+        tag: "dl", parent: metaWrap, attrs: { class: "comp-fields" },
+        children: fields.map(function (f) {
+          return {
+            tag: "div", attrs: { class: "comp-row" },
+            children: [
+              { tag: "dt", text: f.label },
+              { tag: "dd", text: f.value }
+            ]
+          };
+        })
+      });
+
+      CDB.createParagraph({ parent: metaWrap, id: "note-" + item.id, text: item.note, class: "comp-note" });
+      CDB.createLink({ parent: metaWrap, id: "link-" + item.id, text: "Hivatalos oldal →", href: item.link, target: "_blank" });
+
+      var titleText = (item.fee ? item.fee + " " : "") + item.name;
+      var card = CDB.createCard({
+        parent: grid, id: "card-" + item.id, class: "comp-card",
+        title: titleText,
+        body: metaWrap
+      });
+      card.dataset.status = item.status;
+    }
+
+    renderPage(COMPETITION_DATA);
+  })();
+  </script>
+</body>
+</html>
