@@ -34,6 +34,12 @@ jobs:
         with:
           path: "."
 
+      # A frissen feltöltött artifact néha nem azonnal látható a Pages API-ban
+      # (race condition) — enélkül a deploy-pages@v4 lépés "No artifacts named
+      # github-pages were found" hibával elszáll, pedig a feltöltés sikeres volt.
+      - name: Wait for artifact to become queryable
+        run: sleep 15
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
