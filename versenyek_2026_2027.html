@@ -107,7 +107,17 @@
     background: var(--bg-alt);
     color: var(--text);
   }
-  .page { padding: 2rem 0 4rem; }
+  /*
+    A createDOMBlocks createContainer()-je a "container" ÉS a "page" osztályt is
+    ráteszi ugyanarra az elemre. A könyvtár .container szabálya adna 1rem oldalsó
+    paddingot, de mivel ez a .page szabály azonos specificitású és később töltődik
+    be, teljesen felülírta azt — emiatt mobil nézetben a tartalom a képernyő
+    szélét érintette. Explicit oldalsó paddingot adunk, mobilon kicsivel kisebbet.
+  */
+  .page { padding: 2rem 1rem 4rem; }
+  @media (max-width: 480px) {
+    .page { padding: 1.5rem 0.75rem 3rem; }
+  }
   .header-bar { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
   .header-text { flex: 1 1 auto; min-width: 0; }
   #theme-toggle { flex: 0 0 auto; white-space: nowrap; }
