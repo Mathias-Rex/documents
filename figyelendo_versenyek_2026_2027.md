@@ -3,7 +3,7 @@
 Összefoglaló dokumentum általános és középiskolás diákok számára.
 [Google docs változat](https://docs.google.com/document/d/1hVRwHp8279BW64YBcdPLrAq3KJQY9iusTN2f7KaYlrQ/edit?usp=sharing)
 
-> 🔄 **Utolsó ellenőrzés: 2026. szeptember 28.** A dokumentumot frissítettük a 2026/2027-es tanévre: ahol már megjelent a friss kiírás, ott az új dátumok/linkek szerepelnek; ahol még nem, ott a legutóbb ismert (2025/26-os) adatok láthatók egy megjegyzéssel. A részletes, versenyenkénti ellenőrzési jegyzőkönyv a [`versenyek_2026_2027_statusz.md`](./versenyek_2026_2027_statusz.md) fájlban található. A tavalyi (2025/26-os) állapot változatlanul megtalálható itt: [`figyelendo_versenyek_2025_2026.md`](./figyelendo_versenyek_2025_2026.md).
+> 🔄 **Utolsó ellenőrzés: 2026. november 21.** (első kör: 2026. szeptember 28.) A dokumentumot frissítettük a 2026/2027-es tanévre: ahol már megjelent a friss kiírás, ott az új dátumok/linkek szerepelnek; ahol még nem, ott a legutóbb ismert (2025/26-os) adatok láthatók egy megjegyzéssel. A részletes, versenyenkénti ellenőrzési jegyzőkönyv a [`versenyek_2026_2027_statusz.md`](./versenyek_2026_2027_statusz.md) fájlban található (ezt mostantól a [`scripts/scrape_competitions.py`](./scripts/scrape_competitions.py) scraper generálja újrafuttatható módon). A tavalyi (2025/26-os) állapot változatlanul megtalálható itt: [`figyelendo_versenyek_2025_2026.md`](./figyelendo_versenyek_2025_2026.md).
 
 ---
 
@@ -79,10 +79,11 @@ Az Informatika-Számítástechnika Tanárok Egyesületének verseny oldala. Inne
 | Code Week Hungary | ✅ | Kódolás, algoritmikus gondolkodás (nem klasszikus verseny, iskolai esemény) | Minden korosztály | Egyéni / csapat | **szeptember** | Eseményregisztráció folyamatos | **2026. október 10–25.** (14. Code Week) | https://www.codeweekhungary.hu |
 | Kozma László Alkalmazói Tanulmányi Verseny | ✅ | Alkalmazói informatika (grafika, szöveg, prezentáció, táblázat) | 5–10. évfolyam (2 korcsoport) | Páros / csapat | **szeptember–október** | **2026. október 16.** (XXV. verseny) | 2 forduló: iskolai → Döntő: **május** (Százhalombatta) | https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/ |
 | Dusza Árpád Országos Programozói Emlékverseny | ✅ | Programozás (hagyományos / web / mobilprogramozás) | 9–13. évfolyam (középiskola) | Egyéni | **szeptember–október** | **október–november** (2026/27-es felhívás elérhető) | Regionális: **január–február** / Döntő: **március–április** | https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/ |
-| Radnóti Hack&CODE Informatikai Verseny | ❓ | Programozás + robotika + projekt (AI, webfejlesztés, szabadulószoba, csapatmunka) | 7–8. évfolyam | Csapat (2–4 fő) | **október** | ⚠️ nincs nyoma a versenynek az átalakult honlapon – lásd megjegyzés lent | — | http://www.radnoti-pecs.hu |
+| Radnóti HACK & CODE Informatikai Verseny | ✅ | Programozás (Scratch) + logika + projekt (idei téma: „A bolygóért” – globális felmelegedés, szabadulószoba, csapatmunka) | 7–8. évfolyam | Csapat (2–4 fő) | **október** | **2026. november 6.** | I. forduló (online): **2026. nov. 16. – dec. 11.** / II. forduló (Pécs): **2027. jan. 8.** / III. forduló (döntő): **2027. febr. 5.** | http://www.radnoti-pecs.hu |
 | Nemes Tihamér Alkalmazói Tanulmányi Verseny | ✅ | Alkalmazói informatika (irodai szoftverek, weblapkészítés) | 7–10. évfolyam | Egyéni | **november–december** | **2026. december 20.** | Iskolai forduló: **2027. jan. 6.** / Országos: **2027. márc. 20.** / Díjátadó: **2027. máj. 6.** (ELTE IK) | https://versenyportal.hu/nemesa/nemesa_aktualis.html |
 | ROCS – Robotprogramozó Csapatverseny | ❌ | LEGO robotprogramozás (vonalkövetés, akadálypálya) | 5–8. évfolyam (3 korcsoport) | Csapat (2–3 fő) | **november–december** | **január–február** | Regionális: **február–március** / Döntő: **április** (Kecskemét) | http://robotprog.hu/ |
 | Kovács Mihály Országos Grafikus Programozási Verseny | ✅ | Grafikus programozás (teknőcgrafika, animáció, rekurzió – Scratch / Logo / Python) | 3–12. évfolyam (4 korcsoport: K1–K4) | Egyéni | **november–december** | **2027. február 16.** | Iskolai forduló: **2027. febr. 17.** / Országos: **2027. ápr. 10.** / Eredményhirdetés: **2027 május** (ELTE IK) | https://versenyportal.hu/logo/logo_aktualis.html |
+| Árpád-kupa (Pécsi Árpád Fejedelem Gimnázium) | ✅ *(új)* | Digitális kultúra verseny (matematikai/logikai feladatok, grafika, szövegszerkesztés, prezentáció, táblázatkezelés, micro:bit programozás) | 7–8. évfolyam | Csapat (2 fő) | **október** | **2026. november 20.** (éjfél) | 1. beadandó: **2026. dec. 19.** / 2. beadandó: **2027. febr. 19.** / Döntő: **2027. ápr. 6., 14:00** (Pécs) | https://www.arpad-pecs.hu |
 
 *(A teljes ellenőrzési jegyzőkönyv, forrásokkal és indoklással: [`versenyek_2026_2027_statusz.md`](./versenyek_2026_2027_statusz.md))*
 
@@ -846,17 +847,17 @@ Kétfordulós verseny:
 
 ---
 
-## 18. Radnóti Hack&CODE Informatikai Verseny
+## 18. Radnóti HACK & CODE Informatikai Verseny
 
-> ⚠️ **2026.09.28-i ellenőrzés – FIGYELEM, a verseny jövője bizonytalan:** a `www.radnoti-pecs.hu` domain jelenleg átirányít egy szakképzési centrumba (SzC) integrálódott, teljesen átalakult honlapra (`technikum.radnoti-pecs.hu`). Sem a régi, sem az új domainen, sem webes kereséssel nem található nyoma a "Hack&CODE" versenynek (sem 2025/26-os, sem 2026/27-es kiírásnak). Lehet, hogy a verseny megszűnt vagy átnevezték — **mielőtt a dokumentumból törlik, érdemes közvetlenül az iskolánál megerősítést kérni** (titkar@radnoti-pecs.hu). Az alábbi adatok a legutóbb ismert (2025/26-os) kiírásból származnak, referenciaként.
+> ✅ **2026.11.21-i ellenőrzés — megerősítve:** a korábbi (2026.09.28-i) "bizonytalan" besorolás téves volt. A hivatalos versenyfelhívás PDF (kelt: Pécs, 2026. október 5.) megerősíti, hogy a verseny 2026/2027-ben is fut — a honlapon ez egyszerűen nem volt megtalálható szöveges kereséssel. Az adatokat ez alapján frissítettük.
 
 **Szervező:** Baranya Vármegyei SzC Radnóti Miklós Közgazdasági Technikum (Pécs)
 
-**Cél:** Lehetőséget biztosítani az informatika és programozás iránt érdeklődő 7–8. osztályos diákoknak tudásuk összemérésére, egy éven átívelő, komplex, többfordulós megmérettetés keretében. A 2025/26-os tanév témája: **„Űrutazás"**.
+**Cél:** Lehetőséget biztosítani az informatika és programozás iránt érdeklődő 7–8. osztályos diákoknak tudásuk összemérésére, egy éven átívelő, komplex, többfordulós megmérettetés keretében. A 2026/27-es tanév neve és témája: **„Radnóti HACK & CODE a bolygóért"** — „Egy élhetőbb jövő – technológiai megoldások a globális felmelegedés kihívásaira".
 
 ### Korosztály
 
-**7–8. évfolyam** – a csapatok tagjai eltérő osztályú (és évfolyamú) diákokból is állhatnak. Egy intézményből több csapat is indulhat.
+**7–8. évfolyam** – a csapatok tagjai eltérő osztályú (és évfolyamú) diákokból is állhatnak. Egy intézményből tetszőleges számú csapat indulhat (nincs korlátozva).
 
 ### Csapatméret
 
@@ -866,54 +867,102 @@ Kétfordulós verseny:
 
 **Háromfordulós** verseny:
 
-1. **I. forduló – Online** (2025. november 17.)
-   - 1. rész: 45 perces online teszt (beküldési határidő: november 21.)
-   - 2. rész: webes játék készítése AI felhasználásával (leadási határidő: november 28.)
-   - Továbbjutók értesítése: december 5-ig
+1. **I. forduló – Online** (kezdete: 2026. november 16., leadási határidő: 2026. december 11.)
+   - Informatikai, logikai és kreatív feladatok a globális felmelegedés témájában
+   - Továbbjutók értesítése: 2026. december 18-ig
 
-2. **II. forduló – Személyes megjelenés, Pécs** (2025. december 12.)
-   - 1. rész: 30 perces szabadulószoba kihívás (logika, kreativitás, csapatmunka)
-   - 2. rész: 90 perces robotépítés és programozás
+2. **II. forduló – Személyes megjelenés, Pécs** (2027. január 8.)
+   - 1. rész: 30 perces szabadulószoba-kihívás (logika, kreativitás, csapatmunka)
+   - 2. rész: 60 perces Scratch-programozás
+   - 3. rész: 30 perces iskolaismereti játék
    - Helyszín: Radnóti Miklós Közgazdasági Technikum, 7633 Pécs, Esztergár Lajos u. 6.
-   - Továbbjutók értesítése: december 17-ig
+   - Továbbjutók értesítése: 2027. január 15-ig
 
-3. **III. forduló – Személyes megjelenés, Pécs** (2026. január 30.)
-   - Komplex projekt elkészítése és bemutatása szakmai zsűri előtt csapatprezentációval
-   - A szükséges projekt-kiírást a II. fordulóból továbbjutott csapatok kapják meg előre
+3. **III. forduló – Döntő, Pécs** (2027. február 5.)
+   - Komplex, a globális felmelegedéshez kapcsolódó projekt elkészítése és bemutatása szakmai zsűri előtt, prezentáció keretében
+   - A szükséges részleteket a II. fordulóból továbbjutott csapatok előzetesen megkapják
 
-### Menetrend (2025/26 tényleges adatok)
+### Menetrend (2026/27 tényleges adatok)
 
 | Esemény | Dátum |
 |---|---|
-| Kiírás megjelenése | 2025. október 10. |
-| Nevezési határidő | **2025. október 27.** |
-| I. forduló (online teszt) | 2025. november 17–28. |
-| II. forduló (Pécs, személyes) | 2025. december 12. |
-| III. forduló / döntő (Pécs, személyes) | 2026. január 30. |
+| Kiírás megjelenése | 2026. október 5. |
+| Nevezési határidő | **2026. november 6.** |
+| I. forduló (online) | 2026. nov. 16. – dec. 11. (kiértékelés: dec. 18-ig) |
+| II. forduló (Pécs, személyes) | 2027. január 8. |
+| III. forduló / döntő (Pécs, személyes) | 2027. február 5. |
 
 ### Részvétel
 
-**Ingyenes** – nevezési díj nincs. A regisztrációt a felkészítő tanár végzi az online regisztrációs űrlapon. Minden résztvevő tanuló részére szülői nyilatkozat szükséges.
+**Ingyenes** – nevezési díj nincs, de előzetes regisztrációhoz kötött. A regisztrációt a felkészítő tanár végzi; minden résztvevő tanuló részére szülői nyilatkozat szükséges. A nevezési határidő lejárta után a csapat összetétele nem módosítható.
 
 Regisztrációs űrlap: [https://forms.gle/eR3HK92LVR8pH4cw5](https://forms.gle/eR3HK92LVR8pH4cw5)
 
 ### Díjazás
 
-**400 000 Ft összdíjazás** + a felkészítő tanárok is jutalomban részesülnek. Minden döntős csapat oklevelet kap.
+A helyezettek értékes díjazásban részesülnek, a felkészítő pedagógusok munkáját is külön jutalmazzák. Minden döntős csapat oklevelet kap.
 
 | Helyezés | Díj |
 |---|---|
-| I. helyezett | 40 000 Ft/fő vásárlási utalvány + felvételi lehetőség az iskolába |
-| II. helyezett | 30 000 Ft/fő vásárlási utalvány |
-| III. helyezett | 20 000 Ft/fő vásárlási utalvány |
+| I. helyezett | Felvételi lehetőség az iskolába + értékes vásárlási utalvány |
+| II. helyezett | Értékes vásárlási utalvány |
+| III. helyezett | Értékes vásárlási utalvány |
 
 ### Elérhetőség
 
 - Web: [http://www.radnoti-pecs.hu](http://www.radnoti-pecs.hu)
 - E-mail: pecsiradnoti.verseny@gmail.com
-- Iskola e-mail: titkar@radnoti-pecs.hu
 - Telefon: 72/257-859
 
 ---
 
-*Dokumentum összeállítva: 2025–2026-os tanév | Frissítve a 2026–2027-es tanévre: 2026. szeptember 28. | Forrás: verseny-kiírások és szervező intézmények weboldalai*
+## 19. „Árpád-kupa" (Pécsi Árpád Fejedelem Gimnázium és Általános Iskola)
+
+> ✅ **2026.11.21-én felvéve — új, korábban nem követett verseny**, hivatalos versenyfelhívás PDF alapján (kelt: Pécs, 2026. október 20.).
+
+**Szervező:** Pécsi Árpád Fejedelem Gimnázium és Általános Iskola
+
+**Cél:** Digitális kultúra verseny, amely matematikai/logikai feladatokat, grafikát, szövegszerkesztést, prezentációkészítést, táblázatkezelést és micro:bit programozást ötvöz. A megye általános és középiskoláiból várják a nevezéseket.
+
+### Korosztály és csapatméret
+
+**7–8. évfolyam**, **2 fős csapatokban** (a csapattagok lehetnek vegyesen 7. és 8. évfolyamosok is).
+
+### Témakörök
+
+Matematikai és logikai feladatok, grafika, szövegszerkesztés, prezentáció, táblázatkezelés, micro:bit programozása — a digitális kultúra tantárgy adott évfolyamokra vonatkozó tananyagára építve. Használható szoftverek: Microsoft Office programcsomag, képszerkesztő program.
+
+### Fordulók
+
+Kétfordulós verseny:
+1. **1. forduló (online):** tesztmegoldás, majd beadandó feladat.
+2. **2. forduló (döntő):** személyes megjelenés, micro:bit-tel megoldandó szabadulószoba. Az online fordulók után az 5 legjobban teljesítő csapatot hívják meg a döntőbe.
+
+### Menetrend (2026/27 tényleges adatok)
+
+| Esemény | Dátum |
+|---|---|
+| Regisztráció / 1. forduló tesztmegoldás | **2026. november 20.** (éjfél) |
+| 1. forduló beadandó feladat beküldése | **2026. december 19.** |
+| 2. forduló (online) beadandó | **2027. február 19.** |
+| Döntő (személyes, micro:bit szabadulószoba) | **2027. április 6., 14:00** |
+
+### Helyszín
+
+Pécsi Árpád Fejedelem Gimnázium és Általános Iskola, 7632 Pécs, Aidinger János út 41.
+
+### Részvétel és díjazás
+
+Nevezés a regisztrációs űrlap beküldésével (csapat neve, tanulók neve és évfolyama, iskola neve, kapcsolattartó tanár neve és e-mail címe). A döntőben résztvevők jutalomban részesülnek.
+
+Regisztrációs űrlap: [https://forms.office.com/e/cxF0cqnv8M?origin=lprLink](https://forms.office.com/e/cxF0cqnv8M?origin=lprLink)
+
+### Elérhetőség
+
+- Web: [https://www.arpad-pecs.hu](https://www.arpad-pecs.hu)
+- E-mail: arpad-kupa@arpad-pecs.hu
+- Telefon: 72/450-351
+
+---
+
+*Dokumentum összeállítva: 2025–2026-os tanév | Frissítve a 2026–2027-es tanévre: 2026. szeptember 28., legutóbb 2026. november 21. | Forrás: verseny-kiírások és szervező intézmények weboldalai, valamint hivatalos versenyfelhívás PDF-ek*

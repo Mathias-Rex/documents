@@ -2,7 +2,7 @@
 
 Automatikus ellenőrzés (scripts/scrape_competitions.py) — **2026. nov. 21.**.
 
-**10** versenynél már megjelent/elérhető az új tanévi kiírás, **5**-nál még a korábbi adatok érvényesek, **5** verseny státusza bizonytalan.
+**12** versenynél már megjelent/elérhető az új tanévi kiírás, **6**-nál még a korábbi adatok érvényesek, **3** verseny státusza bizonytalan.
 
 | Verseny | Státusz | Megjegyzés | Honlap |
 |---|---|---|---|
@@ -22,10 +22,11 @@ Automatikus ellenőrzés (scripts/scrape_competitions.py) — **2026. nov. 21.**
 | Code Week Hungary | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://www.codeweekhungary.hu oldalon található „14. Code Week” jelzi a 2026/2027-es kiírást. | https://www.codeweekhungary.hu |
 | Kozma László Alkalmazói Tanulmányi Verseny | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/ oldalon található „2026/2027” jelzi a 2026/2027-es kiírást. | https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/ |
 | Dusza Árpád Országos Programozói Emlékverseny | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/ oldalon található „2026/2027” jelzi a 2026/2027-es kiírást. | https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/ |
-| Radnóti Hack&CODE Informatikai Verseny | ❓ Bizonytalan | Automatikus ellenőrzés: a verseny megnevezése nem található a figyelt oldal(ak)on — lehet, hogy a honlap átalakult, vagy a verseny megszűnt. Korábbi megjegyzés: A honlap teljesen átalakult; a versenynek nem volt nyoma — érdemes megerősítést kérni az iskolától. | http://www.radnoti-pecs.hu |
+| Radnóti HACK & CODE Informatikai Verseny | ✅ Van kiírás | Kézzel megerősítve (versenyfelhívás PDF, Pécs, 2026. október 5., pecsiradnoti.verseny@gmail.com): a verseny idén „Radnóti HACK & CODE a bolygóért” néven, a globális felmelegedés témájában fut. Nevezési határidő: 2026. november 6. A honlap keresésből ez nem derült ki, úgyhogy a jövőben is érdemes kézzel ellenőrizni/megerősíteni. | http://www.radnoti-pecs.hu |
 | Nemes Tihamér Alkalmazói Tanulmányi Verseny | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://versenyportal.hu/nemesa/nemesa_aktualis.html oldalon található „2026/2027” jelzi a 2026/2027-es kiírást. | https://versenyportal.hu/nemesa/nemesa_aktualis.html |
-| ROCS – Robotprogramozó Csapatverseny | ❓ Bizonytalan | Automatikus ellenőrzés: egyik figyelt oldal sem volt elérhető (http://robotprog.hu/HTML/ROCS_aktualis.html, http://robotprog.hu/); a korábbi állapot megőrizve. Korábbi megjegyzés: A honlap még a korábbi (2024/25-ös, XV.) kiírást mutatta. | http://robotprog.hu/ |
+| ROCS – Robotprogramozó Csapatverseny | ❌ Még nincs | Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap még a korábbi (2024/25-ös, XV.) kiírást mutatta. | http://robotprog.hu/ |
 | Kovács Mihály Országos Grafikus Programozási Verseny | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://versenyportal.hu/logo/logo_aktualis.html oldalon található „2026/2027” jelzi a 2026/2027-es kiírást. | https://versenyportal.hu/logo/logo_aktualis.html |
+| Árpád-kupa (Pécsi Árpád Fejedelem Gimnázium) | ✅ Van kiírás | Kézzel felvéve (versenyfelhívás PDF, Pécs, 2026. október 20., arpad-kupa@arpad-pecs.hu): a Pécsi Árpád Fejedelem Gimnázium és Általános Iskola digitális kultúra versenye, 7–8. évfolyamos, 2 fős csapatoknak. Regisztráció/1. forduló tesztmegoldás határideje: 2026. november 20. éjfél. | https://www.arpad-pecs.hu |
 
 ---
 

@@ -113,6 +113,13 @@ class Competition:
     # oldalon ahhoz, hogy a versenyt egyáltalán "élőnek" tekintsük — ha egyik
     # sem található meg, a verseny eltűnt/átalakult honlapra utalhat (unsure).
     presence_patterns: Optional[List[str]] = None
+    # Ha meg van adva, a scraper NEM próbálja meg élőben ellenőrizni a versenyt —
+    # ehelyett ezt a kézzel (pl. hivatalos PDF-ből) megerősített státuszt/megjegyzést
+    # használja változatlanul. Akkor érdemes beállítani, ha a honlap maga nem (vagy
+    # nem megbízhatóan) mutatja a kiírást, de más forrásból (pl. a szervező által
+    # közvetlenül küldött dokumentum) megerősítést kaptunk.
+    manual_status: Optional[str] = None
+    manual_note: Optional[str] = None
 
     # Futás közben kitöltött mezők:
     status: str = "unsure"
@@ -301,15 +308,27 @@ def build_registry() -> List[Competition]:
             fallback_note="Elérhető volt a „Versenyfelhívás_2026-2027” PDF.",
         ),
         Competition(
-            id="radnoti", name="Radnóti Hack&CODE Informatikai Verseny", fee="",
-            focus="Programozás + robotika + projekt (AI, webfejlesztés, szabadulószoba, csapatmunka)",
+            id="radnoti", name="Radnóti HACK & CODE Informatikai Verseny", fee="",
+            focus="Programozás (Scratch) + logika + projekt (idei téma: „A bolygóért” – globális felmelegedés, szabadulószoba, csapatmunka)",
             age="7–8. évfolyam", type="Csapat (2–4 fő)",
-            announce="október", deadline="⚠️ nincs nyoma a versenynek az átalakult honlapon",
-            event_date="—",
+            announce="október", deadline="2026. november 6.",
+            event_date=(
+                "I. forduló (online): 2026. nov. 16. – dec. 11. / "
+                "II. forduló (Pécs, személyes): 2027. jan. 8. / "
+                "III. forduló (döntő): 2027. febr. 5."
+            ),
             link="http://www.radnoti-pecs.hu",
             check_urls=["http://www.radnoti-pecs.hu", "http://technikum.radnoti-pecs.hu"],
             presence_patterns=[r"Hack\s*&\s*CODE", r"Hack&CODE"],
-            fallback_note="A honlap teljesen átalakult; a versenynek nem volt nyoma — érdemes megerősítést kérni az iskolától.",
+            fallback_note="A honlap nem mutatja, de hivatalos versenyfelhívás PDF megerősítette a 2026/2027-es futást.",
+            manual_status="yes",
+            manual_note=(
+                "Kézzel megerősítve (versenyfelhívás PDF, Pécs, 2026. október 5., "
+                "pecsiradnoti.verseny@gmail.com): a verseny idén „Radnóti HACK & CODE "
+                "a bolygóért” néven, a globális felmelegedés témájában fut. "
+                "Nevezési határidő: 2026. november 6. A honlap keresésből ez nem derült ki, "
+                "úgyhogy a jövőben is érdemes kézzel ellenőrizni/megerősíteni."
+            ),
         ),
         Competition(
             id="nemes-alkalmazoi", name="Nemes Tihamér Alkalmazói Tanulmányi Verseny", fee="",
@@ -348,6 +367,31 @@ def build_registry() -> List[Competition]:
             ],
             fallback_note="A verseny átkerült a versenyportal.hu-ra, ahol élt a 2026/2027-es kiírás.",
         ),
+        Competition(
+            id="arpad-kupa", name="Árpád-kupa (Pécsi Árpád Fejedelem Gimnázium)", fee="",
+            focus=(
+                "Digitális kultúra verseny (matematikai/logikai feladatok, grafika, "
+                "szövegszerkesztés, prezentáció, táblázatkezelés, micro:bit programozás)"
+            ),
+            age="7–8. évfolyam", type="Csapat (2 fő)",
+            announce="október", deadline="2026. november 20. (éjfél)",
+            event_date=(
+                "1. forduló beadandó: 2026. dec. 19. / 2. forduló beadandó: 2027. febr. 19. / "
+                "Döntő: 2027. ápr. 6., 14:00 (Pécs)"
+            ),
+            link="https://www.arpad-pecs.hu",
+            # Egyelőre csak kézi megerősítésünk van rá (lásd manual_status) — ha ez a jövőben
+            # megszűnik, a scraper automatikusan megpróbálja majd élőben is ellenőrizni.
+            check_urls=["https://www.arpad-pecs.hu"],
+            fallback_note="Új, korábban nem követett verseny — hivatalos versenyfelhívás PDF alapján vettük fel.",
+            manual_status="yes",
+            manual_note=(
+                "Kézzel felvéve (versenyfelhívás PDF, Pécs, 2026. október 20., "
+                "arpad-kupa@arpad-pecs.hu): a Pécsi Árpád Fejedelem Gimnázium és Általános "
+                "Iskola digitális kultúra versenye, 7–8. évfolyamos, 2 fős csapatoknak. "
+                "Regisztráció/1. forduló tesztmegoldás határideje: 2026. november 20. éjfél."
+            ),
+        ),
     ]
 
 
@@ -375,6 +419,14 @@ def fetch(url: str, timeout: int) -> Optional[str]:
 
 def check_competition(comp: Competition, timeout: int) -> Competition:
     print(f"- {comp.name} ...")
+
+    if comp.manual_status:
+        print(f"  [manual] élő ellenőrzés kihagyva — kézzel megerősített adat van megadva.")
+        comp.status = comp.manual_status
+        comp.note = comp.manual_note or comp.fallback_note
+        comp.checked_urls = []
+        return comp
+
     patterns = DEFAULT_POSITIVE_PATTERNS + comp.extra_patterns
     fetch_errors: List[str] = []
     presence_found = comp.presence_patterns is None  # ha nincs megadva, nem kell ellenőrizni

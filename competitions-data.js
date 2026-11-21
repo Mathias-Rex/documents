@@ -1,5 +1,5 @@
 // ⚠️ Ezt a fájlt a scripts/scrape_competitions.py generálja automatikusan — ne szerkeszd kézzel!
-// Generálva: 2026-11-21T20:09:14
+// Generálva: 2026-11-21T20:14:26
 //
 // Használat HTML-ből (klasszikus <script>, globál változóként):
 //   <script src="competitions-data.js"></script>
@@ -258,17 +258,17 @@ var COMPETITION_DATA = {
     },
     {
       "id": "radnoti",
-      "name": "Radnóti Hack&CODE Informatikai Verseny",
-      "status": "unsure",
+      "name": "Radnóti HACK & CODE Informatikai Verseny",
+      "status": "yes",
       "fee": "",
-      "focus": "Programozás + robotika + projekt (AI, webfejlesztés, szabadulószoba, csapatmunka)",
+      "focus": "Programozás (Scratch) + logika + projekt (idei téma: „A bolygóért” – globális felmelegedés, szabadulószoba, csapatmunka)",
       "age": "7–8. évfolyam",
       "type": "Csapat (2–4 fő)",
       "announce": "október",
-      "deadline": "⚠️ nincs nyoma a versenynek az átalakult honlapon",
-      "eventDate": "—",
+      "deadline": "2026. november 6.",
+      "eventDate": "I. forduló (online): 2026. nov. 16. – dec. 11. / II. forduló (Pécs, személyes): 2027. jan. 8. / III. forduló (döntő): 2027. febr. 5.",
       "link": "http://www.radnoti-pecs.hu",
-      "note": "Automatikus ellenőrzés: a verseny megnevezése nem található a figyelt oldal(ak)on — lehet, hogy a honlap átalakult, vagy a verseny megszűnt. Korábbi megjegyzés: A honlap teljesen átalakult; a versenynek nem volt nyoma — érdemes megerősítést kérni az iskolától."
+      "note": "Kézzel megerősítve (versenyfelhívás PDF, Pécs, 2026. október 5., pecsiradnoti.verseny@gmail.com): a verseny idén „Radnóti HACK & CODE a bolygóért” néven, a globális felmelegedés témájában fut. Nevezési határidő: 2026. november 6. A honlap keresésből ez nem derült ki, úgyhogy a jövőben is érdemes kézzel ellenőrizni/megerősíteni."
     },
     {
       "id": "nemes-alkalmazoi",
@@ -287,7 +287,7 @@ var COMPETITION_DATA = {
     {
       "id": "rocs",
       "name": "ROCS – Robotprogramozó Csapatverseny",
-      "status": "unsure",
+      "status": "no",
       "fee": "",
       "focus": "LEGO robotprogramozás (vonalkövetés, akadálypálya)",
       "age": "5–8. évfolyam (3 korcsoport)",
@@ -296,7 +296,7 @@ var COMPETITION_DATA = {
       "deadline": "január–február",
       "eventDate": "Regionális: február–március / Döntő: április (Kecskemét)",
       "link": "http://robotprog.hu/",
-      "note": "Automatikus ellenőrzés: egyik figyelt oldal sem volt elérhető (http://robotprog.hu/HTML/ROCS_aktualis.html, http://robotprog.hu/); a korábbi állapot megőrizve. Korábbi megjegyzés: A honlap még a korábbi (2024/25-ös, XV.) kiírást mutatta."
+      "note": "Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap még a korábbi (2024/25-ös, XV.) kiírást mutatta."
     },
     {
       "id": "kovacs",
@@ -311,6 +311,20 @@ var COMPETITION_DATA = {
       "eventDate": "Iskolai forduló: 2027. febr. 17. / Országos: 2027. ápr. 10. / Eredményhirdetés: 2027 május (ELTE IK)",
       "link": "https://versenyportal.hu/logo/logo_aktualis.html",
       "note": "Automatikus ellenőrzés: a(z) https://versenyportal.hu/logo/logo_aktualis.html oldalon található „2026/2027” jelzi a 2026/2027-es kiírást."
+    },
+    {
+      "id": "arpad-kupa",
+      "name": "Árpád-kupa (Pécsi Árpád Fejedelem Gimnázium)",
+      "status": "yes",
+      "fee": "",
+      "focus": "Digitális kultúra verseny (matematikai/logikai feladatok, grafika, szövegszerkesztés, prezentáció, táblázatkezelés, micro:bit programozás)",
+      "age": "7–8. évfolyam",
+      "type": "Csapat (2 fő)",
+      "announce": "október",
+      "deadline": "2026. november 20. (éjfél)",
+      "eventDate": "1. forduló beadandó: 2026. dec. 19. / 2. forduló beadandó: 2027. febr. 19. / Döntő: 2027. ápr. 6., 14:00 (Pécs)",
+      "link": "https://www.arpad-pecs.hu",
+      "note": "Kézzel felvéve (versenyfelhívás PDF, Pécs, 2026. október 20., arpad-kupa@arpad-pecs.hu): a Pécsi Árpád Fejedelem Gimnázium és Általános Iskola digitális kultúra versenye, 7–8. évfolyamos, 2 fős csapatoknak. Regisztráció/1. forduló tesztmegoldás határideje: 2026. november 20. éjfél."
     }
   ]
 };
