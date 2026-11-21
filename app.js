@@ -4,103 +4,30 @@
 // importált COMPETITION_DATA objektumból.
 //
 // Betöltési sorrend (lásd versenyek_2026_2027.html): domelemjs, createdomblocks,
-// competitions-data.js, majd ez a fájl — ebben a sorrendben kell lennie, mert
-// ez a script a globális DOMElemJS, CreateDOMBlocks és COMPETITION_DATA
-// változókra támaszkodik.
+// competitions-data.js, utils.js, majd ez a fájl — ebben a sorrendben kell
+// lennie, mert ez a script a globális DOMElemJS, CreateDOMBlocks,
+// COMPETITION_DATA és VersenyekUtils változókra támaszkodik.
 // ============================================================================
 (function () {
   "use strict";
   var createDOMElem = DOMElemJS.createDOMElem;
   var CDB = CreateDOMBlocks;
-  var THEME_KEY = "versenyek-theme";
 
-  // --- világos / sötét mód kezelése ---
-  function getStoredTheme() {
-    try { return localStorage.getItem(THEME_KEY); } catch (e) { return null; }
-  }
-  function setStoredTheme(theme) {
-    try {
-      if (theme) { localStorage.setItem(THEME_KEY, theme); }
-      else { localStorage.removeItem(THEME_KEY); }
-    } catch (e) { /* localStorage nem elérhető */ }
-  }
-  function getEffectiveTheme() {
-    var stored = getStoredTheme();
-    if (stored === "light" || stored === "dark") { return stored; }
-    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  }
-  function applyTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-  }
-  function themeButtonLabel(theme) {
-    return theme === "dark" ? "☀️ Világos mód" : "🌙 Sötét mód";
-  }
-
-  // --- szűrő / kapcsoló állapot megjegyzése ---
-  var FILTER_STATE_KEY = "versenyek-filter-state";
-
-  function getStoredFilterState() {
-    try {
-      var raw = localStorage.getItem(FILTER_STATE_KEY);
-      if (!raw) { return null; }
-      var parsed = JSON.parse(raw);
-      return parsed && typeof parsed === "object" ? parsed : null;
-    } catch (e) { return null; }
-  }
-
-  function setStoredFilterState(state) {
-    try { localStorage.setItem(FILTER_STATE_KEY, JSON.stringify(state)); }
-    catch (e) { /* localStorage nem elérhető */ }
-  }
-
-  // --- határidő-számítás és rendezés a mai dátumhoz képest ---
-  function daysUntilDeadline(deadlineDate) {
-    if (!deadlineDate) { return null; }
-    var today = new Date();
-    today.setHours(0, 0, 0, 0);
-    var parts = deadlineDate.split("-").map(Number);
-    var deadline = new Date(parts[0], parts[1] - 1, parts[2]);
-    return Math.round((deadline - today) / 86400000);
-  }
-
-  function countdownText(days) {
-    if (days === null) { return null; }
-    if (days === 0) { return "⏰ Ma jár le a nevezési határidő!"; }
-    if (days > 0) { return "⏳ " + days + " nap múlva jár le a nevezési határidő"; }
-    return "✖️ " + Math.abs(days) + " napja lejárt a nevezési határidő";
-  }
-
-  // A versenyeket a nevezési határidő szerint rendezi: a legközelebb lejáró
-  // (de még nem lejárt) határidejűek elöl, utánuk az ismeretlen/folyamatos
-  // határidejűek, végül a már lejártak — azok közül is a régebben lejártak
-  // kerülnek leghátrébb.
-  function sortItemsByDeadline(items) {
-    var withDays = items.map(function (item) {
-      return { item: item, days: daysUntilDeadline(item.deadlineDate) };
-    });
-    var upcoming = withDays.filter(function (x) { return x.days !== null && x.days >= 0; });
-    var unknown = withDays.filter(function (x) { return x.days === null; });
-    var expired = withDays.filter(function (x) { return x.days !== null && x.days < 0; });
-
-    upcoming.sort(function (a, b) { return a.days - b.days; });
-    expired.sort(function (a, b) { return b.days - a.days; });
-
-    return upcoming.concat(unknown, expired).map(function (x) { return x.item; });
-  }
-
-  var HU_MONTHS_SHORT = ["jan", "febr", "márc", "ápr", "máj", "jún", "júl", "aug", "szept", "okt", "nov", "dec"];
-
-  function todayIsoDate() {
-    var d = new Date();
-    var mm = String(d.getMonth() + 1).padStart(2, "0");
-    var dd = String(d.getDate()).padStart(2, "0");
-    return d.getFullYear() + "-" + mm + "-" + dd;
-  }
-
-  function formatIsoDateHu(iso) {
-    var parts = iso.split("-").map(Number);
-    return parts[0] + ". " + HU_MONTHS_SHORT[parts[1] - 1] + ". " + parts[2] + ".";
-  }
+  // Tisztán számító/localStorage-ot kezelő segédfüggvények a utils.js-ből
+  // (lásd ott: window.VersenyekUtils) — ez a fájl csak a tényleges DOM-
+  // renderelésért felel.
+  var getStoredTheme = VersenyekUtils.getStoredTheme;
+  var setStoredTheme = VersenyekUtils.setStoredTheme;
+  var getEffectiveTheme = VersenyekUtils.getEffectiveTheme;
+  var applyTheme = VersenyekUtils.applyTheme;
+  var themeButtonLabel = VersenyekUtils.themeButtonLabel;
+  var getStoredFilterState = VersenyekUtils.getStoredFilterState;
+  var setStoredFilterState = VersenyekUtils.setStoredFilterState;
+  var daysUntilDeadline = VersenyekUtils.daysUntilDeadline;
+  var countdownText = VersenyekUtils.countdownText;
+  var sortItemsByDeadline = VersenyekUtils.sortItemsByDeadline;
+  var todayIsoDate = VersenyekUtils.todayIsoDate;
+  var formatIsoDateHu = VersenyekUtils.formatIsoDateHu;
 
   // Egy átfogó idővonal, ami minden (napra pontos határidejű) versenyt
   // időrendben felsorol, és a megfelelő helyen megjelöli a mai napot is —
