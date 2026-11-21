@@ -64,8 +64,8 @@ Az Informatika-Számítástechnika Tanárok Egyesületének verseny oldala. Inne
 | Verseny neve | 26/27? | Fókusz | Korosztály | Típus | Mikor jelenik meg a kiírás? | Nevezési határidő (tipikus / 26-27) | Verseny időpontja (tipikus / 26-27) | Link |
 |---|:---:|---|---|---|---|---|---|---|
 | 23. Neumann János Programtermék Verseny | ✅ | Projektmunka (app, játék, grafika, CAD, animáció, hardver) | Ált. és közép (a döntő kezdetéig 20 év alatt) | Egyéni / csapat | **szeptember–október** | **2027. február 14.** | Előzsűri értesítés: **2027. febr. 22.** / Döntő: **2027. márc. 18–19.** (Szekszárd) | https://neumannverseny.hu |
-| Boronkay Informatika Verseny – 8. évfolyam | ❓ | Alkalmazói informatika (elmélet + szöveg, táblázat) | 8. osztály (alacsonyabb is indulhat) | Egyéni | **október eleje** | 1. ford.: **november közepe** / 2. ford.: **január eleje** | Döntő: **január vége** (Vác) | https://boronkay.vac.hu/informatika-verseny |
-| Boronkay Informatika Verseny – 5–7. évfolyam | ❓ | Alkalmazói informatika (elmélet + grafika, szöveg, prezentáció) | 5–7. osztály | Egyéni | **október közepe** | 1. ford.: **január vége** / 2. ford.: **április eleje** | Döntő: **április vége** (Vác) | https://boronkay.vac.hu/informatika-verseny |
+| Boronkay Informatika Verseny – 8. évfolyam | ✅ | Alkalmazói informatika (elmélet + szöveg, táblázat) | 8. osztály (alacsonyabb is indulhat) | Egyéni | **október eleje** | 1. ford.: **2026. nov. 9.** / 2. ford.: **2026. dec. 30.** | Döntő: **2027. jan. 15.** (Vác) | https://www.boronkay.eu |
+| Boronkay Informatika Verseny – 5–7. évfolyam | ✅ | Alkalmazói informatika (elmélet + grafika, szöveg, prezentáció) | 5–7. osztály | Egyéni | **október közepe** | 1. ford.: **2027. jan. 18.** / 2. ford.: **2027. ápr. 7.** | Döntő: **2027. ápr. 23.** (Vác) | https://www.boronkay.eu |
 | ProSuli Robotika Verseny 💸 | ✅ | LEGO robotprogramozás (vonalkövetés, pályafeladatok) | Ált. és közép (amatőr / profi liga) | Csapat | **október** | 2026/27: **hamarosan** (a kiírás elindult) | Regionális: **február** / Döntő: **március** (Törökbálint) | https://prosuli.hu/prosuli-robotika-verseny |
 | FIRST LEGO League – Challenge 💸💸 | ✅ | LEGO robotika + tudományos kutatási projekt (2026/27: **BIOGLOW**) | 9–16 év | Csapat (3–10 fő) | **augusztus** (szezon-indulás) | Csapatregisztráció: **2026. nov. 30.** | Regionális: **2026. dec.–2027. febr.** / Nemzeti döntő: **2027. márc. 7.** (Miskolc) | https://www.firstlegoleague.hu |
 | FIRST LEGO League – Explore & Discover 💸 | ✅ | LEGO robotika (játékos, modellépítés, bemutató) | 4–10 év | Csapat | **augusztus** | Iskolai/óvodai regisztráció: **2027. jan. 31.** | Kiállítás: **február–május** | https://www.firstlegoleague.hu |
@@ -143,35 +143,54 @@ Az Informatika-Számítástechnika Tanárok Egyesületének verseny oldala. Inne
 
 ## 2. Boronkay Informatika Verseny (BIV)
 
-**Szervező:** Boronkay György Műszaki Technikum és Gimnázium, Vác
+> ✅ **2026.11.21-i ellenőrzés — megerősítve, és fontos linkváltás:** az iskola időközben leváltotta a domaint — a korábbi `boronkay.vac.hu` helyett mostantól **[boronkay.eu](https://www.boronkay.eu)** a hivatalos oldal. Ez magyarázza a korábbi tartós elérhetetlenséget (HTTP 503 / TLS hiba): a régi domain láthatóan megszűnt vagy elromlott, nem a verseny szűnt meg.
 
-**Cél:** Általános iskolás tanulók informatikai tudásának és problémamegoldó képességének megmérettetése elméleti és gyakorlati feladatokon keresztül.
+**Szervező:** VSZC Boronkay György Műszaki Technikum és Gimnázium, Vác (Informatika Munkacsoport)
 
-### Korosztály
+**Cél:** Általános iskolás tanulók informatikai tudásának és problémamegoldó képességének megmérettetése elméleti és gyakorlati feladatokon keresztül. A 2026–2027-es tanévben **14. alkalommal** kerül meghirdetésre.
 
-Jelenleg elsősorban **7–8. osztályosok** számára meghirdetve, de más évfolyamokra is szóló versenyek is megrendezésre kerülnek.
+### Korosztályok
+
+A verseny **két korosztálynak** szól, külön menetrenddel:
+- **8. osztályosok**
+- **5–7. évfolyamosok** ("felfele" jelentkezés elfogadott, "lefele" nem — azaz alacsonyabb évfolyamos jelentkezhet a magasabbak versenyére, fordítva nem)
 
 ### Fordulók
 
-A verseny **három fordulóból** áll:
-1. **Első forduló (levelezős):** Online beküldött elméleti és gyakorlati feladatok.
-2. **Második forduló (területi):** A legjobb versenyzők továbbjutnak.
-3. **Döntő:** Személyes részvétel az iskola helyszínén (Vác).
+Mindkét korosztálynak **háromfordulós** verseny: két levelezős forduló és egy döntő.
+
+**8. osztályosok:**
+| Esemény | Dátum |
+|---|---|
+| I. forduló határideje | **2026. november 9.** (hétfő) |
+| II. forduló határideje | **2026. december 30.** (szerda) |
+| Döntősök értesítése | 2027. január 4-ig (hétfő) |
+| Döntőre jelentkezés határideje | 2027. január 7. (csütörtök) |
+| **Döntő** | **2027. január 15.** (péntek, Vác) |
+
+**5–7. évfolyamosok:**
+| Esemény | Dátum |
+|---|---|
+| I. forduló határideje | **2027. január 18.** (hétfő) |
+| II. forduló határideje | **2027. április 7.** (szerda) |
+| Döntősök értesítése | 2027. április 12-ig (hétfő) |
+| Döntőre jelentkezés határideje | 2027. április 15. (csütörtök) |
+| **Döntő** | **2027. április 23.** (péntek, Vác) |
 
 ### Feladattípusok
 
-- Elméleti kérdések (számítástechnika-elmélet, logika)
-- Gyakorlati feladatok: szövegszerkesztés, táblázatkezelés, programozás
+- Elméleti feladatsor (25 kérdés)
+- 8. osztályosoknak gyakorlati feladatok: szövegszerkesztés (1. forduló), táblázatkezelés (2. forduló); a döntőben ezek mellett algoritmizálás-kódolás is
+- 5–7. évfolyamosoknak két gyakorlati feladat fordulónként; a döntőben szövegszerkesztés, prezentációkészítés és számítógépes grafika is szerepel
 
 ### Díjazás és támogató
 
-A Tigra Zrt. támogatja a BIV 8. évfolyamos versenyét; a dobogósok értékes tárgynyereményeket kapnak.
+A **Tigra Zrt.** immár 13+. éve támogatja a BIV 8. évfolyamos versenyét; a dobogósok értékes tárgynyereményeket kapnak. Iskolák közötti versenyben a BIV Vándorkupáját is kiosztják (min. 3 induló diák + legalább 1 döntős szükséges iskolánként).
 
 ### Elérhetőség
 
-- Web: [https://boronkay.vac.hu/informatika-verseny](https://boronkay.vac.hu/informatika-verseny)
-
-> ❓ **2026.09.28-i ellenőrzés:** a honlap jelenleg HTTP 503 hibát ad, nem volt élőben ellenőrizhető. A gyorsítótárazott tartalom még a 2025/26-os (már lejárt) dátumokat mutatta — érdemes később kézzel újraellenőrizni.
+- Web: [https://www.boronkay.eu](https://www.boronkay.eu) (menüpont: „Általános iskolásoknak” → „Boronkay versenyek” → „Informatika Verseny")
+- Versenyszervező: Kemenes Tamás — kemenes.tamas@boronkay.hu (ide kell küldeni a gyakorlati feladatok megoldását)
 
 ---
 

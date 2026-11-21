@@ -1,5 +1,5 @@
 // ⚠️ Ezt a fájlt a scripts/scrape_competitions.py generálja automatikusan — ne szerkeszd kézzel!
-// Generálva: 2026-11-21T20:14:26
+// Generálva: 2026-11-21T21:02:49
 //
 // Használat HTML-ből (klasszikus <script>, globál változóként):
 //   <script src="competitions-data.js"></script>
@@ -49,30 +49,30 @@ var COMPETITION_DATA = {
     {
       "id": "boronkay-8",
       "name": "Boronkay Informatika Verseny – 8. évfolyam",
-      "status": "unsure",
+      "status": "yes",
       "fee": "",
       "focus": "Alkalmazói informatika (elmélet + szöveg, táblázat)",
       "age": "8. osztály (alacsonyabb is indulhat)",
       "type": "Egyéni",
       "announce": "október eleje",
-      "deadline": "1. ford.: november közepe / 2. ford.: január eleje",
-      "eventDate": "Döntő: január vége (Vác)",
-      "link": "https://boronkay.vac.hu/informatika-verseny",
-      "note": "Automatikus ellenőrzés: egyik figyelt oldal sem volt elérhető (https://boronkay.vac.hu/informatika-verseny); a korábbi állapot megőrizve. Korábbi megjegyzés: A honlap korábban HTTP 503 hibát adott — nem volt élőben ellenőrizhető."
+      "deadline": "2026. november 9. (I. forduló) / 2026. december 30. (II. forduló)",
+      "eventDate": "Döntősök értesítése: 2027. jan. 4-ig / Döntőre jelentkezés: 2027. jan. 7. / Döntő: 2027. január 15. (Vác)",
+      "link": "https://www.boronkay.eu",
+      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, boronkay.eu, 2026. 11. 21.): a 2026-2027. tanévi (14.) Boronkay Informatika Verseny 8. osztályosok ágának kiírása él. I. forduló határideje: 2026. november 9., II. forduló határideje: 2026. december 30., döntő: 2027. január 15. (Vác). A hivatalos oldal új domainje: boronkay.eu (a korábbi boronkay.vac.hu helyett) — szervező: Kemenes Tamás, kemenes.tamas@boronkay.hu."
     },
     {
       "id": "boronkay-57",
       "name": "Boronkay Informatika Verseny – 5–7. évfolyam",
-      "status": "unsure",
+      "status": "yes",
       "fee": "",
       "focus": "Alkalmazói informatika (elmélet + grafika, szöveg, prezentáció)",
       "age": "5–7. osztály",
       "type": "Egyéni",
       "announce": "október közepe",
-      "deadline": "1. ford.: január vége / 2. ford.: április eleje",
-      "eventDate": "Döntő: április vége (Vác)",
-      "link": "https://boronkay.vac.hu/informatika-verseny",
-      "note": "Automatikus ellenőrzés: egyik figyelt oldal sem volt elérhető (https://boronkay.vac.hu/informatika-verseny); a korábbi állapot megőrizve. Korábbi megjegyzés: A honlap korábban HTTP 503 hibát adott — nem volt élőben ellenőrizhető."
+      "deadline": "2027. január 18. (I. forduló) / 2027. április 7. (II. forduló)",
+      "eventDate": "Döntősök értesítése: 2027. ápr. 12-ig / Döntőre jelentkezés: 2027. ápr. 15. / Döntő: 2027. április 23. (Vác)",
+      "link": "https://www.boronkay.eu",
+      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, boronkay.eu, 2026. 11. 21.): a 2026-2027. tanévi (14.) Boronkay Informatika Verseny 5–7. évfolyamos ágának kiírása él. I. forduló határideje: 2027. január 18., II. forduló határideje: 2027. április 7., döntő: 2027. április 23. (Vác). A hivatalos oldal új domainje: boronkay.eu (a korábbi boronkay.vac.hu helyett) — szervező: Kemenes Tamás, kemenes.tamas@boronkay.hu."
     },
     {
       "id": "prosuli",

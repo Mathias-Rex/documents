@@ -2,13 +2,13 @@
 
 Automatikus ellenőrzés (scripts/scrape_competitions.py) — **2026. nov. 21.**.
 
-**12** versenynél már megjelent/elérhető az új tanévi kiírás, **6**-nál még a korábbi adatok érvényesek, **3** verseny státusza bizonytalan.
+**14** versenynél már megjelent/elérhető az új tanévi kiírás, **6**-nál még a korábbi adatok érvényesek, **1** verseny státusza bizonytalan.
 
 | Verseny | Státusz | Megjegyzés | Honlap |
 |---|---|---|---|
 | 23. Neumann János Programtermék Verseny | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://ibela.hu/neumann/dokumentumtar oldalon található „23. Neumann” jelzi a 2026/2027-es kiírást. | https://neumannverseny.hu |
-| Boronkay Informatika Verseny – 8. évfolyam | ❓ Bizonytalan | Automatikus ellenőrzés: egyik figyelt oldal sem volt elérhető (https://boronkay.vac.hu/informatika-verseny); a korábbi állapot megőrizve. Korábbi megjegyzés: A honlap korábban HTTP 503 hibát adott — nem volt élőben ellenőrizhető. | https://boronkay.vac.hu/informatika-verseny |
-| Boronkay Informatika Verseny – 5–7. évfolyam | ❓ Bizonytalan | Automatikus ellenőrzés: egyik figyelt oldal sem volt elérhető (https://boronkay.vac.hu/informatika-verseny); a korábbi állapot megőrizve. Korábbi megjegyzés: A honlap korábban HTTP 503 hibát adott — nem volt élőben ellenőrizhető. | https://boronkay.vac.hu/informatika-verseny |
+| Boronkay Informatika Verseny – 8. évfolyam | ✅ Van kiírás | Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, boronkay.eu, 2026. 11. 21.): a 2026-2027. tanévi (14.) Boronkay Informatika Verseny 8. osztályosok ágának kiírása él. I. forduló határideje: 2026. november 9., II. forduló határideje: 2026. december 30., döntő: 2027. január 15. (Vác). A hivatalos oldal új domainje: boronkay.eu (a korábbi boronkay.vac.hu helyett) — szervező: Kemenes Tamás, kemenes.tamas@boronkay.hu. | https://www.boronkay.eu |
+| Boronkay Informatika Verseny – 5–7. évfolyam | ✅ Van kiírás | Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, boronkay.eu, 2026. 11. 21.): a 2026-2027. tanévi (14.) Boronkay Informatika Verseny 5–7. évfolyamos ágának kiírása él. I. forduló határideje: 2027. január 18., II. forduló határideje: 2027. április 7., döntő: 2027. április 23. (Vác). A hivatalos oldal új domainje: boronkay.eu (a korábbi boronkay.vac.hu helyett) — szervező: Kemenes Tamás, kemenes.tamas@boronkay.hu. | https://www.boronkay.eu |
 | ProSuli Robotika Verseny | ❌ Még nincs | Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap a 2026/2027 tanévi versenyt hirdette, de a konkrét dátumok még hiányoztak. | https://prosuli.hu/prosuli-robotika-verseny/ |
 | FIRST LEGO League – Challenge | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://www.firstlegoleague.hu oldalon található „2026–2027” jelzi a 2026/2027-es kiírást. | https://www.firstlegoleague.hu |
 | FIRST LEGO League – Explore & Discover | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://www.firstlegoleague.hu oldalon található „2026–2027” jelzi a 2026/2027-es kiírást. | https://www.firstlegoleague.hu |
