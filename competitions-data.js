@@ -1,5 +1,5 @@
 // ⚠️ Ezt a fájlt a scripts/scrape_competitions.py generálja automatikusan — ne szerkeszd kézzel!
-// Generálva: 2026-11-21T21:05:19
+// Generálva: 2026-11-21T21:13:17
 //
 // Használat HTML-ből (klasszikus <script>, globál változóként):
 //   <script src="competitions-data.js"></script>
@@ -42,9 +42,11 @@ var COMPETITION_DATA = {
       "type": "Egyéni / csapat",
       "announce": "szeptember–október",
       "deadline": "2027. február 14.",
+      "deadlineDate": "2027-02-14",
       "eventDate": "Előzsűri értesítés: 2027. febr. 22. / Döntő: 2027. márc. 18–19. (Szekszárd)",
       "link": "https://neumannverseny.hu",
-      "note": "Automatikus ellenőrzés: a(z) https://ibela.hu/neumann/dokumentumtar oldalon található „23. Neumann” jelzi a 2026/2027-es kiírást."
+      "note": "Automatikus ellenőrzés: a(z) https://ibela.hu/neumann/dokumentumtar oldalon található „23. Neumann” jelzi a 2026/2027-es kiírást.",
+      "registered": true
     },
     {
       "id": "boronkay-8",
@@ -56,9 +58,11 @@ var COMPETITION_DATA = {
       "type": "Egyéni",
       "announce": "október eleje",
       "deadline": "2026. november 9. (I. forduló) / 2026. december 30. (II. forduló)",
+      "deadlineDate": "2026-11-09",
       "eventDate": "Döntősök értesítése: 2027. jan. 4-ig / Döntőre jelentkezés: 2027. jan. 7. / Döntő: 2027. január 15. (Vác)",
       "link": "https://www.boronkay.eu",
-      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, boronkay.eu, 2026. 11. 21.): a 2026-2027. tanévi (14.) Boronkay Informatika Verseny 8. osztályosok ágának kiírása él. I. forduló határideje: 2026. november 9., II. forduló határideje: 2026. december 30., döntő: 2027. január 15. (Vác). A hivatalos oldal új domainje: boronkay.eu (a korábbi boronkay.vac.hu helyett) — szervező: Kemenes Tamás, kemenes.tamas@boronkay.hu."
+      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, boronkay.eu, 2026. 11. 21.): a 2026-2027. tanévi (14.) Boronkay Informatika Verseny 8. osztályosok ágának kiírása él. I. forduló határideje: 2026. november 9., II. forduló határideje: 2026. december 30., döntő: 2027. január 15. (Vác). A hivatalos oldal új domainje: boronkay.eu (a korábbi boronkay.vac.hu helyett) — szervező: Kemenes Tamás, kemenes.tamas@boronkay.hu.",
+      "registered": false
     },
     {
       "id": "boronkay-57",
@@ -70,9 +74,11 @@ var COMPETITION_DATA = {
       "type": "Egyéni",
       "announce": "október közepe",
       "deadline": "2027. január 18. (I. forduló) / 2027. április 7. (II. forduló)",
+      "deadlineDate": "2027-01-18",
       "eventDate": "Döntősök értesítése: 2027. ápr. 12-ig / Döntőre jelentkezés: 2027. ápr. 15. / Döntő: 2027. április 23. (Vác)",
       "link": "https://www.boronkay.eu",
-      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, boronkay.eu, 2026. 11. 21.): a 2026-2027. tanévi (14.) Boronkay Informatika Verseny 5–7. évfolyamos ágának kiírása él. I. forduló határideje: 2027. január 18., II. forduló határideje: 2027. április 7., döntő: 2027. április 23. (Vác). A hivatalos oldal új domainje: boronkay.eu (a korábbi boronkay.vac.hu helyett) — szervező: Kemenes Tamás, kemenes.tamas@boronkay.hu."
+      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, boronkay.eu, 2026. 11. 21.): a 2026-2027. tanévi (14.) Boronkay Informatika Verseny 5–7. évfolyamos ágának kiírása él. I. forduló határideje: 2027. január 18., II. forduló határideje: 2027. április 7., döntő: 2027. április 23. (Vác). A hivatalos oldal új domainje: boronkay.eu (a korábbi boronkay.vac.hu helyett) — szervező: Kemenes Tamás, kemenes.tamas@boronkay.hu.",
+      "registered": false
     },
     {
       "id": "prosuli",
@@ -84,9 +90,11 @@ var COMPETITION_DATA = {
       "type": "Csapat",
       "announce": "október",
       "deadline": "2026/27: hamarosan (a kiírás elindult)",
+      "deadlineDate": null,
       "eventDate": "Regionális: február / Döntő: március (Törökbálint)",
       "link": "https://prosuli.hu/prosuli-robotika-verseny/",
-      "note": "Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap a 2026/2027 tanévi versenyt hirdette, de a konkrét dátumok még hiányoztak."
+      "note": "Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap a 2026/2027 tanévi versenyt hirdette, de a konkrét dátumok még hiányoztak.",
+      "registered": false
     },
     {
       "id": "fll-challenge",
@@ -98,9 +106,11 @@ var COMPETITION_DATA = {
       "type": "Csapat (3–10 fő)",
       "announce": "augusztus (szezon-indulás)",
       "deadline": "Csapatregisztráció: 2026. nov. 30.",
+      "deadlineDate": "2026-11-30",
       "eventDate": "Regionális: 2026. dec.–2027. febr. / Nemzeti döntő: 2027. márc. 7. (Miskolc)",
       "link": "https://www.firstlegoleague.hu",
-      "note": "Automatikus ellenőrzés: a(z) https://www.firstlegoleague.hu oldalon található „2026–2027” jelzi a 2026/2027-es kiírást."
+      "note": "Automatikus ellenőrzés: a(z) https://www.firstlegoleague.hu oldalon található „2026–2027” jelzi a 2026/2027-es kiírást.",
+      "registered": false
     },
     {
       "id": "fll-explore",
@@ -112,9 +122,11 @@ var COMPETITION_DATA = {
       "type": "Csapat",
       "announce": "augusztus",
       "deadline": "Iskolai/óvodai regisztráció: 2027. jan. 31.",
+      "deadlineDate": "2027-01-31",
       "eventDate": "Kiállítás: február–május",
       "link": "https://www.firstlegoleague.hu",
-      "note": "Automatikus ellenőrzés: a(z) https://www.firstlegoleague.hu oldalon található „2026–2027” jelzi a 2026/2027-es kiírást."
+      "note": "Automatikus ellenőrzés: a(z) https://www.firstlegoleague.hu oldalon található „2026–2027” jelzi a 2026/2027-es kiírást.",
+      "registered": false
     },
     {
       "id": "wro",
@@ -126,9 +138,11 @@ var COMPETITION_DATA = {
       "type": "Csapat (2–3 fő)",
       "announce": "december–január",
       "deadline": "február–március (reg.wro.hu)",
+      "deadlineDate": null,
       "eventDate": "Magyarországi válogató: április–május",
       "link": "https://wro.hu",
-      "note": "Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap még csak a lezajlott „WRO 2026” szezont mutatta."
+      "note": "Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap még csak a lezajlott „WRO 2026” szezont mutatta.",
+      "registered": false
     },
     {
       "id": "ftc",
@@ -140,9 +154,11 @@ var COMPETITION_DATA = {
       "type": "Csapat (6–12 fő)",
       "announce": "augusztus–szeptember",
       "deadline": "2026/27: dátumok még nincsenek meghirdetve",
+      "deadlineDate": null,
       "eventDate": "Ligaversenyek/döntő dátuma: még nem ismert",
       "link": "https://firsttechchallenge.hu",
-      "note": "Automatikus ellenőrzés: a(z) https://firsttechchallenge.hu oldalon található „2026/2027” jelzi a 2026/2027-es kiírást."
+      "note": "Automatikus ellenőrzés: a(z) https://firsttechchallenge.hu oldalon található „2026/2027” jelzi a 2026/2027-es kiírást.",
+      "registered": false
     },
     {
       "id": "ehod",
@@ -154,9 +170,11 @@ var COMPETITION_DATA = {
       "type": "Egyéni",
       "announce": "október eleje (bejegyzés: 2026. okt. 25.)",
       "deadline": "Tanári regisztráció folyamatos (e-mail megerősítés + szervezői jóváhagyás szükséges)",
+      "deadlineDate": null,
       "eventDate": "Verseny: 2026. nov. 9–20.",
       "link": "https://e-hod.cuttle.org/",
-      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, e-hod.elte.hu, 2026. 11. 21.): megnyílt a regisztráció a 2026-os kihívásra, 2026. nov. 9–20. között, 5 korcsoportban. Új rendszer: a regisztráció mostantól az e-hod.cuttle.org/admin oldalon történik (tanárként), e-mail megerősítéssel és szervezői jóváhagyással. Diákok felvétele ezután fájlimporttal. Finanszírozás: NTP-TMV-M-26-B-0019 (Nemzeti Tehetség Program)."
+      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, e-hod.elte.hu, 2026. 11. 21.): megnyílt a regisztráció a 2026-os kihívásra, 2026. nov. 9–20. között, 5 korcsoportban. Új rendszer: a regisztráció mostantól az e-hod.cuttle.org/admin oldalon történik (tanárként), e-mail megerősítéssel és szervezői jóváhagyással. Diákok felvétele ezután fájlimporttal. Finanszírozás: NTP-TMV-M-26-B-0019 (Nemzeti Tehetség Program).",
+      "registered": false
     },
     {
       "id": "nemes-online",
@@ -168,9 +186,11 @@ var COMPETITION_DATA = {
       "type": "Egyéni",
       "announce": "október",
       "deadline": "Folyamatos (fordulónként az előző szerdán éjfélig)",
+      "deadlineDate": null,
       "eventDate": "5 forduló: nov, dec, jan, febr, ápr / Eredményhirdetés: máj. 7.",
       "link": "https://tehetseg.inf.elte.hu/nemes-online/nemes-aktualis.html",
-      "note": "Automatikus ellenőrzés: a(z) https://tehetseg.inf.elte.hu/nemes-online/nemes-aktualis.html oldalon található „2026/2027” jelzi a 2026/2027-es kiírást."
+      "note": "Automatikus ellenőrzés: a(z) https://tehetseg.inf.elte.hu/nemes-online/nemes-aktualis.html oldalon található „2026/2027” jelzi a 2026/2027-es kiírást.",
+      "registered": false
     },
     {
       "id": "zsako",
@@ -182,9 +202,11 @@ var COMPETITION_DATA = {
       "type": "Egyéni",
       "announce": "október",
       "deadline": "1. ford. (iskolai): október",
+      "deadlineDate": null,
       "eventDate": "Területi: november / Döntő: február (ELTE IK)",
       "link": "https://tehetseg.inf.elte.hu/nemes/",
-      "note": "Automatikus ellenőrzés: egyik figyelt oldal sem volt elérhető (https://tehetseg.inf.elte.hu/nemes/); a korábbi állapot megőrizve. Korábbi megjegyzés: A kiírás dokumentumai még a 2025/2026-os tanévre vonatkoztak."
+      "note": "Automatikus ellenőrzés: egyik figyelt oldal sem volt elérhető (https://tehetseg.inf.elte.hu/nemes/); a korábbi állapot megőrizve. Korábbi megjegyzés: A kiírás dokumentumai még a 2025/2026-os tanévre vonatkoztak.",
+      "registered": false
     },
     {
       "id": "kodkupa",
@@ -196,9 +218,11 @@ var COMPETITION_DATA = {
       "type": "Csapat (max. 4 fő)",
       "announce": "október",
       "deadline": "2026. november 13. (meghosszabbítva)",
+      "deadlineDate": "2026-11-13",
       "eventDate": "4 online forduló: 2026. nov. 16. / dec. 15. / 2027. jan. 13. / febr. 11. / Döntő: 2027. márc. 13. (Budapest, Fazekas) / Nemzetközi (IIOT): 2027. május",
       "link": "https://kodkupa.hu",
-      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, kodkupa.hu, 2026. 11. 21.): a 2026/2027-es szezon él, meghosszabbított jelentkezési határidővel (nov. 13.). 4 online forduló + országos döntő (Fazekas Gimnázium, 10+1 csapat) + nemzetközi IIOT verseny. Mindkét kategória (Kódkupa profi + ProgramPohár újonc) elérhető, ingyenes nevezéssel."
+      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, kodkupa.hu, 2026. 11. 21.): a 2026/2027-es szezon él, meghosszabbított jelentkezési határidővel (nov. 13.). 4 online forduló + országos döntő (Fazekas Gimnázium, 10+1 csapat) + nemzetközi IIOT verseny. Mindkét kategória (Kódkupa profi + ProgramPohár újonc) elérhető, ingyenes nevezéssel.",
+      "registered": false
     },
     {
       "id": "prograce",
@@ -210,9 +234,11 @@ var COMPETITION_DATA = {
       "type": "Csapat (3 fő)",
       "announce": "szeptember–október",
       "deadline": "Nevezés Google Űrlapon, folyamatos",
+      "deadlineDate": null,
       "eventDate": "2026. december 15. (Pécs, PTE MIK)",
       "link": "https://prograce.hu",
-      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, prograce.hu, 2026. 11. 21.): „PROGRACE 2026 · Jubileumi év” (10 éves), időpont: 2026. december 15., helyszín: PTE MIK, Pécs. Kapcsolattartó: Gyurák Gábor, gyurak.gabor@mik.pte.hu. Nevezés Python 3-as tudással, saját gép nem használható."
+      "note": "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, prograce.hu, 2026. 11. 21.): „PROGRACE 2026 · Jubileumi év” (10 éves), időpont: 2026. december 15., helyszín: PTE MIK, Pécs. Kapcsolattartó: Gyurák Gábor, gyurak.gabor@mik.pte.hu. Nevezés Python 3-as tudással, saját gép nem használható.",
+      "registered": false
     },
     {
       "id": "codeweek",
@@ -224,9 +250,11 @@ var COMPETITION_DATA = {
       "type": "Egyéni / csapat",
       "announce": "szeptember",
       "deadline": "Eseményregisztráció folyamatos",
+      "deadlineDate": null,
       "eventDate": "2026. október 10–25. (14. Code Week)",
       "link": "https://www.codeweekhungary.hu",
-      "note": "Automatikus ellenőrzés: a(z) https://www.codeweekhungary.hu oldalon található „14. Code Week” jelzi a 2026/2027-es kiírást."
+      "note": "Automatikus ellenőrzés: a(z) https://www.codeweekhungary.hu oldalon található „14. Code Week” jelzi a 2026/2027-es kiírást.",
+      "registered": false
     },
     {
       "id": "kozma",
@@ -238,9 +266,11 @@ var COMPETITION_DATA = {
       "type": "Páros / csapat",
       "announce": "szeptember–október",
       "deadline": "2026. október 16. (XXV. verseny)",
+      "deadlineDate": "2026-10-16",
       "eventDate": "2 forduló: iskolai → Döntő: május (Százhalombatta)",
       "link": "https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/",
-      "note": "Automatikus ellenőrzés: a(z) https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/ oldalon található „2026/2027” jelzi a 2026/2027-es kiírást."
+      "note": "Automatikus ellenőrzés: a(z) https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/ oldalon található „2026/2027” jelzi a 2026/2027-es kiírást.",
+      "registered": false
     },
     {
       "id": "dusza",
@@ -252,9 +282,11 @@ var COMPETITION_DATA = {
       "type": "Egyéni",
       "announce": "szeptember–október",
       "deadline": "október–november (2026/27-es felhívás elérhető)",
+      "deadlineDate": null,
       "eventDate": "Regionális: január–február / Döntő: március–április",
       "link": "https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/",
-      "note": "Automatikus ellenőrzés: a(z) https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/ oldalon található „2026/2027” jelzi a 2026/2027-es kiírást."
+      "note": "Automatikus ellenőrzés: a(z) https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/ oldalon található „2026/2027” jelzi a 2026/2027-es kiírást.",
+      "registered": false
     },
     {
       "id": "radnoti",
@@ -266,9 +298,11 @@ var COMPETITION_DATA = {
       "type": "Csapat (2–4 fő)",
       "announce": "október",
       "deadline": "2026. november 6.",
+      "deadlineDate": "2026-11-06",
       "eventDate": "I. forduló (online): 2026. nov. 16. – dec. 11. / II. forduló (Pécs, személyes): 2027. jan. 8. / III. forduló (döntő): 2027. febr. 5.",
       "link": "http://www.radnoti-pecs.hu",
-      "note": "Kézzel megerősítve (versenyfelhívás PDF, Pécs, 2026. október 5., pecsiradnoti.verseny@gmail.com): a verseny idén „Radnóti HACK & CODE a bolygóért” néven, a globális felmelegedés témájában fut. Nevezési határidő: 2026. november 6. A honlap keresésből ez nem derült ki, úgyhogy a jövőben is érdemes kézzel ellenőrizni/megerősíteni."
+      "note": "Kézzel megerősítve (versenyfelhívás PDF, Pécs, 2026. október 5., pecsiradnoti.verseny@gmail.com): a verseny idén „Radnóti HACK & CODE a bolygóért” néven, a globális felmelegedés témájában fut. Nevezési határidő: 2026. november 6. A honlap keresésből ez nem derült ki, úgyhogy a jövőben is érdemes kézzel ellenőrizni/megerősíteni.",
+      "registered": true
     },
     {
       "id": "nemes-alkalmazoi",
@@ -280,9 +314,11 @@ var COMPETITION_DATA = {
       "type": "Egyéni",
       "announce": "november–december",
       "deadline": "2026. december 20.",
+      "deadlineDate": "2026-12-20",
       "eventDate": "Iskolai forduló: 2027. jan. 6. / Országos: 2027. márc. 20. / Díjátadó: 2027. máj. 6. (ELTE IK)",
       "link": "https://versenyportal.hu/nemesa/nemesa_aktualis.html",
-      "note": "Automatikus ellenőrzés: a(z) https://versenyportal.hu/nemesa/nemesa_aktualis.html oldalon található „2026/2027” jelzi a 2026/2027-es kiírást."
+      "note": "Automatikus ellenőrzés: a(z) https://versenyportal.hu/nemesa/nemesa_aktualis.html oldalon található „2026/2027” jelzi a 2026/2027-es kiírást.",
+      "registered": false
     },
     {
       "id": "rocs",
@@ -294,9 +330,11 @@ var COMPETITION_DATA = {
       "type": "Csapat (2–3 fő)",
       "announce": "november–december",
       "deadline": "január–február",
+      "deadlineDate": null,
       "eventDate": "Regionális: február–március / Döntő: április (Kecskemét)",
       "link": "http://robotprog.hu/",
-      "note": "Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap még a korábbi (2024/25-ös, XV.) kiírást mutatta."
+      "note": "Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap még a korábbi (2024/25-ös, XV.) kiírást mutatta.",
+      "registered": false
     },
     {
       "id": "kovacs",
@@ -308,9 +346,11 @@ var COMPETITION_DATA = {
       "type": "Egyéni",
       "announce": "november–december",
       "deadline": "2027. február 16.",
+      "deadlineDate": "2027-02-16",
       "eventDate": "Iskolai forduló: 2027. febr. 17. / Országos: 2027. ápr. 10. / Eredményhirdetés: 2027 május (ELTE IK)",
       "link": "https://versenyportal.hu/logo/logo_aktualis.html",
-      "note": "Automatikus ellenőrzés: a(z) https://versenyportal.hu/logo/logo_aktualis.html oldalon található „2026/2027” jelzi a 2026/2027-es kiírást."
+      "note": "Automatikus ellenőrzés: a(z) https://versenyportal.hu/logo/logo_aktualis.html oldalon található „2026/2027” jelzi a 2026/2027-es kiírást.",
+      "registered": false
     },
     {
       "id": "arpad-kupa",
@@ -322,9 +362,11 @@ var COMPETITION_DATA = {
       "type": "Csapat (2 fő)",
       "announce": "október",
       "deadline": "2026. november 20. (éjfél)",
+      "deadlineDate": "2026-11-20",
       "eventDate": "1. forduló beadandó: 2026. dec. 19. / 2. forduló beadandó: 2027. febr. 19. / Döntő: 2027. ápr. 6., 14:00 (Pécs)",
       "link": "https://www.arpad-pecs.hu",
-      "note": "Kézzel felvéve (versenyfelhívás PDF, Pécs, 2026. október 20., arpad-kupa@arpad-pecs.hu): a Pécsi Árpád Fejedelem Gimnázium és Általános Iskola digitális kultúra versenye, 7–8. évfolyamos, 2 fős csapatoknak. Regisztráció/1. forduló tesztmegoldás határideje: 2026. november 20. éjfél."
+      "note": "Kézzel felvéve (versenyfelhívás PDF, Pécs, 2026. október 20., arpad-kupa@arpad-pecs.hu): a Pécsi Árpád Fejedelem Gimnázium és Általános Iskola digitális kultúra versenye, 7–8. évfolyamos, 2 fős csapatoknak. Regisztráció/1. forduló tesztmegoldás határideje: 2026. november 20. éjfél.",
+      "registered": true
     }
   ]
 };

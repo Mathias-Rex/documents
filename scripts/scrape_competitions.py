@@ -120,6 +120,15 @@ class Competition:
     # közvetlenül küldött dokumentum) megerősítést kaptunk.
     manual_status: Optional[str] = None
     manual_note: Optional[str] = None
+    # A legfontosabb, géppel is értelmezhető (nevezési) határidő, ISO formátumban
+    # ("ÉÉÉÉ-HH-NN"), ha ismert egy konkrét, napra pontos dátum. A HTML oldal ez
+    # alapján rendezi időrendbe a versenyeket, és ez alapján dönti el, hogy egy
+    # kiírás lejárt-e már. Ha a határidő csak hozzávetőleges (pl. "október" vagy
+    # "folyamatos"), maradjon None — ilyenkor a kártya a "még ismeretlen
+    # dátumú" csoportba kerül, nem minősül sem közelgőnek, sem lejártnak.
+    deadline_date: Optional[str] = None
+    # Igaz, ha erre a versenyre ténylegesen neveztünk/jelentkeztünk.
+    registered: bool = False
 
     # Futás közben kitöltött mezők:
     status: str = "unsure"
@@ -145,6 +154,8 @@ def build_registry() -> List[Competition]:
                 "(ibela.hu/neumann/dokumentumtar): nevezési határidő 2027. február 14., "
                 "döntő 2027. március 18–19. (Szekszárd)."
             ),
+            deadline_date="2027-02-14",
+            registered=True,
         ),
         Competition(
             id="boronkay-8", name="Boronkay Informatika Verseny – 8. évfolyam", fee="",
@@ -171,6 +182,7 @@ def build_registry() -> List[Competition]:
                 "A hivatalos oldal új domainje: boronkay.eu (a korábbi boronkay.vac.hu helyett) — "
                 "szervező: Kemenes Tamás, kemenes.tamas@boronkay.hu."
             ),
+            deadline_date="2026-11-09",
         ),
         Competition(
             id="boronkay-57", name="Boronkay Informatika Verseny – 5–7. évfolyam", fee="",
@@ -194,6 +206,7 @@ def build_registry() -> List[Competition]:
                 "A hivatalos oldal új domainje: boronkay.eu (a korábbi boronkay.vac.hu helyett) — "
                 "szervező: Kemenes Tamás, kemenes.tamas@boronkay.hu."
             ),
+            deadline_date="2027-01-18",
         ),
         Competition(
             id="prosuli", name="ProSuli Robotika Verseny", fee="\U0001f4b8",
@@ -215,6 +228,7 @@ def build_registry() -> List[Competition]:
             check_urls=["https://www.firstlegoleague.hu"],
             extra_patterns=[r"BIOGLOW"],
             fallback_note="A 2026/2027-es „BIOGLOW” szezon élt, konkrét dátumokkal.",
+            deadline_date="2026-11-30",
         ),
         Competition(
             id="fll-explore", name="FIRST LEGO League – Explore & Discover", fee="\U0001f4b8",
@@ -226,6 +240,7 @@ def build_registry() -> List[Competition]:
             check_urls=["https://www.firstlegoleague.hu"],
             extra_patterns=[r"BIOGLOW"],
             fallback_note="A 2026/2027-es BIOGLOW szezon része, azonos menetrenddel.",
+            deadline_date="2027-01-31",
         ),
         Competition(
             id="wro", name="World Robot Olympiad (WRO)", fee="\U0001f4b8\U0001f4b8",
@@ -313,6 +328,7 @@ def build_registry() -> List[Competition]:
                 "10+1 csapat) + nemzetközi IIOT verseny. Mindkét kategória (Kódkupa profi + "
                 "ProgramPohár újonc) elérhető, ingyenes nevezéssel."
             ),
+            deadline_date="2026-11-13",
         ),
         Competition(
             id="prograce", name="PROGRACE Programozói Verseny", fee="",
@@ -352,6 +368,7 @@ def build_registry() -> List[Competition]:
             check_urls=["https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/"],
             extra_patterns=[r"XXV\."],
             fallback_note="Megjelent a 2026/2027-es kiírás (XXV. verseny), nevezési határidővel.",
+            deadline_date="2026-10-16",
         ),
         Competition(
             id="dusza", name="Dusza Árpád Országos Programozói Emlékverseny", fee="",
@@ -386,6 +403,8 @@ def build_registry() -> List[Competition]:
                 "Nevezési határidő: 2026. november 6. A honlap keresésből ez nem derült ki, "
                 "úgyhogy a jövőben is érdemes kézzel ellenőrizni/megerősíteni."
             ),
+            deadline_date="2026-11-06",
+            registered=True,
         ),
         Competition(
             id="nemes-alkalmazoi", name="Nemes Tihamér Alkalmazói Tanulmányi Verseny", fee="",
@@ -399,6 +418,7 @@ def build_registry() -> List[Competition]:
                 "https://tehetseg.inf.elte.hu/nemesa/",
             ],
             fallback_note="A verseny átkerült a versenyportal.hu-ra, ahol élt a 2026/2027-es kiírás.",
+            deadline_date="2026-12-20",
         ),
         Competition(
             id="rocs", name="ROCS – Robotprogramozó Csapatverseny", fee="",
@@ -423,6 +443,7 @@ def build_registry() -> List[Competition]:
                 "http://logo.inf.elte.hu/",
             ],
             fallback_note="A verseny átkerült a versenyportal.hu-ra, ahol élt a 2026/2027-es kiírás.",
+            deadline_date="2027-02-16",
         ),
         Competition(
             id="arpad-kupa", name="Árpád-kupa (Pécsi Árpád Fejedelem Gimnázium)", fee="",
@@ -448,6 +469,8 @@ def build_registry() -> List[Competition]:
                 "Iskola digitális kultúra versenye, 7–8. évfolyamos, 2 fős csapatoknak. "
                 "Regisztráció/1. forduló tesztmegoldás határideje: 2026. november 20. éjfél."
             ),
+            deadline_date="2026-11-20",
+            registered=True,
         ),
     ]
 
@@ -557,9 +580,11 @@ def render_data_js(competitions: List[Competition], checked_at: str) -> str:
             "type": c.type,
             "announce": c.announce,
             "deadline": c.deadline,
+            "deadlineDate": c.deadline_date,
             "eventDate": c.event_date,
             "link": c.link,
             "note": c.note,
+            "registered": c.registered,
         })
 
     data = {
@@ -600,6 +625,7 @@ def render_status_md(competitions: List[Competition], checked_at: str) -> str:
     counts = {"yes": 0, "no": 0, "unsure": 0}
     for c in competitions:
         counts[c.status] += 1
+    registered_count = sum(1 for c in competitions if c.registered)
 
     lines = [
         "# Versenyek státusza – 2026/2027",
@@ -608,15 +634,21 @@ def render_status_md(competitions: List[Competition], checked_at: str) -> str:
         "",
         f"**{counts['yes']}** versenynél már megjelent/elérhető az új tanévi kiírás, "
         f"**{counts['no']}**-nál még a korábbi adatok érvényesek, "
-        f"**{counts['unsure']}** verseny státusza bizonytalan.",
+        f"**{counts['unsure']}** verseny státusza bizonytalan. "
+        f"**{registered_count}** versenyre ténylegesen neveztünk.",
         "",
-        "| Verseny | Státusz | Megjegyzés | Honlap |",
-        "|---|---|---|---|",
+        "| Verseny | Státusz | Neveztünk? | Határidő | Megjegyzés | Honlap |",
+        "|---|---|---|---|---|---|",
     ]
     for c in competitions:
         legend = STATUS_LEGEND[c.status]
         note = c.note.replace("|", "\\|").replace("\n", " ")
-        lines.append(f"| {c.name} | {legend['icon']} {legend['shortLabel']} | {note} | {c.link} |")
+        registered_mark = "📝 Igen" if c.registered else ""
+        deadline_cell = c.deadline_date or c.deadline
+        lines.append(
+            f"| {c.name} | {legend['icon']} {legend['shortLabel']} | {registered_mark} | "
+            f"{deadline_cell} | {note} | {c.link} |"
+        )
 
     lines += [
         "",
