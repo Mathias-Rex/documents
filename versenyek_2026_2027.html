@@ -126,7 +126,6 @@
   /* Az alert alapból vízszintesen (cím | üzenet, 2 oszlopban) rendezi a tartalmát
      (flex, gap) — itt egymás alá (2 sorba) tesszük a címet és az üzenetet. */
   #status-alert { flex-direction: column; align-items: stretch; gap: 0.25rem; }
-  .stats-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
   .legend-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.75rem 0 1.25rem; font-size: 0.9rem; color: var(--text-light); }
   .legend-row span.legend-item { display: inline-flex; align-items: center; gap: 0.35rem; }
   .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
@@ -307,20 +306,9 @@
 
       CDB.createDivider({ parent: page, id: "divider-1" });
 
-      // --- statisztika a data.items alapján kiszámolva ---
+      // --- statisztika a data.items alapján kiszámolva (a szűrőgombok feliratain jelenik meg) ---
       var counts = { yes: 0, no: 0, unsure: 0 };
       data.items.forEach(function (item) { counts[item.status]++; });
-
-      var statsRow = createDOMElem({ tag: "div", attrs: { class: "stats-row" }, parent: page });
-      CDB.createBadge({ parent: statsRow, id: "stat-total", text: "Összesen: " + data.items.length + " verseny", type: "neutral" });
-      Object.keys(data.statusLegend).forEach(function (key) {
-        var l = data.statusLegend[key];
-        CDB.createBadge({
-          parent: statsRow, id: "stat-" + key,
-          text: l.icon + " " + l.shortLabel + ": " + counts[key],
-          type: l.badgeType
-        });
-      });
 
       // --- szűrő gombsor ---
       var filterBar = createDOMElem({ tag: "div", attrs: { class: "filter-bar" }, parent: page });
