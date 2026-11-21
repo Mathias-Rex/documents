@@ -1,5 +1,5 @@
 // ⚠️ Ezt a fájlt a scripts/scrape_competitions.py generálja automatikusan — ne szerkeszd kézzel!
-// Generálva: 2026-11-21T21:13:17
+// Generálva: 2026-11-21T22:00:53
 //
 // Használat HTML-ből (klasszikus <script>, globál változóként):
 //   <script src="competitions-data.js"></script>
@@ -8,7 +8,7 @@
 // Használat Node/CommonJS-ből:
 //   const { COMPETITION_DATA } = require("./competitions-data.js");
 
-var COMPETITION_DATA = {
+const COMPETITION_DATA = {
   "schoolYear": "2026–2027",
   "statusCheckedAt": "2026. nov. 21.",
   "statusLegend": {

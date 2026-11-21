@@ -10,35 +10,35 @@
 // ============================================================================
 (function () {
   "use strict";
-  var createDOMElem = DOMElemJS.createDOMElem;
-  var CDB = CreateDOMBlocks;
+  const createDOMElem = DOMElemJS.createDOMElem;
+  const CDB = CreateDOMBlocks;
 
   // Tisztán számító/localStorage-ot kezelő segédfüggvények a utils.js-ből
   // (lásd ott: window.VersenyekUtils) — ez a fájl csak a tényleges DOM-
   // renderelésért felel.
-  var getStoredTheme = VersenyekUtils.getStoredTheme;
-  var setStoredTheme = VersenyekUtils.setStoredTheme;
-  var getEffectiveTheme = VersenyekUtils.getEffectiveTheme;
-  var applyTheme = VersenyekUtils.applyTheme;
-  var themeButtonLabel = VersenyekUtils.themeButtonLabel;
-  var getStoredFilterState = VersenyekUtils.getStoredFilterState;
-  var setStoredFilterState = VersenyekUtils.setStoredFilterState;
-  var daysUntilDeadline = VersenyekUtils.daysUntilDeadline;
-  var countdownText = VersenyekUtils.countdownText;
-  var sortItemsByDeadline = VersenyekUtils.sortItemsByDeadline;
-  var todayIsoDate = VersenyekUtils.todayIsoDate;
-  var formatIsoDateHu = VersenyekUtils.formatIsoDateHu;
+  const getStoredTheme = VersenyekUtils.getStoredTheme;
+  const setStoredTheme = VersenyekUtils.setStoredTheme;
+  const getEffectiveTheme = VersenyekUtils.getEffectiveTheme;
+  const applyTheme = VersenyekUtils.applyTheme;
+  const themeButtonLabel = VersenyekUtils.themeButtonLabel;
+  const getStoredFilterState = VersenyekUtils.getStoredFilterState;
+  const setStoredFilterState = VersenyekUtils.setStoredFilterState;
+  const daysUntilDeadline = VersenyekUtils.daysUntilDeadline;
+  const countdownText = VersenyekUtils.countdownText;
+  const sortItemsByDeadline = VersenyekUtils.sortItemsByDeadline;
+  const todayIsoDate = VersenyekUtils.todayIsoDate;
+  const formatIsoDateHu = VersenyekUtils.formatIsoDateHu;
 
   // Egy átfogó idővonal, ami minden (napra pontos határidejű) versenyt
   // időrendben felsorol, és a megfelelő helyen megjelöli a mai napot is —
   // azokat a versenyeket, amiknek a határideje folyamatos/ismeretlen, nem
   // lehet elhelyezni rajta, ezért kimaradnak (de külön jelezzük a számukat).
   function renderTimeline(parent, items) {
-    var section = createDOMElem({ tag: "div", attrs: { class: "timeline-section" }, parent: parent });
+    const section = createDOMElem({ tag: "div", attrs: { class: "timeline-section" }, parent: parent });
     CDB.createTitle({ parent: section, id: "timeline-title", text: "📅 Idővonal — nevezési határidők" }, 3);
 
-    var dated = items.filter(function (i) { return !!i.deadlineDate; });
-    var undatedCount = items.length - dated.length;
+    const dated = items.filter(function (i) { return !!i.deadlineDate; });
+    const undatedCount = items.length - dated.length;
     dated.sort(function (a, b) {
       return a.deadlineDate < b.deadlineDate ? -1 : (a.deadlineDate > b.deadlineDate ? 1 : 0);
     });
@@ -49,9 +49,9 @@
         (undatedCount > 0 ? " (" + undatedCount + " versenynek folyamatos/ismeretlen a határideje, ők nem kerülhetnek fel az idővonalra.)" : "")
     });
 
-    var todayIso = todayIsoDate();
-    var timelineEl = createDOMElem({ tag: "div", attrs: { class: "timeline" }, parent: section });
-    var todayInserted = false;
+    const todayIso = todayIsoDate();
+    const timelineEl = createDOMElem({ tag: "div", attrs: { class: "timeline" }, parent: section });
+    let todayInserted = false;
 
     function insertTodayMarker() {
       createDOMElem({
@@ -65,8 +65,8 @@
       if (!todayInserted && item.deadlineDate >= todayIso) {
         insertTodayMarker();
       }
-      var isExpiredEntry = item.deadlineDate < todayIso;
-      var registeredMark = item.registered ? (isExpiredEntry ? " ✔️" : " 📝") : "";
+      const isExpiredEntry = item.deadlineDate < todayIso;
+      const registeredMark = item.registered ? (isExpiredEntry ? " ✔️" : " 📝") : "";
       createDOMElem({
         tag: "div", parent: timelineEl,
         attrs: { class: "timeline-item" + (isExpiredEntry ? " is-expired-entry" : ""), "data-status": item.status },
@@ -80,10 +80,10 @@
   }
 
   function renderPage(data) {
-    var page = CDB.createContainer({ parent: "#app", id: "page", class: "page" });
+    const page = CDB.createContainer({ parent: "#app", id: "page", class: "page" });
 
-    var headerBar = createDOMElem({ tag: "div", attrs: { class: "header-bar" }, parent: page });
-    var headerText = createDOMElem({ tag: "div", attrs: { class: "header-text" }, parent: headerBar });
+    const headerBar = createDOMElem({ tag: "div", attrs: { class: "header-bar" }, parent: page });
+    const headerText = createDOMElem({ tag: "div", attrs: { class: "header-text" }, parent: headerBar });
 
     CDB.createTitle({ parent: headerText, id: "page-title", text: "Magyarországi Informatikai és Programozó Versenyek" }, 1);
     CDB.createTitle({ parent: headerText, id: "page-subtitle", text: data.schoolYear + "-es tanév", class: "subtitle" }, 2);
@@ -92,11 +92,11 @@
       text: "Adatvezérelt áttekintő — egyetlen JavaScript objektumból renderelve, DOMelemJS + createDOMBlocks segítségével."
     });
 
-    var themeBtn = CDB.createButton({
+    const themeBtn = CDB.createButton({
       parent: headerBar, id: "theme-toggle",
       text: themeButtonLabel(getEffectiveTheme()),
       click: function () {
-        var next = getEffectiveTheme() === "dark" ? "light" : "dark";
+        const next = getEffectiveTheme() === "dark" ? "light" : "dark";
         applyTheme(next);
         setStoredTheme(next);
         themeBtn.textContent = themeButtonLabel(next);
@@ -117,9 +117,9 @@
     });
 
     // --- jelmagyarázat, a statusLegend objektumból felépítve ---
-    var legendRow = createDOMElem({ tag: "div", attrs: { class: "legend-row" }, parent: page });
+    const legendRow = createDOMElem({ tag: "div", attrs: { class: "legend-row" }, parent: page });
     Object.keys(data.statusLegend).forEach(function (key) {
-      var l = data.statusLegend[key];
+      const l = data.statusLegend[key];
       createDOMElem({
         tag: "span", parent: legendRow, attrs: { class: "legend-item" },
         children: [
@@ -136,14 +136,14 @@
     CDB.createDivider({ parent: page, id: "divider-timeline" });
 
     // --- statisztika a data.items alapján kiszámolva (a szűrőgombok feliratain jelenik meg) ---
-    var counts = { yes: 0, no: 0, unsure: 0 };
+    const counts = { yes: 0, no: 0, unsure: 0 };
     data.items.forEach(function (item) { counts[item.status]++; });
 
     // --- szűrő gombsor (a kezdeti állapotot a localStorage-ból töltjük vissza) ---
-    var storedFilterState = getStoredFilterState();
-    var filterBar = createDOMElem({ tag: "div", attrs: { class: "filter-bar" }, parent: page });
-    var currentFilterKey = (storedFilterState && storedFilterState.filterKey) || "all";
-    var showExpired = storedFilterState && typeof storedFilterState.showExpired === "boolean"
+    const storedFilterState = getStoredFilterState();
+    const filterBar = createDOMElem({ tag: "div", attrs: { class: "filter-bar" }, parent: page });
+    let currentFilterKey = (storedFilterState && storedFilterState.filterKey) || "all";
+    let showExpired = storedFilterState && typeof storedFilterState.showExpired === "boolean"
       ? storedFilterState.showExpired
       : true;
 
@@ -152,13 +152,13 @@
     }
 
     function updateVisibility() {
-      var cards = document.querySelectorAll("#competition-grid .comp-card");
+      const cards = document.querySelectorAll("#competition-grid .comp-card");
       cards.forEach(function (card) {
-        var matchesFilter = currentFilterKey === "all"
+        const matchesFilter = currentFilterKey === "all"
           || (currentFilterKey === "registered"
                 ? card.dataset.registered === "true"
                 : card.dataset.status === currentFilterKey);
-        var matchesExpiredToggle = showExpired || card.dataset.expired !== "true";
+        const matchesExpiredToggle = showExpired || card.dataset.expired !== "true";
         card.classList.toggle("is-hidden", !(matchesFilter && matchesExpiredToggle));
       });
     }
@@ -177,14 +177,14 @@
       click: function () { applyFilter("all"); }
     });
     Object.keys(data.statusLegend).forEach(function (key) {
-      var l = data.statusLegend[key];
+      const l = data.statusLegend[key];
       CDB.createButton({
         parent: filterBar, id: "filter-" + key,
         text: l.icon + " " + l.shortLabel + " (" + counts[key] + ")",
         click: function () { applyFilter(key); }
       });
     });
-    var registeredCount = data.items.filter(function (i) { return i.registered; }).length;
+    const registeredCount = data.items.filter(function (i) { return i.registered; }).length;
     CDB.createButton({
       parent: filterBar, id: "filter-registered",
       text: "📝 Neveztünk (" + registeredCount + ")",
@@ -197,7 +197,7 @@
     });
 
     // --- "lejárt határidejűek mutatása" kapcsoló ---
-    var expiredToggleRow = createDOMElem({ tag: "div", attrs: { class: "expired-toggle-row" }, parent: page });
+    const expiredToggleRow = createDOMElem({ tag: "div", attrs: { class: "expired-toggle-row" }, parent: page });
     CDB.createCheckbox({
       parent: expiredToggleRow, id: "show-expired-toggle",
       labelText: "Lejárt határidejű versenyek mutatása (szürkítve)",
@@ -211,7 +211,7 @@
     });
 
     // --- verseny-kártyák rácsa ---
-    var grid = CDB.createGrid({ parent: page, id: "competition-grid", class: "competition-grid", columns: 2, gap: "1.25rem" });
+    const grid = CDB.createGrid({ parent: page, id: "competition-grid", class: "competition-grid", columns: 2, gap: "1.25rem" });
 
     sortItemsByDeadline(data.items).forEach(function (item) {
       renderCard(grid, item, data.statusLegend[item.status]);
@@ -242,8 +242,8 @@
   function renderCard(grid, item, legend) {
     // A kártya belső tartalmát közvetlenül DOMElemJS.createDOMElem-mel építjük fel
     // (append: false — csak a createCard() kapja meg a végén, body-ként).
-    var metaWrap = createDOMElem({ tag: "div", attrs: { class: "comp-meta" }, append: false });
-    var days = daysUntilDeadline(item.deadlineDate);
+    const metaWrap = createDOMElem({ tag: "div", attrs: { class: "comp-meta" }, append: false });
+    const days = daysUntilDeadline(item.deadlineDate);
 
     CDB.createBadge({
       parent: metaWrap, id: "badge-" + item.id,
@@ -255,7 +255,7 @@
       // nevezés biztosan megtörtént ("Neveztünk"); ha még nem (vagy a
       // határidő ismeretlen/folyamatos), még csak szándékunkban áll
       // ("Jelentkezünk").
-      var hasEntered = days !== null && days < 0;
+      const hasEntered = days !== null && days < 0;
       CDB.createBadge({
         parent: metaWrap, id: "badge-registered-" + item.id,
         text: hasEntered ? "✔️ Neveztünk" : "📝 Jelentkezünk",
@@ -263,7 +263,7 @@
       });
     }
 
-    var fields = [
+    const fields = [
       { label: "Fókusz", value: item.focus },
       { label: "Korosztály", value: item.age },
       { label: "Típus", value: item.type },
@@ -285,7 +285,7 @@
       })
     });
 
-    var countdown = countdownText(days);
+    const countdown = countdownText(days);
     if (countdown) {
       CDB.createParagraph({ parent: metaWrap, id: "countdown-" + item.id, text: countdown, class: "comp-countdown" });
     }
@@ -293,15 +293,15 @@
     CDB.createParagraph({ parent: metaWrap, id: "note-" + item.id, text: item.note, class: "comp-note" });
     CDB.createLink({ parent: metaWrap, id: "link-" + item.id, text: "Hivatalos oldal →", href: item.link, target: "_blank" });
 
-    var titleText = (item.fee ? item.fee + " " : "") + item.name;
-    var card = CDB.createCard({
+    const titleText = (item.fee ? item.fee + " " : "") + item.name;
+    const card = CDB.createCard({
       parent: grid, id: "card-" + item.id, class: "comp-card",
       title: titleText,
       body: metaWrap
     });
     card.dataset.status = item.status;
     card.dataset.registered = item.registered ? "true" : "false";
-    var isExpired = days !== null && days < 0;
+    const isExpired = days !== null && days < 0;
     card.dataset.expired = isExpired ? "true" : "false";
     card.classList.toggle("is-expired", isExpired);
   }

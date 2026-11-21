@@ -10,7 +10,7 @@
   "use strict";
 
   // --- világos / sötét mód kezelése ---
-  var THEME_KEY = "versenyek-theme";
+  const THEME_KEY = "versenyek-theme";
 
   function getStoredTheme() {
     try { return localStorage.getItem(THEME_KEY); } catch (e) { return null; }
@@ -22,7 +22,7 @@
     } catch (e) { /* localStorage nem elérhető */ }
   }
   function getEffectiveTheme() {
-    var stored = getStoredTheme();
+    const stored = getStoredTheme();
     if (stored === "light" || stored === "dark") { return stored; }
     return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
@@ -34,13 +34,13 @@
   }
 
   // --- szűrő / kapcsoló állapot megjegyzése ---
-  var FILTER_STATE_KEY = "versenyek-filter-state";
+  const FILTER_STATE_KEY = "versenyek-filter-state";
 
   function getStoredFilterState() {
     try {
-      var raw = localStorage.getItem(FILTER_STATE_KEY);
+      const raw = localStorage.getItem(FILTER_STATE_KEY);
       if (!raw) { return null; }
-      var parsed = JSON.parse(raw);
+      const parsed = JSON.parse(raw);
       return parsed && typeof parsed === "object" ? parsed : null;
     } catch (e) { return null; }
   }
@@ -52,10 +52,10 @@
   // --- határidő-számítás és rendezés a mai dátumhoz képest ---
   function daysUntilDeadline(deadlineDate) {
     if (!deadlineDate) { return null; }
-    var today = new Date();
+    const today = new Date();
     today.setHours(0, 0, 0, 0);
-    var parts = deadlineDate.split("-").map(Number);
-    var deadline = new Date(parts[0], parts[1] - 1, parts[2]);
+    const parts = deadlineDate.split("-").map(Number);
+    const deadline = new Date(parts[0], parts[1] - 1, parts[2]);
     return Math.round((deadline - today) / 86400000);
   }
 
@@ -71,12 +71,12 @@
   // határidejűek, végül a már lejártak — azok közül is a régebben lejártak
   // kerülnek leghátrébb.
   function sortItemsByDeadline(items) {
-    var withDays = items.map(function (item) {
+    const withDays = items.map(function (item) {
       return { item: item, days: daysUntilDeadline(item.deadlineDate) };
     });
-    var upcoming = withDays.filter(function (x) { return x.days !== null && x.days >= 0; });
-    var unknown = withDays.filter(function (x) { return x.days === null; });
-    var expired = withDays.filter(function (x) { return x.days !== null && x.days < 0; });
+    const upcoming = withDays.filter(function (x) { return x.days !== null && x.days >= 0; });
+    const unknown = withDays.filter(function (x) { return x.days === null; });
+    const expired = withDays.filter(function (x) { return x.days !== null && x.days < 0; });
 
     upcoming.sort(function (a, b) { return a.days - b.days; });
     expired.sort(function (a, b) { return b.days - a.days; });
@@ -85,17 +85,17 @@
   }
 
   // --- magyar dátumformázás az idővonalhoz ---
-  var HU_MONTHS_SHORT = ["jan", "febr", "márc", "ápr", "máj", "jún", "júl", "aug", "szept", "okt", "nov", "dec"];
+  const HU_MONTHS_SHORT = ["jan", "febr", "márc", "ápr", "máj", "jún", "júl", "aug", "szept", "okt", "nov", "dec"];
 
   function todayIsoDate() {
-    var d = new Date();
-    var mm = String(d.getMonth() + 1).padStart(2, "0");
-    var dd = String(d.getDate()).padStart(2, "0");
+    const d = new Date();
+    const mm = String(d.getMonth() + 1).padStart(2, "0");
+    const dd = String(d.getDate()).padStart(2, "0");
     return d.getFullYear() + "-" + mm + "-" + dd;
   }
 
   function formatIsoDateHu(iso) {
-    var parts = iso.split("-").map(Number);
+    const parts = iso.split("-").map(Number);
     return parts[0] + ". " + HU_MONTHS_SHORT[parts[1] - 1] + ". " + parts[2] + ".";
   }
 

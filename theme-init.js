@@ -4,7 +4,7 @@
 // data-theme attribútum a CSS kiértékelése előtt beálljon.
 (function () {
   try {
-    var saved = localStorage.getItem("versenyek-theme");
+    const saved = localStorage.getItem("versenyek-theme");
     if (saved === "light" || saved === "dark") {
       document.documentElement.setAttribute("data-theme", saved);
     }
