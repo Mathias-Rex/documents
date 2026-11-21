@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Magyarországi Informatikai és Programozó Versenyek 2026/2027</title>
+<link rel="stylesheet" href="https://unpkg.com/createdomblocks@2.0.1/dist/style.css" />
+<style>
+  :root {
+    --page-max-width: 1100px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #60a5fa;
+      --primary-hover: #3b82f6;
+      --secondary: #9ca3af;
+      --success: #4ade80;
+      --success-bg: #14532d;
+      --error: #f87171;
+      --error-bg: #450a0a;
+      --warning: #fbbf24;
+      --warning-bg: #451a03;
+      --info: #60a5fa;
+      --info-bg: #1e3a5f;
+      --neutral: #9ca3af;
+      --neutral-bg: #27272a;
+      --text: #f3f4f6;
+      --text-light: #9ca3af;
+      --border: #374151;
+      --bg: #1f2937;
+      --bg-alt: #111827;
+    }
+  }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-alt);
+    color: var(--text);
+  }
+  .page { padding: 2rem 0 4rem; }
+  .subtitle { color: var(--text-light); margin-top: -0.5rem; }
+  .meta-line { color: var(--text-light); font-size: 0.9rem; }
+  .stats-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
+  .legend-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.75rem 0 1.25rem; font-size: 0.9rem; color: var(--text-light); }
+  .legend-row span.legend-item { display: inline-flex; align-items: center; gap: 0.35rem; }
+  .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
+  .filter-bar .btn.active { background-color: var(--primary-hover); box-shadow: var(--shadow-md); outline: 2px solid var(--primary); outline-offset: 1px; }
+  #competition-grid { align-items: start; }
+  @media (max-width: 680px) {
+    #competition-grid { grid-template-columns: 1fr !important; }
+  }
+  .comp-card { border-left: 5px solid var(--border); transition: box-shadow 0.2s ease; }
+  .comp-card[data-status="yes"] { border-left-color: var(--success); }
+  .comp-card[data-status="no"] { border-left-color: var(--error); }
+  .comp-card[data-status="unsure"] { border-left-color: var(--warning); }
+  .comp-card.is-hidden { display: none; }
+  .comp-meta .badge { margin-bottom: 0.75rem; }
+  .comp-fields { margin: 0 0 0.75rem; }
+  .comp-row { display: flex; gap: 0.75rem; padding: 0.3rem 0; border-bottom: 1px dashed var(--border); font-size: 0.92rem; }
+  .comp-row:last-child { border-bottom: none; }
+  .comp-row dt { flex: 0 0 40%; margin: 0; color: var(--text-light); font-weight: 600; }
+  .comp-row dd { margin: 0; flex: 1; }
+  .comp-note { font-size: 0.85rem; color: var(--text-light); font-style: italic; margin: 0.5rem 0 0; }
+  .comp-link { display: inline-block; margin-top: 0.6rem; font-weight: 600; }
+  footer.page-footer { margin-top: 2rem; font-size: 0.85rem; color: var(--text-light); }
+  footer.page-footer a { color: inherit; }
+</style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="https://unpkg.com/domelemjs@2.0.1/dist/index.browser.js"></script>
+  <script src="https://unpkg.com/createdomblocks@2.0.1/dist/index.js"></script>
+  <script>
+  (function () {
+    "use strict";
+
+    // ======================================================================
+    // EGYETLEN ADATFORRÁS — a teljes oldal ebből az objektumból épül fel.
+    // ======================================================================
+    var COMPETITION_DATA = {
+      schoolYear: "2026–2027",
+      statusCheckedAt: "2026. szeptember 28.",
+      statusLegend: {
+        yes:    { icon: "✅", label: "Már megjelent a 2026/2027-es kiírás", shortLabel: "Van kiírás", badgeType: "success" },
+        no:     { icon: "❌", label: "Még a 2025/26-os (vagy korábbi) adatok érvényesek", shortLabel: "Még nincs", badgeType: "error" },
+        unsure: { icon: "❓", label: "Státusz bizonytalan / nem ellenőrizhető", shortLabel: "Bizonytalan", badgeType: "warning" }
+      },
+      items: [
+        { id: "neumann", name: "22. Neumann János Programtermék Verseny", status: "no", fee: "",
+          focus: "Projektmunka (app, játék, grafika, CAD, animáció, hardver)", age: "Ált. és közép (21 év alatt)", type: "Egyéni / csapat",
+          announce: "szeptember–október", deadline: "január–február", eventDate: "Döntő: március vége (Szekszárd)",
+          link: "https://neumannverseny.hu",
+          note: "A honlapon még a 22. (2025/2026-os, már lezajlott) kiírás látszik; a 23. verseny 2026/27-es kiírása még nem jelent meg." },
+
+        { id: "boronkay-8", name: "Boronkay Informatika Verseny – 8. évfolyam", status: "unsure", fee: "",
+          focus: "Alkalmazói informatika (elmélet + szöveg, táblázat)", age: "8. osztály (alacsonyabb is indulhat)", type: "Egyéni",
+          announce: "október eleje", deadline: "1. ford.: november közepe / 2. ford.: január eleje", eventDate: "Döntő: január vége (Vác)",
+          link: "https://boronkay.vac.hu/informatika-verseny",
+          note: "A honlap jelenleg HTTP 503 hibát ad — nem volt élőben ellenőrizhető; érdemes később újraellenőrizni." },
+
+        { id: "boronkay-57", name: "Boronkay Informatika Verseny – 5–7. évfolyam", status: "unsure", fee: "",
+          focus: "Alkalmazói informatika (elmélet + grafika, szöveg, prezentáció)", age: "5–7. osztály", type: "Egyéni",
+          announce: "október közepe", deadline: "1. ford.: január vége / 2. ford.: április eleje", eventDate: "Döntő: április vége (Vác)",
+          link: "https://boronkay.vac.hu/informatika-verseny",
+          note: "A honlap jelenleg HTTP 503 hibát ad — nem volt élőben ellenőrizhető; érdemes később újraellenőrizni." },
+
+        { id: "prosuli", name: "ProSuli Robotika Verseny", status: "yes", fee: "💸",
+          focus: "LEGO robotprogramozás (vonalkövetés, pályafeladatok)", age: "Ált. és közép (amatőr / profi liga)", type: "Csapat",
+          announce: "október", deadline: "2026/27: hamarosan (a kiírás elindult)", eventDate: "Regionális: február / Döntő: március (Törökbálint)",
+          link: "https://prosuli.hu/prosuli-robotika-verseny/",
+          note: "A honlap már a 2026/2027 tanévi versenyt hirdeti, de a konkrét dátumok helyén még „hamarosan…” szerepel." },
+
+        { id: "fll-challenge", name: "FIRST LEGO League – Challenge", status: "yes", fee: "💸💸",
+          focus: "LEGO robotika + tudományos kutatási projekt (2026/27: BIOGLOW)", age: "9–16 év", type: "Csapat (3–10 fő)",
+          announce: "augusztus (szezon-indulás)", deadline: "Csapatregisztráció: 2026. nov. 30.",
+          eventDate: "Regionális: 2026. dec.–2027. febr. / Nemzeti döntő: 2027. márc. 7. (Miskolc)",
+          link: "https://www.firstlegoleague.hu",
+          note: "A 2026/2027-es „BIOGLOW” szezon él, konkrét dátumokkal (új „Future Edition” formátum indul)." },
+
+        { id: "fll-explore", name: "FIRST LEGO League – Explore & Discover", status: "yes", fee: "💸",
+          focus: "LEGO robotika (játékos, modellépítés, bemutató)", age: "4–10 év", type: "Csapat",
+          announce: "augusztus", deadline: "Iskolai/óvodai regisztráció: 2027. jan. 31.", eventDate: "Kiállítás: február–május",
+          link: "https://www.firstlegoleague.hu",
+          note: "A 2026/2027-es BIOGLOW szezon része, azonos menetrenddel." },
+
+        { id: "wro", name: "World Robot Olympiad (WRO)", status: "no", fee: "💸💸",
+          focus: "Robotika (RoboMission, Future Innovators, RoboSports, Future Engineers)", age: "8–19 év (kategóriánként)", type: "Csapat (2–3 fő)",
+          announce: "december–január", deadline: "február–március (reg.wro.hu)", eventDate: "Magyarországi válogató: április–május",
+          link: "https://wro.hu",
+          note: "A honlap még csak a lezajlott „WRO 2026” szezont mutatja; 2027-es kiírás nincs." },
+
+        { id: "ftc", name: "FIRST Tech Challenge (FTC)", status: "yes", fee: "💸💸",
+          focus: "Haladó mérnöki robotépítés + programozás (2026/27: BIOBUZZ)", age: "12–18 év (9–12. évf.)", type: "Csapat (6–12 fő)",
+          announce: "augusztus–szeptember", deadline: "2026/27: dátumok még nincsenek meghirdetve", eventDate: "Ligaversenyek/döntő dátuma: még nem ismert",
+          link: "https://firsttechchallenge.hu",
+          note: "Az oldal már a „BIOBUZZ” szezont nevesíti, de a konkrét fordulódátumok még hiányoznak." },
+
+        { id: "ehod", name: "e-Hód / Bebras", status: "no", fee: "",
+          focus: "Algoritmikus gondolkodás (programozás nélkül, online teszt)", age: "3–12. évfolyam (5 korcsoport)", type: "Egyéni",
+          announce: "október eleje", deadline: "Regisztráció: október közepe", eventDate: "Verseny (előzetes): 2026. nov. 9–20.",
+          link: "http://e-hod.elte.hu",
+          note: "Előzetes dátum látható, de a hivatalos kiírás/regisztráció még nem nyílt meg." },
+
+        { id: "nemes-online", name: "Nemes Tihamér Online Programozási Verseny", status: "no", fee: "",
+          focus: "Programozás (algoritmusok, C++/Python/Pascal/C#/Java)", age: "5–12. osztály", type: "Egyéni",
+          announce: "október", deadline: "Folyamatos (fordulónként az előző szerdán éjfélig)",
+          eventDate: "5 forduló: nov, dec, jan, febr, ápr / Eredményhirdetés: máj. 7.",
+          link: "https://tehetseg.inf.elte.hu/nemes-online/nemes-aktualis.html",
+          note: "Még a 2025/2026-os kiírás aktuális, 2026/27-es fordulódátumokra utalás nincs." },
+
+        { id: "zsako", name: "Zsakó László Programozási Verseny", status: "no", fee: "",
+          focus: "Programozás (algoritmusok, analízis, kódolás)", age: "5–13. osztály", type: "Egyéni",
+          announce: "október", deadline: "1. ford. (iskolai): október", eventDate: "Területi: november / Döntő: február (ELTE IK)",
+          link: "https://tehetseg.inf.elte.hu/nemes/",
+          note: "A kiírás dokumentumai még a 2025/2026-os tanévre vonatkoznak." },
+
+        { id: "kodkupa", name: "Kódkupa – IIOT Válogatóverseny", status: "no", fee: "",
+          focus: "Csapat algoritmikus programozás (C, C++, Python)", age: "5–12. évf. (profi: 7–12.)", type: "Csapat (max. 4 fő)",
+          announce: "október", deadline: "november eleje",
+          eventDate: "4 online selejtező: nov–febr / Döntő: március (Budapest, Fazekas) / Nemzetközi: május–június",
+          link: "https://kodkupa.hu",
+          note: "A honlap és a kiírás PDF-je még a 2025/2026-os szezonra vonatkozik." },
+
+        { id: "prograce", name: "PROGRACE Programozói Verseny", status: "no", fee: "",
+          focus: "Programozás (egynapos csapatverseny)", age: "Közép + egyetemisták (24 év alatt)", type: "Csapat (3 fő)",
+          announce: "szeptember–október", deadline: "november", eventDate: "december 1. (Pécs, PTE MIK)",
+          link: "https://prograce.hu",
+          note: "A legfrissebb hír még a 2025/26-os fordulóról szól. (A korábbi, elavult pte.hu link helyett itt már a friss prograce.hu szerepel.)" },
+
+        { id: "codeweek", name: "Code Week Hungary", status: "yes", fee: "",
+          focus: "Kódolás, algoritmikus gondolkodás (nem klasszikus verseny, iskolai esemény)", age: "Minden korosztály", type: "Egyéni / csapat",
+          announce: "szeptember", deadline: "Eseményregisztráció folyamatos", eventDate: "2026. október 10–25. (14. Code Week)",
+          link: "https://www.codeweekhungary.hu",
+          note: "A honlap egyértelműen a 2026-os (14.) Code Week-et hirdeti a fenti dátumokkal." },
+
+        { id: "kozma", name: "Kozma László Alkalmazói Tanulmányi Verseny", status: "yes", fee: "",
+          focus: "Alkalmazói informatika (grafika, szöveg, prezentáció, táblázat)", age: "5–10. évfolyam (2 korcsoport)", type: "Páros / csapat",
+          announce: "szeptember–október", deadline: "2026. október 16. (XXV. verseny)", eventDate: "2 forduló: iskolai → Döntő: május (Százhalombatta)",
+          link: "https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/",
+          note: "Megjelent a 2026/2027-es kiírás (XXV. verseny), nevezési határidővel." },
+
+        { id: "dusza", name: "Dusza Árpád Országos Programozói Emlékverseny", status: "yes", fee: "",
+          focus: "Programozás (hagyományos / web / mobilprogramozás)", age: "9–13. évfolyam (középiskola)", type: "Egyéni",
+          announce: "szeptember–október", deadline: "október–november (2026/27-es felhívás elérhető)", eventDate: "Regionális: január–február / Döntő: március–április",
+          link: "https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/",
+          note: "Elérhető a „Versenyfelhívás_2026-2027” PDF, hagyományos és webprogramozói ágra is." },
+
+        { id: "radnoti", name: "Radnóti Hack&CODE Informatikai Verseny", status: "unsure", fee: "",
+          focus: "Programozás + robotika + projekt (AI, webfejlesztés, szabadulószoba, csapatmunka)", age: "7–8. évfolyam", type: "Csapat (2–4 fő)",
+          announce: "október", deadline: "⚠️ nincs nyoma a versenynek az átalakult honlapon", eventDate: "—",
+          link: "http://www.radnoti-pecs.hu",
+          note: "A honlap teljesen átalakult (szakképzési centrumba integrálódott); a versenynek nincs nyoma — érdemes megerősítést kérni az iskolától." },
+
+        { id: "nemes-alkalmazoi", name: "Nemes Tihamér Alkalmazói Tanulmányi Verseny", status: "yes", fee: "",
+          focus: "Alkalmazói informatika (irodai szoftverek, weblapkészítés)", age: "7–10. évfolyam", type: "Egyéni",
+          announce: "november–december", deadline: "2026. december 20.",
+          eventDate: "Iskolai forduló: 2027. jan. 6. / Országos: 2027. márc. 20. / Díjátadó: 2027. máj. 6. (ELTE IK)",
+          link: "https://versenyportal.hu/nemesa/nemesa_aktualis.html",
+          note: "A verseny átkerült a versenyportal.hu-ra, ahol már él a 2026/2027-es kiírás." },
+
+        { id: "rocs", name: "ROCS – Robotprogramozó Csapatverseny", status: "no", fee: "",
+          focus: "LEGO robotprogramozás (vonalkövetés, akadálypálya)", age: "5–8. évfolyam (3 korcsoport)", type: "Csapat (2–3 fő)",
+          announce: "november–december", deadline: "január–február", eventDate: "Regionális: február–március / Döntő: április (Kecskemét)",
+          link: "http://robotprog.hu/",
+          note: "A honlap még a korábbi (2024/25-ös) kiírást mutatja." },
+
+        { id: "kovacs", name: "Kovács Mihály Országos Grafikus Programozási Verseny", status: "yes", fee: "",
+          focus: "Grafikus programozás (teknőcgrafika, animáció, rekurzió – Scratch / Logo / Python)", age: "3–12. évfolyam (4 korcsoport: K1–K4)", type: "Egyéni",
+          announce: "november–december", deadline: "2027. február 16.",
+          eventDate: "Iskolai forduló: 2027. febr. 17. / Országos: 2027. ápr. 10. / Eredményhirdetés: 2027 május (ELTE IK)",
+          link: "https://versenyportal.hu/logo/logo_aktualis.html",
+          note: "A verseny átkerült a versenyportal.hu-ra, ahol már él a 2026/2027-es kiírás." }
+      ]
+    };
+
+    // ======================================================================
+    // RENDERELÉS — DOMelemJS (DOMElemJS.createDOMElem) + createDOMBlocks
+    // (CreateDOMBlocks.*) segítségével, kizárólag a fenti adatobjektumból.
+    // ======================================================================
+    var createDOMElem = DOMElemJS.createDOMElem;
+    var CDB = CreateDOMBlocks;
+
+    function renderPage(data) {
+      var page = CDB.createContainer({ parent: "#app", id: "page", class: "page" });
+
+      CDB.createTitle({ parent: page, id: "page-title", text: "Magyarországi Informatikai és Programozó Versenyek" }, 1);
+      CDB.createTitle({ parent: page, id: "page-subtitle", text: data.schoolYear + "-es tanév", class: "subtitle" }, 2);
+      createDOMElem({
+        tag: "p", parent: page, attrs: { class: "meta-line" },
+        text: "Adatvezérelt áttekintő — egyetlen JavaScript objektumból renderelve, DOMelemJS + createDOMBlocks segítségével."
+      });
+
+      CDB.createAlert({
+        parent: page, id: "status-alert", type: "info",
+        title: "Utolsó ellenőrzés: " + data.statusCheckedAt,
+        message: "A státuszok a versenyek hivatalos honlapjainak automatizált, webes ellenőrzésén alapulnak. Ahol még nincs 2026/27-es kiírás, ott a legutóbb ismert adatok láthatók."
+      });
+
+      // --- jelmagyarázat, a statusLegend objektumból felépítve ---
+      var legendRow = createDOMElem({ tag: "div", attrs: { class: "legend-row" }, parent: page });
+      Object.keys(data.statusLegend).forEach(function (key) {
+        var l = data.statusLegend[key];
+        createDOMElem({
+          tag: "span", parent: legendRow, attrs: { class: "legend-item" },
+          children: [
+            { tag: "span", text: l.icon },
+            { tag: "span", text: l.label }
+          ]
+        });
+      });
+
+      CDB.createDivider({ parent: page, id: "divider-1" });
+
+      // --- statisztika a data.items alapján kiszámolva ---
+      var counts = { yes: 0, no: 0, unsure: 0 };
+      data.items.forEach(function (item) { counts[item.status]++; });
+
+      var statsRow = createDOMElem({ tag: "div", attrs: { class: "stats-row" }, parent: page });
+      CDB.createBadge({ parent: statsRow, id: "stat-total", text: "Összesen: " + data.items.length + " verseny", type: "neutral" });
+      Object.keys(data.statusLegend).forEach(function (key) {
+        var l = data.statusLegend[key];
+        CDB.createBadge({
+          parent: statsRow, id: "stat-" + key,
+          text: l.icon + " " + l.shortLabel + ": " + counts[key],
+          type: l.badgeType
+        });
+      });
+
+      // --- szűrő gombsor ---
+      var filterBar = createDOMElem({ tag: "div", attrs: { class: "filter-bar" }, parent: page });
+
+      function applyFilter(key) {
+        var cards = document.querySelectorAll("#competition-grid .comp-card");
+        cards.forEach(function (card) {
+          var show = key === "all" || card.dataset.status === key;
+          card.classList.toggle("is-hidden", !show);
+        });
+        filterBar.querySelectorAll(".btn").forEach(function (btn) {
+          btn.classList.toggle("active", btn.id === "filter-" + key);
+        });
+      }
+
+      var allBtn = CDB.createButton({
+        parent: filterBar, id: "filter-all", text: "Összes (" + data.items.length + ")",
+        click: function () { applyFilter("all"); }
+      });
+      Object.keys(data.statusLegend).forEach(function (key) {
+        var l = data.statusLegend[key];
+        CDB.createButton({
+          parent: filterBar, id: "filter-" + key,
+          text: l.icon + " " + l.shortLabel + " (" + counts[key] + ")",
+          click: function () { applyFilter(key); }
+        });
+      });
+      allBtn.classList.add("active");
+
+      // --- verseny-kártyák rácsa ---
+      var grid = CDB.createGrid({ parent: page, id: "competition-grid", class: "competition-grid", columns: 2, gap: "1.25rem" });
+
+      data.items.forEach(function (item) {
+        renderCard(grid, item, data.statusLegend[item.status]);
+      });
+
+      CDB.createDivider({ parent: page, id: "divider-2" });
+
+      createDOMElem({
+        tag: "footer", parent: page, attrs: { class: "page-footer" },
+        children: [
+          {
+            tag: "p",
+            children: [
+              { tag: "span", text: "Forrás és teljes ellenőrzési jegyzőkönyv: " },
+              { tag: "a", text: "figyelendo_versenyek_2026_2027.md", attrs: { href: "./figyelendo_versenyek_2026_2027.md" } },
+              { tag: "span", text: " · " },
+              { tag: "a", text: "versenyek_2026_2027_statusz.md", attrs: { href: "./versenyek_2026_2027_statusz.md" } }
+            ]
+          },
+          { tag: "p", text: "Renderelve: DOMelemJS (createDOMElem) + createDOMBlocks (createdomblocks) — egyetlen JS adatobjektumból." }
+        ]
+      });
+    }
+
+    function renderCard(grid, item, legend) {
+      // A kártya belső tartalmát közvetlenül DOMElemJS.createDOMElem-mel építjük fel
+      // (append: false — csak a createCard() kapja meg a végén, body-ként).
+      var metaWrap = createDOMElem({ tag: "div", attrs: { class: "comp-meta" }, append: false });
+
+      CDB.createBadge({
+        parent: metaWrap, id: "badge-" + item.id,
+        text: legend.icon + " " + legend.shortLabel,
+        type: legend.badgeType
+      });
+
+      var fields = [
+        { label: "Fókusz", value: item.focus },
+        { label: "Korosztály", value: item.age },
+        { label: "Típus", value: item.type },
+        { label: "Kiírás megjelenése", value: item.announce },
+        { label: "Nevezési határidő", value: item.deadline },
+        { label: "Verseny időpontja", value: item.eventDate }
+      ];
+
+      createDOMElem({
+        tag: "dl", parent: metaWrap, attrs: { class: "comp-fields" },
+        children: fields.map(function (f) {
+          return {
+            tag: "div", attrs: { class: "comp-row" },
+            children: [
+              { tag: "dt", text: f.label },
+              { tag: "dd", text: f.value }
+            ]
+          };
+        })
+      });
+
+      CDB.createParagraph({ parent: metaWrap, id: "note-" + item.id, text: item.note, class: "comp-note" });
+      CDB.createLink({ parent: metaWrap, id: "link-" + item.id, text: "Hivatalos oldal →", href: item.link, target: "_blank" });
+
+      var titleText = (item.fee ? item.fee + " " : "") + item.name;
+      var card = CDB.createCard({
+        parent: grid, id: "card-" + item.id, class: "comp-card",
+        title: titleText,
+        body: metaWrap
+      });
+      card.dataset.status = item.status;
+    }
+
+    renderPage(COMPETITION_DATA);
+  })();
+  </script>
+</body>
+</html>
