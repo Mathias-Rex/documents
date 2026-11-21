@@ -2,7 +2,7 @@
 
 Automatikus ellenőrzés (scripts/scrape_competitions.py) — **2026. nov. 21.**.
 
-**14** versenynél már megjelent/elérhető az új tanévi kiírás, **6**-nál még a korábbi adatok érvényesek, **1** verseny státusza bizonytalan.
+**17** versenynél már megjelent/elérhető az új tanévi kiírás, **3**-nál még a korábbi adatok érvényesek, **1** verseny státusza bizonytalan.
 
 | Verseny | Státusz | Megjegyzés | Honlap |
 |---|---|---|---|
@@ -14,11 +14,11 @@ Automatikus ellenőrzés (scripts/scrape_competitions.py) — **2026. nov. 21.**
 | FIRST LEGO League – Explore & Discover | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://www.firstlegoleague.hu oldalon található „2026–2027” jelzi a 2026/2027-es kiírást. | https://www.firstlegoleague.hu |
 | World Robot Olympiad (WRO) | ❌ Még nincs | Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap még csak a lezajlott „WRO 2026” szezont mutatta. | https://wro.hu |
 | FIRST Tech Challenge (FTC) | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://firsttechchallenge.hu oldalon található „2026/2027” jelzi a 2026/2027-es kiírást. | https://firsttechchallenge.hu |
-| e-Hód / Bebras | ❌ Még nincs | Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: Előzetes dátum volt látható, de a hivatalos kiírás/regisztráció még nem nyílt meg. | http://e-hod.elte.hu |
+| e-Hód / Bebras | ✅ Van kiírás | Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, e-hod.elte.hu, 2026. 11. 21.): megnyílt a regisztráció a 2026-os kihívásra, 2026. nov. 9–20. között, 5 korcsoportban. Új rendszer: a regisztráció mostantól az e-hod.cuttle.org/admin oldalon történik (tanárként), e-mail megerősítéssel és szervezői jóváhagyással. Diákok felvétele ezután fájlimporttal. Finanszírozás: NTP-TMV-M-26-B-0019 (Nemzeti Tehetség Program). | https://e-hod.cuttle.org/ |
 | Nemes Tihamér Online Programozási Verseny | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://tehetseg.inf.elte.hu/nemes-online/nemes-aktualis.html oldalon található „2026/2027” jelzi a 2026/2027-es kiírást. | https://tehetseg.inf.elte.hu/nemes-online/nemes-aktualis.html |
 | Zsakó László Programozási Verseny | ❓ Bizonytalan | Automatikus ellenőrzés: egyik figyelt oldal sem volt elérhető (https://tehetseg.inf.elte.hu/nemes/); a korábbi állapot megőrizve. Korábbi megjegyzés: A kiírás dokumentumai még a 2025/2026-os tanévre vonatkoztak. | https://tehetseg.inf.elte.hu/nemes/ |
-| Kódkupa – IIOT Válogatóverseny | ❌ Még nincs | Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A honlap és a kiírás PDF-je még a 2025/2026-os szezonra vonatkozott. | https://kodkupa.hu |
-| PROGRACE Programozói Verseny | ❌ Még nincs | Automatikus ellenőrzés: nem található 2026/2027-es kiírásra utaló szöveg a figyelt oldal(ak)on. Korábbi megjegyzés: A legfrissebb hír még a 2025/26-os fordulóról szólt. | https://prograce.hu |
+| Kódkupa – IIOT Válogatóverseny | ✅ Van kiírás | Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, kodkupa.hu, 2026. 11. 21.): a 2026/2027-es szezon él, meghosszabbított jelentkezési határidővel (nov. 13.). 4 online forduló + országos döntő (Fazekas Gimnázium, 10+1 csapat) + nemzetközi IIOT verseny. Mindkét kategória (Kódkupa profi + ProgramPohár újonc) elérhető, ingyenes nevezéssel. | https://kodkupa.hu |
+| PROGRACE Programozói Verseny | ✅ Van kiírás | Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, prograce.hu, 2026. 11. 21.): „PROGRACE 2026 · Jubileumi év” (10 éves), időpont: 2026. december 15., helyszín: PTE MIK, Pécs. Kapcsolattartó: Gyurák Gábor, gyurak.gabor@mik.pte.hu. Nevezés Python 3-as tudással, saját gép nem használható. | https://prograce.hu |
 | Code Week Hungary | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://www.codeweekhungary.hu oldalon található „14. Code Week” jelzi a 2026/2027-es kiírást. | https://www.codeweekhungary.hu |
 | Kozma László Alkalmazói Tanulmányi Verseny | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/ oldalon található „2026/2027” jelzi a 2026/2027-es kiírást. | https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/ |
 | Dusza Árpád Országos Programozói Emlékverseny | ✅ Van kiírás | Automatikus ellenőrzés: a(z) https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/ oldalon található „2026/2027” jelzi a 2026/2027-es kiírást. | https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/ |

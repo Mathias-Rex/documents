@@ -254,11 +254,23 @@ def build_registry() -> List[Competition]:
             id="ehod", name="e-Hód / Bebras", fee="",
             focus="Algoritmikus gondolkodás (programozás nélkül, online teszt)",
             age="3–12. évfolyam (5 korcsoport)", type="Egyéni",
-            announce="október eleje", deadline="Regisztráció: október közepe",
-            event_date="Verseny (előzetes): 2026. nov. 9–20.",
-            link="http://e-hod.elte.hu",
-            check_urls=["http://e-hod.elte.hu"],
-            fallback_note="Előzetes dátum volt látható, de a hivatalos kiírás/regisztráció még nem nyílt meg.",
+            announce="október eleje (bejegyzés: 2026. okt. 25.)",
+            deadline="Tanári regisztráció folyamatos (e-mail megerősítés + szervezői jóváhagyás szükséges)",
+            event_date="Verseny: 2026. nov. 9–20.",
+            # A verseny új platformra költözött (e-hod.cuttle.org); a régi e-hod.elte.hu
+            # inkább csak hírportálként/kapcsolattartásra szolgál tovább.
+            link="https://e-hod.cuttle.org/",
+            check_urls=["http://e-hod.elte.hu", "https://e-hod.cuttle.org/"],
+            fallback_note="Korábban csak előzetes dátum volt látható, a regisztráció még nem nyílt meg.",
+            manual_status="yes",
+            manual_note=(
+                "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, e-hod.elte.hu, "
+                "2026. 11. 21.): megnyílt a regisztráció a 2026-os kihívásra, 2026. nov. 9–20. "
+                "között, 5 korcsoportban. Új rendszer: a regisztráció mostantól az "
+                "e-hod.cuttle.org/admin oldalon történik (tanárként), e-mail megerősítéssel és "
+                "szervezői jóváhagyással. Diákok felvétele ezután fájlimporttal. Finanszírozás: "
+                "NTP-TMV-M-26-B-0019 (Nemzeti Tehetség Program)."
+            ),
         ),
         Competition(
             id="nemes-online", name="Nemes Tihamér Online Programozási Verseny", fee="",
@@ -283,23 +295,41 @@ def build_registry() -> List[Competition]:
         ),
         Competition(
             id="kodkupa", name="Kódkupa – IIOT Válogatóverseny", fee="",
-            focus="Csapat algoritmikus programozás (C, C++, Python)",
-            age="5–12. évf. (profi: 7–12.)", type="Csapat (max. 4 fő)",
-            announce="október", deadline="november eleje",
-            event_date="4 online selejtező: nov–febr / Döntő: március (Budapest, Fazekas) / Nemzetközi: május–június",
+            focus="Csapat algoritmikus programozás (C, C++, Python) — Kódkupa (profi) és ProgramPohár (újonc) kategória",
+            age="5–12. évf. (profi: 7–12., ProgramPohár: 5–12.)", type="Csapat (max. 4 fő)",
+            announce="október", deadline="2026. november 13. (meghosszabbítva)",
+            event_date=(
+                "4 online forduló: 2026. nov. 16. / dec. 15. / 2027. jan. 13. / febr. 11. / "
+                "Döntő: 2027. márc. 13. (Budapest, Fazekas) / Nemzetközi (IIOT): 2027. május"
+            ),
             link="https://kodkupa.hu",
             check_urls=["https://kodkupa.hu"],
-            fallback_note="A honlap és a kiírás PDF-je még a 2025/2026-os szezonra vonatkozott.",
+            fallback_note="A honlap és a kiírás PDF-je korábban még a 2025/2026-os szezonra vonatkozott.",
+            manual_status="yes",
+            manual_note=(
+                "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, kodkupa.hu, "
+                "2026. 11. 21.): a 2026/2027-es szezon él, meghosszabbított jelentkezési "
+                "határidővel (nov. 13.). 4 online forduló + országos döntő (Fazekas Gimnázium, "
+                "10+1 csapat) + nemzetközi IIOT verseny. Mindkét kategória (Kódkupa profi + "
+                "ProgramPohár újonc) elérhető, ingyenes nevezéssel."
+            ),
         ),
         Competition(
             id="prograce", name="PROGRACE Programozói Verseny", fee="",
-            focus="Programozás (egynapos csapatverseny)",
+            focus="Programozás (egynapos csapatverseny, Python 3) — a 2026-os (X., jubileumi) kiadás",
             age="Közép + egyetemisták (24 év alatt)", type="Csapat (3 fő)",
-            announce="szeptember–október", deadline="november",
-            event_date="december 1. (Pécs, PTE MIK)",
+            announce="szeptember–október", deadline="Nevezés Google Űrlapon, folyamatos",
+            event_date="2026. december 15. (Pécs, PTE MIK)",
             link="https://prograce.hu",
             check_urls=["https://prograce.hu"],
-            fallback_note="A legfrissebb hír még a 2025/26-os fordulóról szólt.",
+            fallback_note="A legfrissebb hír korábban még a 2025/26-os fordulóról szólt.",
+            manual_status="yes",
+            manual_note=(
+                "Kézzel megerősítve (a felhasználó által bemásolt oldaltartalom, prograce.hu, "
+                "2026. 11. 21.): „PROGRACE 2026 · Jubileumi év” (10 éves), időpont: 2026. "
+                "december 15., helyszín: PTE MIK, Pécs. Kapcsolattartó: Gyurák Gábor, "
+                "gyurak.gabor@mik.pte.hu. Nevezés Python 3-as tudással, saját gép nem használható."
+            ),
         ),
         Competition(
             id="codeweek", name="Code Week Hungary", fee="",
