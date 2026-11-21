@@ -64,6 +64,43 @@
     --bg: #1f2937;
     --bg-alt: #111827;
   }
+  /*
+    A createdomblocks könyvtár az alert/toast/badge success/error/warning/info
+    variánsainál NEM CSS-változóval, hanem fixen beégetett (csak világos
+    háttérhez tervezett, pl. #166534 sötétzöld) szövegszínt használ. Sötét
+    módban ez a sötét háttérszínen (--success-bg stb.) szinte olvashatatlan
+    (zöld-a-zöldön / kék-a-kéken) — ezért itt felülírjuk világosabb, megfelelő
+    kontrasztú szövegszínekre, ugyanazzal a kettős (media query + explicit
+    data-theme) mintával, mint a többi sötét mód szabály.
+  */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .alert-success,
+    :root:not([data-theme="light"]) .toast-success,
+    :root:not([data-theme="light"]) .badge-success { color: #bbf7d0; }
+    :root:not([data-theme="light"]) .alert-error,
+    :root:not([data-theme="light"]) .toast-error,
+    :root:not([data-theme="light"]) .badge-error { color: #fecaca; }
+    :root:not([data-theme="light"]) .alert-warning,
+    :root:not([data-theme="light"]) .toast-warning,
+    :root:not([data-theme="light"]) .badge-warning { color: #fde68a; }
+    :root:not([data-theme="light"]) .alert-info,
+    :root:not([data-theme="light"]) .toast-info,
+    :root:not([data-theme="light"]) .badge-info,
+    :root:not([data-theme="light"]) .badge { color: #bfdbfe; }
+  }
+  :root[data-theme="dark"] .alert-success,
+  :root[data-theme="dark"] .toast-success,
+  :root[data-theme="dark"] .badge-success { color: #bbf7d0; }
+  :root[data-theme="dark"] .alert-error,
+  :root[data-theme="dark"] .toast-error,
+  :root[data-theme="dark"] .badge-error { color: #fecaca; }
+  :root[data-theme="dark"] .alert-warning,
+  :root[data-theme="dark"] .toast-warning,
+  :root[data-theme="dark"] .badge-warning { color: #fde68a; }
+  :root[data-theme="dark"] .alert-info,
+  :root[data-theme="dark"] .toast-info,
+  :root[data-theme="dark"] .badge-info,
+  :root[data-theme="dark"] .badge { color: #bfdbfe; }
   body {
     margin: 0;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -80,7 +117,21 @@
   .legend-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.75rem 0 1.25rem; font-size: 0.9rem; color: var(--text-light); }
   .legend-row span.legend-item { display: inline-flex; align-items: center; gap: 0.35rem; }
   .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0 1.5rem; }
-  .filter-bar .btn.active { background-color: var(--primary-hover); box-shadow: var(--shadow-md); outline: 2px solid var(--primary); outline-offset: 1px; }
+  /*
+    A createdomblocks könyvtár a .btn-hez alapból nem ad háttér- vagy
+    szövegszínt (csak :hover-re), így a böngésző natív gombstílusára hagyatkozik
+    — ez sötét módban rossz kontrasztot adhat. Explicit, téma-tudatos alapstílust
+    adunk minden gombnak.
+  */
+  .btn { background-color: var(--bg); color: var(--text); border: 1px solid var(--border); }
+  .filter-bar .btn.active {
+    background-color: var(--primary-hover);
+    color: #ffffff;
+    border-color: var(--primary-hover);
+    box-shadow: var(--shadow-md);
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+  }
   #competition-grid { align-items: start; }
   @media (max-width: 680px) {
     #competition-grid { grid-template-columns: 1fr !important; }
