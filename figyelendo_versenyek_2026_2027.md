@@ -64,18 +64,18 @@ Az Informatika-Számítástechnika Tanárok Egyesületének verseny oldala. Inne
 | Verseny neve | 26/27? | Fókusz | Korosztály | Típus | Mikor jelenik meg a kiírás? | Nevezési határidő (tipikus / 26-27) | Verseny időpontja (tipikus / 26-27) | Link |
 |---|:---:|---|---|---|---|---|---|---|
 | 23. Neumann János Programtermék Verseny | ✅ | Projektmunka (app, játék, grafika, CAD, animáció, hardver) | Ált. és közép (a döntő kezdetéig 20 év alatt) | Egyéni / csapat | **szeptember–október** | **2027. február 14.** | Előzsűri értesítés: **2027. febr. 22.** / Döntő: **2027. márc. 18–19.** (Szekszárd) | https://neumannverseny.hu |
-| Boronkay Informatika Verseny – 8. évfolyam | ❓ | Alkalmazói informatika (elmélet + szöveg, táblázat) | 8. osztály (alacsonyabb is indulhat) | Egyéni | **október eleje** | 1. ford.: **november közepe** / 2. ford.: **január eleje** | Döntő: **január vége** (Vác) | https://boronkay.vac.hu/informatika-verseny |
-| Boronkay Informatika Verseny – 5–7. évfolyam | ❓ | Alkalmazói informatika (elmélet + grafika, szöveg, prezentáció) | 5–7. osztály | Egyéni | **október közepe** | 1. ford.: **január vége** / 2. ford.: **április eleje** | Döntő: **április vége** (Vác) | https://boronkay.vac.hu/informatika-verseny |
+| Boronkay Informatika Verseny – 8. évfolyam | ✅ | Alkalmazói informatika (elmélet + szöveg, táblázat) | 8. osztály (alacsonyabb is indulhat) | Egyéni | **október eleje** | 1. ford.: **2026. nov. 9.** / 2. ford.: **2026. dec. 30.** | Döntő: **2027. jan. 15.** (Vác) | https://www.boronkay.eu |
+| Boronkay Informatika Verseny – 5–7. évfolyam | ✅ | Alkalmazói informatika (elmélet + grafika, szöveg, prezentáció) | 5–7. osztály | Egyéni | **október közepe** | 1. ford.: **2027. jan. 18.** / 2. ford.: **2027. ápr. 7.** | Döntő: **2027. ápr. 23.** (Vác) | https://www.boronkay.eu |
 | ProSuli Robotika Verseny 💸 | ✅ | LEGO robotprogramozás (vonalkövetés, pályafeladatok) | Ált. és közép (amatőr / profi liga) | Csapat | **október** | 2026/27: **hamarosan** (a kiírás elindult) | Regionális: **február** / Döntő: **március** (Törökbálint) | https://prosuli.hu/prosuli-robotika-verseny |
 | FIRST LEGO League – Challenge 💸💸 | ✅ | LEGO robotika + tudományos kutatási projekt (2026/27: **BIOGLOW**) | 9–16 év | Csapat (3–10 fő) | **augusztus** (szezon-indulás) | Csapatregisztráció: **2026. nov. 30.** | Regionális: **2026. dec.–2027. febr.** / Nemzeti döntő: **2027. márc. 7.** (Miskolc) | https://www.firstlegoleague.hu |
 | FIRST LEGO League – Explore & Discover 💸 | ✅ | LEGO robotika (játékos, modellépítés, bemutató) | 4–10 év | Csapat | **augusztus** | Iskolai/óvodai regisztráció: **2027. jan. 31.** | Kiállítás: **február–május** | https://www.firstlegoleague.hu |
 | World Robot Olympiad (WRO) 💸💸 | ❌ | Robotika (RoboMission, Future Innovators, RoboSports, Future Engineers) | 8–19 év (kategóriánként) | Csapat (2–3 fő) | **december–január** | **február–március** (reg.wro.hu) | Magyarországi válogató: **április–május** | https://wro.hu |
 | FIRST Tech Challenge (FTC) 💸💸 | ✅ | Haladó mérnöki robotépítés + programozás (2026/27: **BIOBUZZ**) | 12–18 év (9–12. évf.) | Csapat (6–12 fő) | **augusztus–szeptember** | 2026/27: dátumok még **nincsenek meghirdetve** | Ligaversenyek/döntő dátuma: **még nem ismert** | https://firsttechchallenge.hu |
-| e-Hód / Bebras | ❌ | Algoritmikus gondolkodás (programozás nélkül, online teszt) | 3–12. évfolyam (5 korcsoport) | Egyéni | **október eleje** | Regisztráció: **október közepe** | Verseny (előzetes): **2026. nov. 9–20.** | http://e-hod.elte.hu |
+| e-Hód / Bebras | ✅ | Algoritmikus gondolkodás (programozás nélkül, online teszt) | 3–12. évfolyam (5 korcsoport) | Egyéni | **október eleje** | Tanári regisztráció **folyamatos** (e-hod.cuttle.org/admin) | Verseny: **2026. nov. 9–20.** | https://e-hod.cuttle.org/ |
 | Nemes Tihamér Online Programozási Verseny | ❌ | Programozás (algoritmusok, C++/Python/Pascal/C#/Java) | 5–12. osztály | Egyéni | **október** | Folyamatos (fordulónként az előző szerdán éjfélig) | 5 forduló: **nov, dec, jan, febr, ápr** / Eredményhirdetés: **máj. 7.** | https://tehetseg.inf.elte.hu/nemes-online/nemes-aktualis.html |
 | Zsakó László Programozási Verseny | ❌ | Programozás (algoritmusok, analízis, kódolás) | 5–13. osztály | Egyéni | **október** | 1. ford. (iskolai): **október** | Területi: **november** / Döntő: **február** (ELTE IK) | https://tehetseg.inf.elte.hu/nemes/ |
-| Kódkupa – IIOT Válogatóverseny | ❌ | Csapat algoritmikus programozás (C, C++, Python) | 5–12. évf. (profi: 7–12.) | Csapat (max. 4 fő) | **október** | **november eleje** | 4 online selejtező: **nov–febr** / Döntő: **március** (Budapest, Fazekas) / Nemzetközi: **május–június** | https://kodkupa.hu |
-| PROGRACE Programozói Verseny | ❌ | Programozás (egynapos csapatverseny) | Közép + egyetemisták (24 év alatt) | Csapat (3 fő) | **szeptember–október** | **november** | **december 1.** (Pécs, PTE MIK) | https://prograce.hu |
+| Kódkupa – IIOT Válogatóverseny | ✅ | Csapat algoritmikus programozás (C, C++, Python) — Kódkupa + ProgramPohár | 5–12. évf. (profi: 7–12.) | Csapat (max. 4 fő) | **október** | **2026. november 13.** (meghosszabbítva) | 4 online forduló: **nov–febr** / Döntő: **2027. márc. 13.** (Fazekas) / Nemzetközi (IIOT): **2027. május** | https://kodkupa.hu |
+| PROGRACE Programozói Verseny | ✅ | Programozás (egynapos csapatverseny, Python 3) — X., jubileumi kiadás | Közép + egyetemisták (24 év alatt) | Csapat (3 fő) | **szeptember–október** | Google Űrlapon, folyamatos | **2026. december 15.** (Pécs, PTE MIK) | https://prograce.hu |
 | Code Week Hungary | ✅ | Kódolás, algoritmikus gondolkodás (nem klasszikus verseny, iskolai esemény) | Minden korosztály | Egyéni / csapat | **szeptember** | Eseményregisztráció folyamatos | **2026. október 10–25.** (14. Code Week) | https://www.codeweekhungary.hu |
 | Kozma László Alkalmazói Tanulmányi Verseny | ✅ | Alkalmazói informatika (grafika, szöveg, prezentáció, táblázat) | 5–10. évfolyam (2 korcsoport) | Páros / csapat | **szeptember–október** | **2026. október 16.** (XXV. verseny) | 2 forduló: iskolai → Döntő: **május** (Százhalombatta) | https://isze.hu/kozma-laszlo-orszagos-informatika-alkalmazoi-tanulmanyi-verseny/ |
 | Dusza Árpád Országos Programozói Emlékverseny | ✅ | Programozás (hagyományos / web / mobilprogramozás) | 9–13. évfolyam (középiskola) | Egyéni | **szeptember–október** | **október–november** (2026/27-es felhívás elérhető) | Regionális: **január–február** / Döntő: **március–április** | https://isze.hu/dusza-arpad-orszagos-programozoi-emlekverseny/ |
@@ -143,35 +143,54 @@ Az Informatika-Számítástechnika Tanárok Egyesületének verseny oldala. Inne
 
 ## 2. Boronkay Informatika Verseny (BIV)
 
-**Szervező:** Boronkay György Műszaki Technikum és Gimnázium, Vác
+> ✅ **2026.11.21-i ellenőrzés — megerősítve, és fontos linkváltás:** az iskola időközben leváltotta a domaint — a korábbi `boronkay.vac.hu` helyett mostantól **[boronkay.eu](https://www.boronkay.eu)** a hivatalos oldal. Ez magyarázza a korábbi tartós elérhetetlenséget (HTTP 503 / TLS hiba): a régi domain láthatóan megszűnt vagy elromlott, nem a verseny szűnt meg.
 
-**Cél:** Általános iskolás tanulók informatikai tudásának és problémamegoldó képességének megmérettetése elméleti és gyakorlati feladatokon keresztül.
+**Szervező:** VSZC Boronkay György Műszaki Technikum és Gimnázium, Vác (Informatika Munkacsoport)
 
-### Korosztály
+**Cél:** Általános iskolás tanulók informatikai tudásának és problémamegoldó képességének megmérettetése elméleti és gyakorlati feladatokon keresztül. A 2026–2027-es tanévben **14. alkalommal** kerül meghirdetésre.
 
-Jelenleg elsősorban **7–8. osztályosok** számára meghirdetve, de más évfolyamokra is szóló versenyek is megrendezésre kerülnek.
+### Korosztályok
+
+A verseny **két korosztálynak** szól, külön menetrenddel:
+- **8. osztályosok**
+- **5–7. évfolyamosok** ("felfele" jelentkezés elfogadott, "lefele" nem — azaz alacsonyabb évfolyamos jelentkezhet a magasabbak versenyére, fordítva nem)
 
 ### Fordulók
 
-A verseny **három fordulóból** áll:
-1. **Első forduló (levelezős):** Online beküldött elméleti és gyakorlati feladatok.
-2. **Második forduló (területi):** A legjobb versenyzők továbbjutnak.
-3. **Döntő:** Személyes részvétel az iskola helyszínén (Vác).
+Mindkét korosztálynak **háromfordulós** verseny: két levelezős forduló és egy döntő.
+
+**8. osztályosok:**
+| Esemény | Dátum |
+|---|---|
+| I. forduló határideje | **2026. november 9.** (hétfő) |
+| II. forduló határideje | **2026. december 30.** (szerda) |
+| Döntősök értesítése | 2027. január 4-ig (hétfő) |
+| Döntőre jelentkezés határideje | 2027. január 7. (csütörtök) |
+| **Döntő** | **2027. január 15.** (péntek, Vác) |
+
+**5–7. évfolyamosok:**
+| Esemény | Dátum |
+|---|---|
+| I. forduló határideje | **2027. január 18.** (hétfő) |
+| II. forduló határideje | **2027. április 7.** (szerda) |
+| Döntősök értesítése | 2027. április 12-ig (hétfő) |
+| Döntőre jelentkezés határideje | 2027. április 15. (csütörtök) |
+| **Döntő** | **2027. április 23.** (péntek, Vác) |
 
 ### Feladattípusok
 
-- Elméleti kérdések (számítástechnika-elmélet, logika)
-- Gyakorlati feladatok: szövegszerkesztés, táblázatkezelés, programozás
+- Elméleti feladatsor (25 kérdés)
+- 8. osztályosoknak gyakorlati feladatok: szövegszerkesztés (1. forduló), táblázatkezelés (2. forduló); a döntőben ezek mellett algoritmizálás-kódolás is
+- 5–7. évfolyamosoknak két gyakorlati feladat fordulónként; a döntőben szövegszerkesztés, prezentációkészítés és számítógépes grafika is szerepel
 
 ### Díjazás és támogató
 
-A Tigra Zrt. támogatja a BIV 8. évfolyamos versenyét; a dobogósok értékes tárgynyereményeket kapnak.
+A **Tigra Zrt.** immár 13+. éve támogatja a BIV 8. évfolyamos versenyét; a dobogósok értékes tárgynyereményeket kapnak. Iskolák közötti versenyben a BIV Vándorkupáját is kiosztják (min. 3 induló diák + legalább 1 döntős szükséges iskolánként).
 
 ### Elérhetőség
 
-- Web: [https://boronkay.vac.hu/informatika-verseny](https://boronkay.vac.hu/informatika-verseny)
-
-> ❓ **2026.09.28-i ellenőrzés:** a honlap jelenleg HTTP 503 hibát ad, nem volt élőben ellenőrizhető. A gyorsítótárazott tartalom még a 2025/26-os (már lejárt) dátumokat mutatta — érdemes később kézzel újraellenőrizni.
+- Web: [https://www.boronkay.eu](https://www.boronkay.eu) (menüpont: „Általános iskolásoknak” → „Boronkay versenyek” → „Informatika Verseny")
+- Versenyszervező: Kemenes Tamás — kemenes.tamas@boronkay.hu (ide kell küldeni a gyakorlati feladatok megoldását)
 
 ---
 
@@ -289,31 +308,52 @@ A honlap kiemeli, hogy a 2026–2027-es tanév különleges lesz: új, "Future E
 
 ---
 
-## 7. e-Hód / Bebras (NJSZT)
+## 7. e-Hód / Bebras (NJSZT + ELTE IK)
 
-**Szervező:** Neumann János Számítógéptudományi Társaság
+> ✅ **2026.11.21-i ellenőrzés — megerősítve, platformváltással:** megnyílt a regisztráció a 2026-os kihívásra. A verseny **új platformra költözött** — a nevezés mostantól az [e-hod.cuttle.org/admin](https://e-hod.cuttle.org/admin) oldalon történik, nem a korábbi e-hod.elte.hu-n (az utóbbi inkább hír-/kapcsolattartó oldalként marad fenn).
 
-**Cél:** Az algoritmikus és logikai gondolkodás fejlesztése és mérése, játékos feladatokon keresztül.
+**Szervezők:** Neumann János Számítógéptudományi Társaság (NJSzT) és ELTE Informatikai Kar
+
+**Cél:** Az algoritmikus és logikai gondolkodás fejlesztése és mérése, játékos feladatokon keresztül. A BEBRAS nemzetközi kezdeményezés magyar megvalósulása.
 
 ### Korosztály
 
-**3–12. évfolyam** – több külön korcsoport:
+**3–12. évfolyam** – 5 korcsoport:
 - 3–4. osztály
 - 5–6. osztály
 - 7–8. osztály
 - 9–12. osztály
+(a hivatalos oldal szerint pontosan 5 korcsoportban várják a résztvevőket)
 
 ### Verseny jellege
 
-- Online és papíralapú fordulók
+- Online forduló, 2 hét alatt megoldható
 - Feladatok vizuális, algoritmikus gondolkodást igényelnek (Scratch-szerű megközelítés is elegendő lehet)
 - Nem igényel előzetes programozási tudást
 
+### Regisztráció (2026/2027 — új folyamat)
+
+1. Tanárként regisztráció az iskolá(k)hoz az [e-hod.cuttle.org/admin](https://e-hod.cuttle.org/admin) oldalon
+2. E-mail-cím megerősítése a kapott linkkel (24 órán belül — érdemes a spam mappát is figyelni)
+3. Várakozás a szervezők jóváhagyására (2 munkanapon belül)
+4. Bejelentkezés, majd a diákok felvétele fájlimporttal
+
+### Menetrend (2026/2027 tényleges adatok)
+
+| Esemény | Dátum |
+|---|---|
+| Regisztráció megnyitása (bejegyzés) | 2026. október 25. |
+| **Verseny időpontja** | **2026. november 9–20.** (2 hét) |
+
+### Finanszírozás
+
+A verseny a Nemzeti Tehetség Program „A hazai nagy hagyományú, országos szervezésű tanulmányi és sportversenyek támogatása” alprogramja (NTP-TMV-M-26-B-0019) keretében, az Oktatási és Gyermekügyi Minisztérium támogatásával valósul meg.
+
 ### Elérhetőség
 
-- Web: [https://njszt.hu](https://njszt.hu/hu/szakmai_kozosseg/tehetseggondozasi-szakosztaly/versenyek)
-
-> ❌ **2026.09.28-i ellenőrzés:** a hivatalos oldal (e-hod.elte.hu) egyelőre csak előzetesen említi a 2026. november 9–20. közötti fordulót; a formális kiírás és a regisztráció (várhatóan október közepétől) még nem nyílt meg.
+- Nevezés: [https://e-hod.cuttle.org/admin](https://e-hod.cuttle.org/admin)
+- Verseny felülete: [https://e-hod.cuttle.org/](https://e-hod.cuttle.org/)
+- E-mail: info@e-hod.elte.hu
 
 ---
 
@@ -417,6 +457,8 @@ A versenyző maga választja a nyelvet; hangsúly a módszeres programozáson, n
 
 ## 10. Kódkupa – IIOT Válogatóverseny
 
+> ✅ **2026.11.21-i ellenőrzés — megerősítve:** él a 2026/2027-es szezon, meghosszabbított jelentkezési határidővel.
+
 **Szervezők:** Neumann János Számítógéptudományi Társaság, Budapesti Fazekas Mihály Gyakorló Általános Iskola és Gimnázium, Algo Pro Club
 
 **Cél:** Csapatban történő algoritmikus programozás fejlesztése; a legjobb csapatok a nemzetközi IIOT-döntőre juthatnak ki.
@@ -434,20 +476,19 @@ A versenyző maga választja a nyelvet; hangsúly a módszeres programozáson, n
 
 Maximum **4 fő**.
 
-### Fordulók és időpontok
+### Fordulók és időpontok (2026/2027-es tanév, megerősített adatok)
 
 | Esemény | Dátum |
 |---|---|
-| Gyakorlóidőszak | 2025. november 7–9. |
-| Jelentkezési határidő | 2025. november 7. (éjfél) |
-| 1. online selejtező | 2025. november 10–11. |
-| 2. online selejtező | 2025. december 9–10. |
-| 3. online selejtező | 2026. január 14–15. |
-| 4. online selejtező | 2026. február 12–13. |
-| Országos döntő | 2026. március 14., 11:00–14:00 (Fazekas Gimnázium, Budapest) |
-| Nemzetközi döntő | 2026. május / június (Piatra Neamț, Románia) |
+| Jelentkezési határidő | **2026. november 13.** (meghosszabbítva) |
+| 1. online forduló | 2026. november 16. |
+| 2. online forduló | 2026. december 15. |
+| 3. online forduló | 2027. január 13. |
+| 4. online forduló | 2027. február 11. |
+| Országos döntő | **2027. március 13.** (Fazekas Gimnázium, Budapest — 10+1 csapat meghívva) |
+| Nemzetközi verseny (IIOT) | 2027. május |
 
-Az online selejtezőkön a csapat maga választja meg, mikor kezdi a **3 órás versenyt** a megadott időszakon belül.
+Az online fordulókon képernyőfelvételt kell készíteni (tiltott AI eszközök és kommunikáció kiszűrésére). A döntőre az online selejtező alapján 10+1 csapatot hívnak meg.
 
 ### Feladatok
 
@@ -481,13 +522,13 @@ Az online selejtezőkön a csapat maga választja meg, mikor kezdi a **3 órás 
 - Web: [https://kodkupa.hu](https://kodkupa.hu)
 - E-mail: info@kodkupa.hu
 
-> ❌ **2026.09.28-i ellenőrzés:** a honlap és a versenykiírás PDF-je még a 2025/2026-os szezonra vonatkozik (döntő: 2026. március 14.); 2026/27-es kiírás még nem jelent meg.
-
 ---
 
 ## 11. PROGRACE Programozói Verseny
 
-**Szervezők:** Pécsi Tudományegyetem Műszaki és Informatikai Kara + Neumann János Számítógéptudományi Társaság
+> ✅ **2026.11.21-i ellenőrzés — megerősítve:** „PROGRACE 2026 · Jubileumi év" (10 éves), pontosított időponttal.
+
+**Szervezők:** Pécsi Tudományegyetem Műszaki és Informatikai Kara + Neumann János Számítógéptudományi Társaság, PTE CyberLAB, Juhász Jenő Szakkollégium
 
 **Cél:** Tehetséges középiskolás és egyetemista programozók megmérettetése; a pályaválasztás előtt álló diákok elkötelezettségének erősítése az informatika iránt.
 
@@ -501,9 +542,16 @@ Az online selejtezőkön a csapat maga választja meg, mikor kezdi a **3 órás 
 
 ### Verseny jellege
 
-- Egész napos, helyszíni verseny (09:00–18:00)
-- Algoritmikus programozási feladatok
+- Egész napos, helyszíni verseny
+- Algoritmikus programozási feladatok, Python 3-ban
+- Saját gép nem használható — a szervezők biztosítják a gépeket; internet/AI/online segítség használata tilos
 - Lehetőség az informatikai cégekkel való megismerkedésre
+
+### Menetrend (2026/2027 — X., jubileumi kiadás)
+
+| Esemény | Dátum |
+|---|---|
+| **Verseny időpontja** | **2026. december 15.** |
 
 ### Helyszín
 
@@ -516,9 +564,9 @@ PTE MIK, Pécs (7624 Pécs, Boszorkány u. 2.)
 ### Elérhetőség
 
 - Web: [https://prograce.hu](https://prograce.hu)
+- Nevezés: Google Űrlapon (a prograce.hu-ról elérhető)
+- Kapcsolattartó: Gyurák Gábor — gyurak.gabor@mik.pte.hu
 - E-mail: info@prograce.hu
-
-> ❌ **2026.09.28-i ellenőrzés:** a prograce.hu legfrissebb híre még a 2025/26-os fordulóról szól, 2026/27-es kiírás nincs. (A dokumentum korábban egy elavult, 2018-as pte.hu linket tartalmazott — ezt a fenti, aktuális prograce.hu linkre javítottuk.)
 
 ---
 
